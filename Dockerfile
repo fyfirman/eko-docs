@@ -11,8 +11,6 @@ RUN apt-get update && apt-get install -y \
 
 COPY package.json yarn.lock ./
 
-RUN npm install -g yarn
-
 RUN yarn
 
 COPY . .
