@@ -1,3 +1,8 @@
+---
+title: Installation
+description: Eko is a JavaScript library that can be used in Node.js applications, web pages, and browser extensions. This guide covers installation and setup for different environments.
+---
+
 # Installation
 
 Eko is a JavaScript library that can be used in Node.js applications, web pages, and browser extensions. This guide covers installation and setup for different environments.

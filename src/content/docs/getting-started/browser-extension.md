@@ -1,3 +1,8 @@
+---
+title: Using Eko in Browser Extensions
+description: This guide demonstrates how to use Eko's browser automation capabilities in a Chrome extension environment, building on those fundamental concepts.
+---
+
 # Using Eko in Browser Extensions
 
 Before diving into browser extension specifics, we recommend completing the [Quick Start Guide](quickstart.md) first. The core concepts of workflows and tools introduced there are essential for understanding how Eko operates in a browser extension environment.

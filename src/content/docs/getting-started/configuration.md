@@ -1,3 +1,8 @@
+---
+title: Configuration
+description: This guide covers how to configure Eko in different environments.
+---
+
 # Configuration
 
 This guide covers how to configure Eko in different environments.

@@ -1,3 +1,8 @@
+---
+title: Quick Start Guide
+description: This guide will walk you through creating your first Eko workflow in a Node.js environment.
+---
+
 # Quick Start Guide
 
 This guide will walk you through creating your first Eko workflow in a Node.js environment. While Eko also offers powerful browser automation capabilities (which we'll explore in the [Browser Extension Guide](browser-extension.md)), starting with Node.js provides the clearest introduction to core concepts.
