@@ -8,14 +8,14 @@ export default defineConfig({
 		starlight({
 			title: 'Eko Docs',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/FellouAI/eko',
 			},
 			sidebar: [
 				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'getting-started/quickstart' },
+						{ label: 'Quickstart', slug: 'getting-started/quickstart' },
 					],
 				},
 				{
