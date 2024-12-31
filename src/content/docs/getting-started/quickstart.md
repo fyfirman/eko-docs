@@ -84,7 +84,7 @@ When you inspect `workflow.json`, you'll see how Eko has broken down your task:
 }
 ```
 
-When executing this workflow, Eko first plans the entire task by breaking it into subtasks (like listing files and saving output), then executes each subtask by having the language model decide which tool operations to perform. You can learn more about this process in our [Two-Layer Execution Model](../core-concepts/execution-model.md) guide.
+When executing this workflow, Eko first plans the entire task by breaking it into subtasks (like listing files and saving output), then executes each subtask by having the language model decide which tool operations to perform. You can learn more about this process in our [Two-Layer Execution Model](../core-concepts/execution-model) guide.
 
 ## Workflow Hooks
 
@@ -246,7 +246,7 @@ The workflow concepts you've learned here - breaking down tasks, tool selection,
 
 Now that you understand the basics, you can:
 
-- Learn about the [Two-Layer Execution Model](../core-concepts/execution-model.md) in depth
+- Learn about the [Two-Layer Execution Model](../core-concepts/execution-model) in depth
 - Explore browser automation in the [Browser Extension Guide](browser-extension)
-- Discover more about [available tools](../guides/tools/index.md)
-- Study the [workflow DSL](../guides/workflow/index.md)
+- Discover more about [Available tools](../guides/tools/index)
+- Study the [Workflow DSL](../guides/workflow/index)
