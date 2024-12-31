@@ -1,5 +1,18 @@
 # Eko docs
 
+## What is Eko?
+
+Eko is an agent development framework that enables programmatic control of browsers and operating systems through a combination of natural language and traditional programming interfaces. At its core, Eko provides:
+
+1. A workflow system for orchestrating complex sequences of actions
+2. A tool abstraction layer that unifies access to browser/OS capabilities
+3. Integration with Large Language Models for task planning and execution
+4. Programming interface for agent behavior inspection and control
+
+The framework is particularly focused on bridging the gap between natural language task descriptions and concrete system actions through a structured approach.
+
+Learn more: [Eko Docs](https://eko.fellou.ai/docs).
+
 ## 🚀 Project Structure
 
 Inside of your Eko docs project, you'll see the following folders and files:
@@ -36,7 +49,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
