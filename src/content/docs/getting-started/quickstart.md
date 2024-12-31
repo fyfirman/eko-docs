@@ -3,7 +3,7 @@ title: Quick Start Guide
 description: This guide will walk you through creating your first Eko workflow in a Node.js environment.
 ---
 
-This guide will walk you through creating your first Eko workflow in a Node.js environment. While Eko also offers powerful browser automation capabilities (which we'll explore in the [Browser Extension Guide](browser-extension.md)), starting with Node.js provides the clearest introduction to core concepts.
+This guide will walk you through creating your first Eko workflow in a Node.js environment. While Eko also offers powerful browser automation capabilities (which we'll explore in the [Browser Extension Guide](browser-extension)), starting with Node.js provides the clearest introduction to core concepts.
 
 ## Setting Up Your Environment
 
@@ -232,7 +232,7 @@ The generated workflow will now include an additional formatting step:
 
 ## Beyond File Operations
 
-While this example demonstrates core concepts using simple file operations, Eko's capabilities extend far beyond this. In the [Browser Extension Guide](browser-extension.md), you'll discover how to use these same principles with Eko's rich set of browser automation tools to:
+While this example demonstrates core concepts using simple file operations, Eko's capabilities extend far beyond this. In the [Browser Extension Guide](browser-extension), you'll discover how to use these same principles with Eko's rich set of browser automation tools to:
 
 - Control web navigation
 - Interact with page elements
@@ -247,6 +247,6 @@ The workflow concepts you've learned here - breaking down tasks, tool selection,
 Now that you understand the basics, you can:
 
 - Learn about the [Two-Layer Execution Model](../core-concepts/execution-model.md) in depth
-- Explore browser automation in the [Browser Extension Guide](browser-extension.md)
+- Explore browser automation in the [Browser Extension Guide](browser-extension)
 - Discover more about [available tools](../guides/tools/index.md)
 - Study the [workflow DSL](../guides/workflow/index.md)
