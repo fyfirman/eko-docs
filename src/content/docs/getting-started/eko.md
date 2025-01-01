@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Eko
+title: Eko Overview
 description: Eko is an agent development framework that enables programmatic control of browsers and operating systems through a combination of natural language and traditional programming interfaces.
 ---
 
