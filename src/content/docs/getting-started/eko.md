@@ -60,7 +60,7 @@ Empowering language to transform human words into action.
 - **Comprehensive Tooling**: Rich built-in tools for browser automation, computer control, file operations, and web interactions
 - **Hybrid Drive System:** Combine LLM capabilities with developer control, enabling "human in the loop" and allowing interference at multiple levels of granularity.
 - **Event-Driven Automation:** Trigger workflows based on browser or system events
-- **Environment Flexibility**: Work across different environments ( [Browser Extensions](), [Web](), [Node.js](), [Fellou]() ) with consistent APIs
+- **Environment Flexibility**: Work across different environments ( [Browser Extensions](), [Web](), [Node.js](), [Next-Gen AI Browser Fellou]() ) with consistent APIs
 
 ## Documentation Roadmap
 
