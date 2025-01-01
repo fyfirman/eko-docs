@@ -11,7 +11,7 @@ This guide demonstrates how to use Eko's browser automation capabilities in a Ch
 
 When used in a browser extension, Eko provides three main categories of tools that work together to enable browser automation:
 
-### Browser Control Tools
+### Browse Use Tools
 
 These tools interact with the browser itself through Chrome's extension APIs:
 
@@ -240,7 +240,7 @@ This workflow demonstrates how Eko:
 1. Breaks down a complex task into discrete steps
 2. Selects appropriate tools for each action
 3. Manages dependencies between steps
-4. Handles both browser control and data processing
+4. Handles both Browse use and data processing
 
 The execution is coordinated across multiple contexts:
 
