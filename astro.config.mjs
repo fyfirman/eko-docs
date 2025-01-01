@@ -36,19 +36,13 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Use case',
-					items: [
-						{ label: 'Node.js', slug: 'getting-started/browser-extension' },
-						{ label: 'Fellou', slug: 'getting-started/browser-extension' },
-					],
-				},
-				{
 					label: 'Tools',
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Overview', slug: 'getting-started/eko' },
 						{ label: 'Available tools', slug: 'getting-started/eko' },
 						{ label: 'Custom tools', slug: 'getting-started/eko' },
+						{ label: 'Tools hook', slug: 'getting-started/eko' },
 					],
 				},
 				{
@@ -57,7 +51,7 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Overview', slug: 'getting-started/eko' },
 						{ label: 'Two-Layer Execution Model', slug: 'getting-started/eko' },
-						{ label: 'Workflow DSL', slug: 'getting-started/eko' },
+						{ label: 'Workflow', slug: 'getting-started/eko' },
 						{ label: 'Human in the loop', slug: 'getting-started/eko' },
 						{ label: 'Web Extraction Technology', slug: 'getting-started/eko' },
 					],
