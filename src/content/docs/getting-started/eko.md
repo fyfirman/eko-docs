@@ -58,7 +58,7 @@ Empowering language to transform human words into action.
 - **Natural Language Programming**: Convert natural language task descriptions into executable workflows, making agent development more intuitive
 - **Two-Layer Execution Model**: Separate offline planning from online execution, making agent decisions more structured and explainable
 - **Comprehensive Tooling**: Rich built-in tools for browser automation, computer control, file operations, and web interactions
-- **Hybrid Drive System:** Combine LLM capabilities with developer control, enabling "human in the loop" and allowing interference at multiple levels of granularity.
+- **Hybrid Drive System:** Combine LLM capabilities with developer control, enabling "human in the loop" and allowing interference at multiple levels of granularity
 - **Event-Driven Automation:** Trigger workflows based on browser or system events
 - **Environment Flexibility**: Work across different environments ( [Browser Extensions](), [Web](), [Node.js](), [Next-Gen AI Browser Fellou]() ) with consistent APIs
 
