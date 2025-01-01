@@ -1,8 +1,6 @@
 ---
 title: Overview
-description: A reference page in my new Starlight docs site.
+description: A reference of eko api
 ---
 
-The API reference provides more detailed information about the usage of specific classes and functions, please access through the link below.
-
-eko: [Api Reference](../api/index.html)
+The API reference provides more detailed information about the usage of specific classes and functions, please access through the link: [API Reference](../api/index.html).
