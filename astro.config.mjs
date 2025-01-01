@@ -49,7 +49,7 @@ export default defineConfig({
 					label: 'Architecture',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Overview', slug: 'architecture/overview' },
+						{ label: 'Overview', slug: 'getting-started/eko' },
 						{ label: 'Two-Layer Execution Model', slug: 'getting-started/eko' },
 						{ label: 'Workflow', slug: 'getting-started/eko' },
 						{ label: 'Callback system', slug: 'getting-started/eko' },
@@ -58,7 +58,9 @@ export default defineConfig({
 				},
 				{
 					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					items: [
+						{ label: 'Overview', slug: 'reference/overview' }
+					]
 				},
 				{
 					label: 'Release',
