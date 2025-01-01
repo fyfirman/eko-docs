@@ -25,24 +25,24 @@ export default defineConfig({
 					label: 'Browser use',
 					items: [
 						{ label: 'Browser Extension', slug: 'getting-started/browser-extension' },
-						{ label: 'Web', slug: 'getting-started/browser-extension' },
+						{ label: 'Web', slug: 'getting-started/browser-web' },
 					],
 				},
 				{
 					label: 'Computer use',
 					items: [
-						{ label: 'Node.js', slug: 'getting-started/browser-extension' }, // headless browser, MCP, Computer use
-						{ label: 'Fellou', slug: 'getting-started/browser-extension' },
+						{ label: 'Node.js', slug: 'getting-started/computer-node' }, // headless browser, MCP, Computer use
+						{ label: 'Fellou', slug: 'getting-started/computer-fellou' },
 					],
 				},
 				{
 					label: 'Tools',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Overview', slug: 'getting-started/eko' },
-						{ label: 'Available tools', slug: 'getting-started/eko' },
-						{ label: 'Custom tools', slug: 'getting-started/eko' },
-						{ label: 'Tools hook', slug: 'getting-started/eko' },
+						{ label: 'Overview', slug: 'tools/overview' },
+						{ label: 'Available tools', slug: 'tools/available' },
+						{ label: 'Custom tools', slug: 'tools/custom' },
+						{ label: 'Tools hook', slug: 'tools/callback' },
 					],
 				},
 				{
@@ -52,8 +52,8 @@ export default defineConfig({
 						{ label: 'Overview', slug: 'getting-started/eko' },
 						{ label: 'Two-Layer Execution Model', slug: 'getting-started/eko' },
 						{ label: 'Workflow', slug: 'getting-started/eko' },
-						{ label: 'Callback system', slug: 'getting-started/eko' },
-						{ label: 'Web Extraction Technology', slug: 'getting-started/eko' },
+						{ label: 'Callback system', slug: 'architecture/callback-system' },
+						{ label: 'Web Extraction Technology', slug: 'architecture/web-extraction' },
 					],
 				},
 				{

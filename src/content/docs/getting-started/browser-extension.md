@@ -57,7 +57,7 @@ These tools interact with web page content through the content script interface:
 - Scrolling and navigation
 - Extracting content
 
-The `ComputerWeb` tool provides mouse and keyboard control capabilities. For example, clicking a button:
+The `BrowserUse` tool provides mouse and keyboard control capabilities. For example, clicking a button:
 
 ```typescript
 // When generating a workflow that needs to click something:
@@ -66,7 +66,7 @@ const workflow = await eko.generateWorkflow(
 );
 ```
 
-This gets translated into precise coordinates and actions:
+This will be converted into an executable action:
 
 ```json
 {
@@ -76,10 +76,10 @@ This gets translated into precise coordinates and actions:
       "action": {
         "type": "script",
         "name": "clickElement",
-        "tools": ["computer_web"],
+        "tools": ["browser_use"],
         "input": {
-          "action": "mouse_move",
-          "coordinate": [100, 200] // Coordinates determined by computer vision
+          "action": "click",
+          "index": 12 // index of element
         }
       }
     },
@@ -89,9 +89,9 @@ This gets translated into precise coordinates and actions:
       "action": {
         "type": "script",
         "name": "typeText",
-        "tools": ["computer_web"],
+        "tools": ["browser_use"],
         "input": {
-          "action": "type",
+          "action": "input_text",
           "text": "Chromium"
         }
       }
@@ -118,13 +118,15 @@ Let's look at a complete example that combines these capabilities. We'll create 
 3. Extracts and saves their information
 
 ```typescript
-import { Eko } from "ekoai";
-import { getLLMConfig } from "ekoai/extension";
+import { Eko } from "@eko-ai/eko";
+import { tools, getLLMConfig } from "@eko-ai/eko/extension";
 
 async function searchDevelopers() {
   // Get configuration from extension storage
   const config = await getLLMConfig();
   const eko = new Eko(config);
+
+  eko.registerTool(new tools.BorwserUse());
 
   // Generate workflow from natural language description
   // Eko will automatically select and sequence the appropriate tools
@@ -137,16 +139,8 @@ async function searchDevelopers() {
     4. Save all collected data to a CSV file
   `);
 
-  // Execute with progress monitoring
-  await eko.executeWorkflow(workflow, {
-    hooks: {
-      // Monitor execution progress
-      beforeNodeExecution: async (node) => {
-        console.log(`Executing: ${node.name}`);
-        return true;
-      },
-    },
-  });
+  // Execute
+  await eko.execute(workflow);
 }
 ```
 
@@ -173,7 +167,7 @@ Let's examine the workflow Eko generates for this task:
       "action": {
         "type": "script",
         "name": "searchDevelopers",
-        "tools": ["computer_web"],
+        "tools": ["browser_use"],
         "input": {
           "steps": [
             {
@@ -247,9 +241,3 @@ The execution is coordinated across multiple contexts:
 - Background script: Manages workflow execution
 - Content script: Handles page interactions
 - Browser APIs: Controls tabs and windows
-
-## Next Steps
-
-- Learn about [computer control capabilities](../guides/tools/computer-tools)
-- Explore the [example extension project](https://github.com/FellouAI/eko-chromium-extension)
-- Study [workflow patterns](../guides/workflow/patterns)
