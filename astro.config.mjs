@@ -49,10 +49,10 @@ export default defineConfig({
 					label: 'Architecture',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Overview', slug: 'getting-started/eko' },
+						{ label: 'Overview', slug: 'architecture/overview' },
 						{ label: 'Two-Layer Execution Model', slug: 'getting-started/eko' },
 						{ label: 'Workflow', slug: 'getting-started/eko' },
-						{ label: 'Human in the loop', slug: 'getting-started/eko' },
+						{ label: 'Callback system', slug: 'getting-started/eko' },
 						{ label: 'Web Extraction Technology', slug: 'getting-started/eko' },
 					],
 				},
