@@ -1,0 +1,205 @@
+<svg viewBox="288 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+    <!-- Define arrow markers -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7"
+            refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#3f5787" />
+        </marker>
+        <!-- Vertical arrow marker needs different refX to align properly -->
+        <marker id="arrowhead-vertical" markerWidth="10" markerHeight="7"
+            refX="3.5" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#3f5787" />
+        </marker>
+        <marker id="arrowhead-vertical-small" markerWidth="7" markerHeight="5"
+            refX="2.5" refY="2.5" orient="auto">
+            <polygon points="0 0, 7 2.5, 0 5" fill="#3f5787" />
+        </marker>
+    </defs>
+
+    <!-- Background sections -->
+    <rect x="529" y="0" width="587" height="180" fill="#ffe2cc" />
+    <rect x="1120" y="0" width="270" height="180" fill="#f9ddf8" />
+    <rect x="529" y="240" width="861" height="242" fill="#c7fcf4" />
+
+    <!-- White boxes -->
+    <rect x="550" y="65" width="548" height="88" fill="#fff" />
+    <rect x="1130" y="64" width="231" height="88" fill="#fff" />
+
+    <!-- Task boxes -->
+    <rect x="590" y="292" width="195" height="135" fill="#fff">
+        <animate
+            attributeName="fill"
+            values="#ffffff;#ffffd0;#ffffd0;#f0fff0;#f0fff0;#ffffff"
+            keyTimes="0;0.0625;0.245;0.25;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </rect>
+    <rect x="850" y="292" width="195" height="135" fill="#fff">
+        <animate
+            attributeName="fill"
+            values="#ffffff;#ffffff;#ffffd0;#ffffd0;#f0fff0;#f0fff0;#ffffff"
+            keyTimes="0;0.25;0.3125;0.62;0.625;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </rect>
+    <rect x="1120" y="292" width="195" height="135" fill="#fff">
+        <animate
+            attributeName="fill"
+            values="#ffffff;#ffffff;#ffffd0;#ffffd0;#f0fff0;#f0fff0;#ffffff"
+            keyTimes="0;0.625;0.6875;0.9325;0.9375;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </rect>
+
+    <!-- Text labels -->
+    <text x="550" y="40" font-family="Roboto" font-size="35" fill="#b56f3a">Task description</text>
+    <text x="1136" y="40" font-family="Roboto" font-size="35" fill="#b56f3a">Toolkit</text>
+    <text x="545" y="274" font-family="Roboto" font-size="35" fill="#137264">Workflow consisting of subtasks</text>
+    <text x="545" y="620" font-family="Roboto" font-size="35" fill="#3f5787">Tool calls</text>
+    <text x="562" y="106" font-family="Roboto" font-size="20">"Place the elephant into the fridge"</text>
+    <text x="288" y="220" font-family="Open Sans" font-size="35">eko.generate</text>
+    <text x="288" y="540" font-family="Open Sans" font-size="35">eko.execute</text>
+
+    <!-- Subtask labels -->
+    <text x="609" y="328" font-family="Roboto" font-size="20">Open fridge door</text>
+    <text x="881" y="326" font-family="Roboto" font-size="20">Push elephant</text>
+    <text x="1142" y="321" font-family="Roboto" font-size="20">Close fridge door</text>
+
+    <!-- Toolkit labels -->
+    <text x="1170" y="84" font-family="Roboto" font-size="20">Move hand</text>
+    <text x="1170" y="114" font-family="Roboto" font-size="20">Door use</text>
+    <text x="1170" y="144" font-family="Roboto" font-size="20">Exert force</text>
+
+    <!-- Toolkit action circles -->
+    <circle cx="1154" cy="77" r="11" fill="#f56565" />
+    <circle cx="1154" cy="107" r="11" fill="#a9e7a3" />
+    <circle cx="1154" cy="138" r="11" fill="#f2c975" />
+
+    <!-- Tools available circles -->
+    <circle cx="626" cy="382" r="11" fill="#f56565" />
+    <circle cx="658" cy="382" r="11" fill="#a9e7a3" />
+    <circle cx="889" cy="382" r="11" fill="#f56565" />
+    <circle cx="919" cy="382" r="11" fill="#f2c975" />
+    <circle cx="1154" cy="382" r="11" fill="#f56565" />
+    <circle cx="1182" cy="382" r="11" fill="#a9e7a3" />
+
+    <!-- Tool call circles -->
+    <circle cx="686" cy="500" r="11" fill="#f56565">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.0625;0.125;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </circle>
+    <circle cx="686" cy="555" r="11" fill="#a9e7a3">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.1875;0.25;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </circle>
+    <circle cx="946" cy="500" r="11" fill="#f56565" >
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.3125;0.375;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </circle>
+    <circle cx="946" cy="555" r="11" fill="#f2c975">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.4375;0.5;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </circle>
+    <circle cx="946" cy="610" r="11" fill="#f56565">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.5625;0.625;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </circle>
+    <circle cx="1228" cy="500" r="11" fill="#f56565">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.6875;0.75;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </circle>
+    <circle cx="1228" cy="555" r="11" fill="#a9e7a3">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.8125;0.875;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </circle>
+
+    <!-- Horizontal connection arrows -->
+    <line x1="786" y1="360" x2="840" y2="360" stroke="#3f5787" stroke-width="3"
+        marker-end="url(#arrowhead)" />
+    <line x1="1052" y1="360" x2="1106" y2="360" stroke="#3f5787" stroke-width="3"
+        marker-end="url(#arrowhead)" />
+
+    <!-- Vertical connector from task to execution -->
+    <line x1="946" y1="181" x2="946" y2="220" stroke="#3f5787" stroke-width="3"
+        marker-end="url(#arrowhead-vertical)" />
+
+    <!-- Vertical connection arrows in final state -->
+    <line x1="686" y1="510" x2="686" y2="530" stroke="#3f5787" stroke-width="3"
+        marker-end="url(#arrowhead-vertical-small)">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.125;0.1875;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </line>
+    <line x1="946" y1="510" x2="946" y2="530" stroke="#3f5787" stroke-width="3"
+        marker-end="url(#arrowhead-vertical-small)">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.375;0.4375;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </line>
+    <line x1="946" y1="565" x2="946" y2="585" stroke="#3f5787" stroke-width="3"
+        marker-end="url(#arrowhead-vertical-small)">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.5;0.5625;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </line>
+    <line x1="1228" y1="510" x2="1228" y2="530" stroke="#3f5787" stroke-width="3"
+        marker-end="url(#arrowhead-vertical-small)">
+        <animate
+            attributeName="opacity"
+            values="0;0;1;1;0"
+            keyTimes="0;0.75;0.8275;0.99;1"
+            dur="16s"
+            repeatCount="indefinite"
+        />
+    </line>
+</svg>
