@@ -31,7 +31,7 @@ export default defineConfig({
 				{
 					label: 'Computer use',
 					items: [
-						{ label: 'Node.js', slug: 'getting-started/browser-extension' },
+						{ label: 'Node.js', slug: 'getting-started/browser-extension' }, // headless browser, MCP, Computer use
 						{ label: 'Fellou', slug: 'getting-started/browser-extension' },
 					],
 				},
