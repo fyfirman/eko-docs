@@ -99,14 +99,4 @@ async function example() {
 
 ## Fellou Computer Use API Refrerence
 
-```typescript
-import { Eko } from "@eko-ai/eko";
-import { Fellou } from "@eko-ai/eko/Fellou";
-
-async function example() {
-    await Fellou.computer.screenshot();
-    await Fellou.computer.mouse_move([200, 400]);
-    await Fellou.computer.left_click();
-    await Fellou.computer.type("Elon Musk");
-}
-```
+See in [Tools - Available Tools - Fellou - Computeruse](/docs/tools/available#computeruse).
