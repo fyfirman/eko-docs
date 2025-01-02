@@ -26,9 +26,15 @@ In short, `computer use` makes [Fellou](https://fellou.ai) a true personal AI as
 1. **JavaScript + Natural Language**: Write workflows in JavaScript or use natural language to generate code, making it accessible to everyone.  
 2. **Dual Environment Support**: In [Fellou](https://fellou.ai), eko supports both `browseruse` and `computeruse` capabilities in browser plugins and web environments. This contrasts with other browsers like Chrome, where eko can only enable `browseruse` in browser plugins, and web environments lack access to `browseruse`. This flexibility gives [Fellou](https://fellou.ai) a significant advantage, allowing seamless automation directly within the web environment.  
 3. **Built-in RPA with Accessibility (a11y)**: [Fellou](https://fellou.ai) leverages a11y features to provide native robotic process automation (RPA) capabilities. This allows users to automate complex tasks across web pages effortlessly, enhancing efficiency.  
-4. **Secure Web-to-Local Interaction**: With user authorization, the `computer use` capability enables web pages to securely access and interact with the user’s computer. This opens the door to advanced workflows while ensuring full control and safety for the user.  
+4. **Secure Web-to-Local Interaction**: With user authorization, the `computer use` capability enables web pages to securely access and interact with the user’s computer. This opens the door to advanced workflows while ensuring full control and safety for the user.
 
-At its core, eko provides a unified abstraction and execution environment, enabling [Fellou](https://fellou.ai) to seamlessly perform tasks both within the browser and on local systems. Combined with [Fellou](https://fellou.ai)’s built-in RPA and secure access features, this makes it a comprehensive solution for automating and enhancing productivity.  
+ <div style="position:absolute;;margin-top:-90px;margin-left:760px">
+    <img src="https://fellou.s3.us-west-1.amazonaws.com/images/images/home/user-approve-img-da-new-1.svg" alt="User grant computer use access" />
+</div>
+
+<p>
+At its core, eko provides a unified abstraction and execution environment, enabling Fellou to seamlessly perform tasks both within the browser and on local systems. Combined with Fellou’s built-in RPA and secure access features, this makes it a comprehensive solution for automating and enhancing productivity.
+</p>
 
 ---
 
