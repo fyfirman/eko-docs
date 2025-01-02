@@ -25,15 +25,15 @@ export default defineConfig({
 				{
 					label: 'Browser use',
 					items: [
-						{ label: 'Browser Extension', slug: 'getting-started/browser-extension' },
-						{ label: 'Web', slug: 'getting-started/browser-web' },
+						{ label: 'Browser Extension', slug: 'browseruse/browser-extension' },
+						{ label: 'Web', slug: 'browseruse/browser-web' },
 					],
 				},
 				{
 					label: 'Computer use',
 					items: [
-						{ label: 'Node.js', slug: 'getting-started/computer-node' }, // headless browser, MCP, Computer use
-						{ label: 'Fellou', slug: 'getting-started/computer-fellou' },
+						{ label: 'Node.js', slug: 'computeruse/computer-node' }, // headless browser, MCP, Computer use
+						{ label: 'Fellou', slug: 'computeruse/computer-fellou' },
 					],
 				},
 				{
