@@ -80,12 +80,12 @@ async function example() {
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
-import { [Fellou](https://fellou.ai) } from "@eko-ai/eko/[Fellou](https://fellou.ai)";
+import { Fellou } from "@eko-ai/eko/Fellou";
 
 async function example() {
-    await [Fellou](https://fellou.ai).computer.screenshot();
-    await [Fellou](https://fellou.ai).computer.mouse_move([200, 400]);
-    await [Fellou](https://fellou.ai).computer.left_click();
-    await [Fellou](https://fellou.ai).computer.type("Elon Musk");
+    await Fellou.computer.screenshot();
+    await Fellou.computer.mouse_move([200, 400]);
+    await Fellou.computer.left_click();
+    await Fellou.computer.type("Elon Musk");
 }
 ```
