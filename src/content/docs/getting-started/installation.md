@@ -3,7 +3,36 @@ title: Installation
 description: Eko is a JavaScript library that can be used in Node.js applications, web pages, and browser extensions. This guide covers installation and setup for different environments.
 ---
 
-Eko is a JavaScript library that can be used in Node.js applications, web pages, and browser extensions. This guide covers installation and setup for different environments.
+Eko is a JavaScript library that can be used in [**Browser Extensions (Chromium-Based browser only)**](/docs/getting-started/installation#browser-extension-development), [**Node.js Enviroment**](http://localhost:4321/docs/getting-started/installation#nodejs-environment), and [**Web Enviroment**](http://localhost:4321/docs/getting-started/installation#web-environment). This guide covers installation and setup for different environments.
+
+## Browser Extension Development
+
+When building a browser extension that uses Eko, you'll need to:
+
+1. Add Eko as a dependency in your extension project:
+
+   ```bash
+   npm install @eko-ai/eko
+   ```
+
+2. Configure your bundler (e.g., webpack) to include Eko in your extension bundle.
+
+### Example: Extension Project Structure
+
+```
+extension/
+├── src/
+│   ├── background/
+│   │   └── index.ts        # Use Eko here
+│   ├── content/
+│   │   └── index.ts        # And/or here
+│   └── popup/
+│       └── index.ts
+├── package.json
+└── webpack.config.js       # Configure bundling
+```
+
+For a complete example of using Eko in a browser extension, check out our [example extension project](https://github.com/FellouAI/eko-chromium-extension).
 
 ## Node.js Environment
 
@@ -66,34 +95,6 @@ For web pages, you can include Eko using a module bundler like webpack or use it
 
 Coming soon: CDN distribution for direct browser usage.
 
-## Browser Extension Development
-
-When building a browser extension that uses Eko, you'll need to:
-
-1. Add Eko as a dependency in your extension project:
-
-   ```bash
-   npm install @eko-ai/eko
-   ```
-
-2. Configure your bundler (e.g., webpack) to include Eko in your extension bundle.
-
-### Example: Extension Project Structure
-
-```
-extension/
-├── src/
-│   ├── background/
-│   │   └── index.ts        # Use Eko here
-│   ├── content/
-│   │   └── index.ts        # And/or here
-│   └── popup/
-│       └── index.ts
-├── package.json
-└── webpack.config.js       # Configure bundling
-```
-
-For a complete example of using Eko in a browser extension, check out our [example extension project](https://github.com/FellouAI/eko-chromium-extension).
 
 ## Verify Installation
 

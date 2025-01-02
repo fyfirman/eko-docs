@@ -19,6 +19,7 @@ export default defineConfig({
 						{ label: 'Quickstart', slug: 'getting-started/quickstart' },
 						{ label: 'Installation', slug: 'getting-started/installation' },
 						{ label: 'Configuration', slug: 'getting-started/configuration' },
+						{ label: 'Dive deep into Eko', slug: 'getting-started/dive-deep' },
 					],
 				},
 				{
