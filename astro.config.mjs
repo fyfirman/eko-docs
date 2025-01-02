@@ -42,7 +42,7 @@ export default defineConfig({
 						{ label: 'Overview', slug: 'tools/overview' },
 						{ label: 'Available tools', slug: 'tools/available' },
 						{ label: 'Custom tools', slug: 'tools/custom' },
-						{ label: 'Tools hook', slug: 'tools/callback' },
+						{ label: 'Tools hook', slug: 'tools/hook' },
 					],
 				},
 				{

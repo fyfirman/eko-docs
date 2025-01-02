@@ -14,8 +14,8 @@ eko provides various built-in tools for different environments including:
 Initialize the context:
 ```typescript
 import { ClaudeProvider } from "@eko-ai/eko";
-import { ExecutionContext, Tool } from "@eko-ai/eko/types";
 import { tools } from "@eko-ai/eko/extension";
+import { ExecutionContext } from "@eko-ai/eko/types";
 
 // Context provides LLM model inference and data storage capabilities
 let context: ExecutionContext = {
@@ -163,7 +163,9 @@ pending completion...
 `computer_use`: Use a mouse and keyboard to interact with a computer, and take screenshots.
 
 ```typescript
-let tool = new tools.BrowserUse();
+import { BrowserUse } from "@eko-ai/eko/fellou";
+
+let tool = new BrowserUse();
 let result = await tool.execute(content, {
     action: 'left_click', // the action to perform
     coordinate: [200, 400], // Coordinate position, eg: [x, y].
