@@ -49,25 +49,6 @@ const eko = new Eko({
 
 ## Environment-Specific Configuration
 
-### Node.js Environment
-
-Using environment variables is recommended:
-
-```typescript
-// .env file
-ANTHROPIC_API_KEY = your_api_key_here;
-
-// Your code
-import dotenv from "dotenv";
-import { Eko } from "@eko-ai/eko";
-
-dotenv.config();
-
-const eko = new Eko({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-});
-```
-
 ### Browser Extension Environment
 
 Store configuration in extension storage:
@@ -87,6 +68,25 @@ import { getLLMConfig } from "@eko-ai/eko/extension";
 
 const config = await getLLMConfig();
 const eko = new Eko(config);
+```
+
+### Node.js Environment
+
+Using environment variables is recommended:
+
+```typescript
+// .env file
+ANTHROPIC_API_KEY = your_api_key_here;
+
+// Your code
+import dotenv from "dotenv";
+import { Eko } from "@eko-ai/eko";
+
+dotenv.config();
+
+const eko = new Eko({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
 ```
 
 ## Workflow Configuration
