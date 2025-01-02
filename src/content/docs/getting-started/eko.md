@@ -33,17 +33,11 @@ The framework is particularly focused on bridging the gap between natural langua
 We believe that Agents are transitioning from being able to answer anything to being able to do anything, making action crucial.
 
 ### Eko Mission
-
-Build Agent Workflows Easily with Natural Language.
-
-[Mission Placeholder]
+ Bridge human and AI through natural language programming.
 
 
 ### Eko Vision
-
-Empowering language to transform human words into action.
-
-[Vision Placeholder]
+The first, most natural programming language for all.
 
 
 ## Design Philosophy
