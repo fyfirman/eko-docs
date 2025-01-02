@@ -97,6 +97,6 @@ async function example() {
 }
 ```
 
-## Fellou Computer Use API Refrerence
+## Fellou Computer Use Tool Refrerence
 
 See in [Tools - Available Tools - Fellou - Computeruse](/docs/tools/available#computeruse).
