@@ -48,15 +48,36 @@ With `computer use`, [Fellou](https://fellou.ai) creates a seamless productivity
 
 ---
 
-## Example: Real-Time Web Data Integration
+## Example: Simple Real-Time Web Data Integration
 
-- **Scenario:** A user wants to combine web and local data for reporting.
-- **How it works**:
-    1. Use browseruse to scrape real-time data from a website (e.g., stock prices or weather data).
-    2. Use computeruse to fetch complementary local data (e.g., budgets or past records).
-    3. Merge the data and generate a report in a preferred format.
+#### **Scenario**:  
+A user wants to combine real-time weather data with their local calendar events to automatically suggest appropriate attire for the day.  
 
-### Execute via Eko
+#### **Step-by-Step Workflow**:
+
+1. **Fetch Real-Time Web Data (Weather)**:  
+   - Use `browseruse` in Fellou to access a weather website like Weather.com or a weather API.  
+   - Scrape or pull the current temperature and weather conditions (e.g., sunny, rainy, etc.) for the user’s location.  
+
+2. **Retrieve Local Calendar Events**:  
+   - Use `computeruse` to access the user’s calendar (e.g., Google Calendar or a local calendar app).  
+   - Retrieve events scheduled for the day, focusing on outdoor activities or meetings that might require specific clothing.  
+
+3. **Decision-Making for Attire Suggestion**:  
+   - Based on the weather data (e.g., "sunny and 75°F") and calendar events (e.g., "outdoor meeting at 3 PM"), use simple conditional logic to suggest clothing (e.g., "Wear a light jacket" or "No jacket needed, it's warm").  
+
+4. **Display the Suggestion**:  
+   - Show the clothing recommendation directly in the Fellou browser interface.  
+   - Alternatively, use a notification to alert the user about the attire suggestion for the day.
+
+#### **User Benefits**:  
+- **Quick and Simple**: Combines two simple data sources (weather and calendar) to give a personalized recommendation.  
+- **Convenient**: Saves users time by providing a ready-made suggestion based on current and future conditions.  
+- **Practical**: Useful for users who need to make quick decisions about their daily outfit based on weather and schedule.
+
+---
+
+### Implemention with Eko
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
