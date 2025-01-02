@@ -252,6 +252,6 @@ The workflow concepts you've learned here - breaking down tasks, tool selection,
 Now that you understand the basics, you can:
 
 - Learn about the [Two-Layer Execution Model](../core-concepts/execution-model) in depth
-- Explore browser automation in the [Browser Extension Guide](browser-extension)
+- Explore browser automation in the [Browser Extension Guide](/docs/browseruse/browser-extension)
 - Discover more about [Available tools](../tools/available)
 - Study the [Workflow](../core-concepts/workflow)
