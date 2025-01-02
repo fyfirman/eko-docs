@@ -11,14 +11,24 @@ eko provides various built-in tools for different environments including:
 
 ## Browser extension
 
+Initialize the context:
+```typescript
+import { ClaudeProvider } from "@eko-ai/eko";
+import { ExecutionContext, Tool } from "@eko-ai/eko/types";
+import { tools } from "@eko-ai/eko/extension";
+
+// Context provides LLM model inference and data storage capabilities
+let context: ExecutionContext = {
+    llmProvider: new ClaudeProvider('your apiKey'),
+    variables: new Map<string, unknown>()
+}
+```
+
 ### WebSearch
 `web_search`: Use web search to return search results
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.WebSearch();
-
 let result = await tool.execute(context, {
     query: 'Elon Musk',
     maxResults: 5
@@ -29,8 +39,6 @@ let result = await tool.execute(context, {
 `element_click`: Click the element through task prompts
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.ElementClick();
 let result = await tool.execute(context, {
     task_prompt: 'Click the search button',
@@ -41,8 +49,6 @@ let result = await tool.execute(context, {
 `find_element_position`: Locate Element Coordinates through Task Prompts
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.FindElementPosition();
 let result = await tool.execute(context, {
     task_prompt: 'Find the search input box'
@@ -53,8 +59,6 @@ let result = await tool.execute(context, {
 `open_url`: Open the specified URL link in browser window
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.OpenUrl();
 let result = await tool.execute(context, {
     url: 'https://www.google.com',
@@ -66,8 +70,6 @@ let result = await tool.execute(context, {
 `screenshot`: Screenshot the current webpage window
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.Screenshot();
 let result = await tool.execute(context, {});
 ```
@@ -76,8 +78,6 @@ let result = await tool.execute(context, {});
 `tab_management`: Browser tab management, view and operate tabs.
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.TabManagement();
 
 // open new tab
@@ -99,8 +99,6 @@ The commond to perform. The available commonds are:
 `extract_content`: Extract the text content of the current webpage
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.ExtractContent();
 let result = await tool.execute(context, {});
 ```
@@ -109,8 +107,6 @@ let result = await tool.execute(context, {});
 `export_file`: Content exported as a file, support text format
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.ExportFile();
 let result = await tool.execute(context, {
     fileType: "csv", // text/csv/md/json...
@@ -122,8 +118,6 @@ let result = await tool.execute(context, {
 `form_autofill`: Automatically fill in form data on web pages
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.FormAutofill();
 let result = await tool.execute(context, {});
 ```
@@ -132,8 +126,6 @@ let result = await tool.execute(context, {});
 `browser_use`: Use structured commands to interact with the browser, manipulating page elements through screenshots and webpage element extraction.
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.BrowserUse();
 let result = await tool.execute(content, {
     action: 'screenshot_extract_element', // the action to perform
@@ -171,8 +163,6 @@ pending completion...
 `computer_use`: Use a mouse and keyboard to interact with a computer, and take screenshots.
 
 ```typescript
-import { tools } from "@eko-ai/eko/extension";
-
 let tool = new tools.BrowserUse();
 let result = await tool.execute(content, {
     action: 'left_click', // the action to perform

@@ -8,18 +8,21 @@ The Fellou browser natively supports Computer use capability, but this feature i
 ## Invoke programmatically
 ```typescript
 import { Eko } from "@eko-ai/eko";
+import { fellou } from "@eko-ai/eko/fellou";
 
 async function example() {
-    await Eko.fellou.screenshot();
-    await Eko.fellou.mouse_move([200, 400]);
-    await Eko.fellou.left_click();
-    await Eko.fellou.type("Elon Musk");
+    await fellou.computer.screenshot();
+    await fellou.computer.mouse_move([200, 400]);
+    await fellou.computer.left_click();
+    await fellou.computer.type("Elon Musk");
 }
 ```
 
 ## Execute via Eko workflow
 ```typescript
 import { Eko } from "@eko-ai/eko";
+import { ExportFile } from "@eko-ai/eko/web";
+import { ComputerUse } from "@eko-ai/eko/fellou";
 
 async function example() {
     let eko = new Eko(config);
@@ -30,6 +33,6 @@ async function example() {
     const workflow = await eko.generateWorkflow(`
         Open Google search for information about Musk and export it as an md file.
     `);
-    await eko.execute(workflow);
+    await eko.executeWorkflow(workflow);
 }
 ```

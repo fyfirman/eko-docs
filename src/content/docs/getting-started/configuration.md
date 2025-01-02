@@ -10,7 +10,7 @@ This guide covers how to configure Eko in different environments.
 The most essential configuration is setting up your LLM (Large Language Model) access:
 
 ```typescript
-import { Eko } from "ekoai";
+import { Eko } from "@eko-ai/eko";
 
 // Simple configuration with just API key
 const eko = new Eko({
@@ -59,7 +59,7 @@ ANTHROPIC_API_KEY = your_api_key_here;
 
 // Your code
 import dotenv from "dotenv";
-import { Eko } from "ekoai";
+import { Eko } from "@eko-ai/eko";
 
 dotenv.config();
 
@@ -76,13 +76,14 @@ Store configuration in extension storage:
 // Save configuration
 await chrome.storage.sync.set({
   llmConfig: {
+    llm: "claude",
     apiKey: "your_api_key",
     modelName: "claude-3-5-sonnet-20241022",
   },
 });
 
 // Use configuration
-import { getLLMConfig } from "ekoai/extension";
+import { getLLMConfig } from "@eko-ai/eko/extension";
 
 const config = await getLLMConfig();
 const eko = new Eko(config);

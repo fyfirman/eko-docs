@@ -51,8 +51,8 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Overview', slug: 'core-concepts' },
 						{ label: 'Two-Layer Execution Model', slug: 'core-concepts/execution-model' },
-						{ label: 'Workflow', slug: 'getting-started/eko' },
-						{ label: 'Callback system', slug: 'architecture/callback-system' },
+						{ label: 'Workflow', slug: 'core-concepts/workflow' },
+						{ label: 'Hook system', slug: 'architecture/hook-system' },
 						{ label: 'Web Extraction Technology', slug: 'architecture/web-extraction' },
 					],
 				},
@@ -66,7 +66,7 @@ export default defineConfig({
 					label: 'Release',
 					items: [
 						{ label: 'Roadmap', slug: 'release/overview' },
-						{ label: 'Versions', slug: 'release/overview' },
+						{ label: 'Versions', slug: 'release/versions' },
 					]
 				},
 			],

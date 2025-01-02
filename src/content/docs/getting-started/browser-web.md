@@ -9,6 +9,7 @@ This guide demonstrates how to leverage Eko's browser automation capabilities in
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
+import { BorwserUse, ExportFile } from "@eko-ai/eko/web";
 
 async function test_case() {
   const eko = new Eko({
@@ -30,6 +31,6 @@ async function test_case() {
   `);
 
   // Execute
-  await eko.execute(workflow);
+  await eko.executeWorkflow(workflow);
 }
 ```

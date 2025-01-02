@@ -82,5 +82,5 @@ const workflow = await eko.generateWorkflow(
   "Search for information about Musk"
 );
 // execute workflow
-await eko.execute(workflow);
+await eko.executeWorkflow(workflow);
 ```

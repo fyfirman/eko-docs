@@ -140,7 +140,7 @@ async function searchDevelopers() {
   `);
 
   // Execute
-  await eko.execute(workflow);
+  await eko.executeWorkflow(workflow);
 }
 ```
 

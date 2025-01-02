@@ -109,7 +109,7 @@ class ExtractContent implements Tool {
 Tools must be registered with Eko's tool registry before they can be used:
 
 ```typescript
-import { ToolRegistry } from 'ekoai/core';
+import { ToolRegistry } from '@eko-ai/eko';
 
 const registry = new ToolRegistry();
 

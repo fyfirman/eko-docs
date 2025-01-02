@@ -61,10 +61,10 @@ const workflow = await eko.generate("Place the elephant into the fridge");
 console.log(workflow.subtasks);
 ```
 
-During execution (`eko.execute`), Eko brings the plan to life. It works through each subtask, dynamically generating and executing the necessary tool sequences. The execution phase can adapt to changing conditions while staying true to the overall plan.
+During execution (`eko.executeWorkflow`), Eko brings the plan to life. It works through each subtask, dynamically generating and executing the necessary tool sequences. The execution phase can adapt to changing conditions while staying true to the overall plan.
 
 ```typescript
-const result = await eko.execute(workflow, {
+const result = await eko.executeWorkflow(workflow, {
   onSubtask: (subtask, context) => {
     // Monitor execution progress
     console.log(`Executing ${subtask.name}`);

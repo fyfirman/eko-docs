@@ -15,13 +15,13 @@ Eko is a JavaScript library that can be used in Node.js applications, web pages,
 ### Install via npm
 
 ```bash
-npm install ekoai
+npm install @eko-ai/eko
 ```
 
 ### Install via yarn
 
 ```bash
-yarn add ekoai
+yarn add @eko-ai/eko
 ```
 
 ### TypeScript Configuration (Recommended)
@@ -54,12 +54,12 @@ For web pages, you can include Eko using a module bundler like webpack or use it
 1. Install the package:
 
    ```bash
-   npm install ekoai
+   npm install @eko-ai/eko
    ```
 
 2. Import in your code:
    ```javascript
-   import { Eko } from "ekoai";
+   import { Eko } from "@eko-ai/eko";
    ```
 
 ### Direct Browser Usage
@@ -73,7 +73,7 @@ When building a browser extension that uses Eko, you'll need to:
 1. Add Eko as a dependency in your extension project:
 
    ```bash
-   npm install ekoai
+   npm install @eko-ai/eko
    ```
 
 2. Configure your bundler (e.g., webpack) to include Eko in your extension bundle.
@@ -100,10 +100,10 @@ For a complete example of using Eko in a browser extension, check out our [examp
 Test your installation by creating a minimal example:
 
 ```typescript
-import { Eko } from "ekoai";
+import { Eko } from "@eko-ai/eko";
 
 async function test() {
-  const eko = new Eko("claude-3.5");
+  const eko = new Eko("apiKey");
   console.log("Eko initialized successfully");
 }
 

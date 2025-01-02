@@ -13,7 +13,7 @@ At its heart, Eko consists of three main layers:
 The framework core provides the fundamental workflow management capabilities:
 
 ```typescript
-import { Eko } from "ekoai";
+import { Eko } from "@eko-ai/eko";
 
 // Core remains consistent across environments
 const eko = new Eko({
@@ -55,11 +55,11 @@ Each environment provides its own set of tools optimized for that context:
 
 ```typescript
 // Browser extension tools
-import { tools } from "ekoai/extension";
+import { tools } from "@eko-ai/eko/extension";
 const { ComputerWeb, OpenUrl, TabManagement } = tools;
 
 // Node.js tools
-import { tools } from "ekoai/node";
+import { tools } from "@eko-ai/eko/nodejs";
 const { FileSystem, ProcessControl, NetworkAccess } = tools;
 ```
 

@@ -13,7 +13,7 @@ Let's start by creating a new project and installing Eko:
 mkdir eko-demo
 cd eko-demo
 npm init -y
-npm install ekoai
+npm install @eko-ai/eko
 ```
 
 You'll need an API key from Anthropic to use Claude, Eko's default language model. You can obtain one by visiting [Anthropic's API documentation](https://docs.anthropic.com/claude/reference/getting-started-with-the-api). Once you have your key, create a `.env` file in your project root:
@@ -27,7 +27,7 @@ ANTHROPIC_API_KEY=your_api_key_here
 Let's create a simple workflow that lists directory contents and saves them to a file:
 
 ```typescript
-import { Eko } from "ekoai";
+import { Eko } from "@eko-ai/eko";
 import dotenv from "dotenv";
 import fs from "fs/promises";
 
@@ -145,7 +145,7 @@ Output: { success: true }
 You can extend Eko's capabilities by adding custom tools. Here's an example that formats directory listings:
 
 ```typescript
-import { Tool, InputSchema } from "ekoai/types";
+import { Tool, InputSchema } from "@eko-ai/eko/types";
 
 class DirectoryFormatter implements Tool {
   name = "format_directory";
