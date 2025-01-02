@@ -5,7 +5,7 @@ description: Walk you through creating your first Eko workflow in a Node.js envi
 
 This guide will walk you through creating your first Eko workflow in a Node.js environment. While Eko also offers powerful browser automation capabilities (which we'll explore in the [Browser Extension Guide](browser-extension)), starting with Node.js provides the clearest introduction to core concepts:
 
-1. Hybird Programming diagram
+1. Build Agent Workflows Easily with Natural Language
 2. Workflow DSL
 2. Workflow Hooks
 3. Custom Tools
@@ -27,7 +27,7 @@ You'll need an API key from Anthropic to use Claude, Eko's default language mode
 ANTHROPIC_API_KEY=your_api_key_here
 ```
 
-## Your First Workflow
+## Build your first workflow with Natural Language
 
 Let's create a simple workflow that lists directory contents and saves them to a file:
 
