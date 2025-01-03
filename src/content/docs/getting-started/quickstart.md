@@ -106,4 +106,4 @@ Now that you have run the first workflow, you can:
 
 - Understand the [Installation](/docs/getting-started/installation.md) of Eko in different environments
 - Learn about Eko's [Configuration](/docs/getting-started/configuration.md) in different environments
-- Learn more core concepts of Eko: [Dive deep into Eko](/docs/getting-started/dive-deep.md)
+- Learn more core concepts of eko: [Dive deep into Eko](/docs/getting-started/dive-deep.md)

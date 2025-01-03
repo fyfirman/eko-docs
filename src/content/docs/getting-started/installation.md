@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Eko is a JavaScript library that can be used in Node.js applications, web pages, and browser extensions. This guide covers installation and setup for different environments.
+description: Eko is a JavaScript library that can be used in browser extensions, web pages, and node.js. This guide covers installation and setup for different environments.
 ---
 
 Eko is a JavaScript library that can be used in [**Browser Extensions (Chromium-Based browser only)**](/docs/getting-started/installation#browser-extension-development), [**Node.js Enviroment**](http://localhost:4321/docs/getting-started/installation#nodejs-environment), and [**Web Enviroment**](http://localhost:4321/docs/getting-started/installation#web-environment). This guide covers installation and setup for different environments.
@@ -9,13 +9,16 @@ Eko is a JavaScript library that can be used in [**Browser Extensions (Chromium-
 
 When building a browser extension that uses Eko, you'll need to:
 
-1. Add Eko as a dependency in your extension project:
+```bash
+# install cli (used to initialize browser extension projects)
+npm install @eko-ai/eko-cli -g
+# initialize project
+eko-cli init browser-extension-demo
 
-   ```bash
-   npm install @eko-ai/eko
-   ```
-
-2. Configure your bundler (e.g., webpack) to include Eko in your extension bundle.
+cd browser-extension-demo
+# install dependencies
+npm install
+```
 
 ### Example: Extension Project Structure
 
@@ -25,14 +28,14 @@ extension/
 │   ├── background/
 │   │   └── index.ts        # Use Eko here
 │   ├── content/
-│   │   └── index.ts        # And/or here
+│   │   └── index.ts
 │   └── popup/
 │       └── index.ts
 ├── package.json
 └── webpack.config.js       # Configure bundling
 ```
 
-For a complete example of using Eko in a browser extension, check out our [example extension project](https://github.com/FellouAI/eko-chromium-extension).
+For a complete example of using Eko in a browser extension, check out our [example extension project](https://github.com/FellouAI/eko-browser-extension).
 
 ## Node.js Environment
 
@@ -104,6 +107,7 @@ Test your installation by creating a minimal example:
 import { Eko } from "@eko-ai/eko";
 
 async function test() {
+  // default claude model
   const eko = new Eko("apiKey");
   console.log("Eko initialized successfully");
 }
