@@ -43,11 +43,11 @@ What sets Eko apart from standard tool-based agents is its offline planning phas
 
 Eko's planning phase creates an inspectable, modifiable plan before any execution begins. This has several key benefits:
 
-First, you can review and understand exactly how Eko intends to accomplish a task. The subtask decomposition and tool assignments are transparent and can be validated before execution begins. In our elephant example, you can verify that Eko hasn't forgotten crucial steps like opening the door first.
+First, you can **review and understand** exactly how Eko intends to accomplish a task. The subtask decomposition and tool assignments are transparent and can be validated before execution begins. In our elephant example, you can verify that Eko hasn't forgotten crucial steps like opening the door first.
 
-Second, the plan becomes a reusable artifact. Once Eko has figured out how to put an elephant in a fridge, that same task decomposition can be reused and adapted for similar situations. This leads to more efficient and reliable automation over time.
+Second, the plan becomes a **reusable artifact**. Once Eko has figured out how to put an elephant in a fridge, that same task decomposition can be reused and adapted for similar situations. This leads to more efficient and reliable automation over time.
 
-Third, the separation enables better error handling. When execution fails, Eko can attempt alternative tool sequences while keeping the overall plan intact. For instance, if one approach to pushing the elephant doesn't work, Eko can try different tool combinations without having to rethink the entire task.
+Third, the separation enables better **error handling**. When execution fails, Eko can attempt alternative tool sequences while keeping the overall plan intact. For instance, if one approach to pushing the elephant doesn't work, Eko can try different tool combinations without having to rethink the entire task.
 
 ## The Execution Flow
 
