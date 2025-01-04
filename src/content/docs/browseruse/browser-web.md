@@ -61,7 +61,7 @@ Eko Browser Use is a powerful automation tool that provides users, developers, a
 
 ```typescript
 import { Eko, ClaudeProvider } from "@eko-ai/eko";
-import { BorwserUse } from "@eko-ai/eko/web";
+import { tools } from "@eko-ai/eko/web";
 
 async function auto_test_case() {
   // Initialize LLM provider
@@ -77,7 +77,7 @@ async function auto_test_case() {
   // Initialize eko
   let eko = new Eko(llmProvider);
 
-  eko.registerTool(new BorwserUse());
+  eko.registerTool(new tools.BorwserUse());
 
   // Generate workflow from natural language description
   // Eko will automatically select and sequence the appropriate tools

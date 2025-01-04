@@ -3,9 +3,23 @@ title: Overview
 description: This guide introduces the built-in tools in eko and how to customize tools.
 ---
 
-While Eko provides powerful workflow capabilities, the actual execution work is carried out by one or more tools under each action. work together to accomplish complex operational tasks. Each tool plays a vital role, and the Eko framework comes with different built-in tools for various environments.
+## What are Tools?
 
-### definition
+In the Eko framework, Tools are reusable functional modules, just like various tools in a toolbox, each with specific functionality. For example:
+
+- Tools for sending HTTP requests
+- Tools for reading and writing files
+- Tools for processing data 
+- Tools for calling APIs
+
+## Why Use Tools
+
+### 1. Modular Design
+Tools are independent modules, with each Tool responsible for completing specific functionality. This design allows developers to break down complex workflows into simple, manageable steps. Through this modular approach, developers can reuse these tools across different projects, reduce code duplication, and improve development efficiency.
+
+### 2. Clear Interface Definition
+Each Tool follows a unified interface structure, including `name`, `description`, `input_schema` and `execute` methods. This consistency makes it easy for developers to understand and use different Tools without worrying about implementation details of each Tool. For example, aspects involving input data format and execution logic are standardized, reducing learning costs and error probability.
+
 ```typescript
 interface Tool<T, R> {
   name: string;
@@ -22,13 +36,110 @@ interface Tool<T, R> {
 
 • input_schema: A JSON-structured definition of the parameter T
 
+### 3. Extensibility
+In the Eko framework, Tools can be easily extended and replaced. If you find a Tool is not performing ideally in specific use cases, you can design a new Tool to replace the old version without making major modifications to the entire workflow. This flexibility maintains system stability and efficiency under changing requirements.
 
-### In eko using
+## Role of Tools in Workflow
+
+In the Eko framework, a Workflow is a process of sequential or parallel execution of multiple tasks combined from Tools. The main roles of Tools in Workflow are:
+
+1. **Task Division**: By dividing large tasks into several smaller Tools, with each Tool responsible for specific functionality, users can better understand the task structure and quickly locate and modify specific steps when necessary.
+
+2. **Parameter Management**: Each Tool defines its required input parameters (input_schema), ensuring correct data formats are passed during invocation, thus reducing runtime issues caused by parameter errors.
+
+3. **Execution Context**: Tools can access the ExecutionContext during execution, allowing developers to pass runtime information as needed for intelligent task execution.
+
+4. **Task Destruction**: For tools that need to clean up resources, Tools also provide an optional `destroy` method, allowing timely release of resources after task completion to maintain system cleanliness and efficiency.
+
+## Used in eko
+
+eko framework provides various built-in tools for different environments that can be used directly, and you can also customize tools to complete workflow tasks.
+
+### Built-in tools
+
+Here is a demonstration of the node.js environment
+
+```typescript
+import { Eko } from "@eko-ai/eko";
+import { tools } from "@eko-ai/eko/nodejs";
+
+let eko = new Eko("apiKey");
+
+// register tool
+eko.registerTool(new tools.CommandExecute());
+
+// Generate a workflow from natural language description
+const workflow = await eko.generateWorkflow(`
+  Clean up log files larger than 100M on the system
+`);
+
+// Execute the workflow
+await eko.executeWorkflow(workflow);
+```
+
+### Custom tools
 ```typescript
 import { Eko } from "@eko-ai/eko";
 
-let eko = new Eko(config);
+let eko = new Eko("apiKey");
 
 // register tool
-eko.registerTool(new ComputerUse());
+// Custom MyQueryOrderTool tool
+eko.registerTool(new MyQueryOrderTool());
+
+// Generate a workflow from natural language description
+const workflow = await eko.generateWorkflow(`
+  Get the unshipped orders of user ID 1000 within the last 3 days
+`);
+
+// Execute the workflow
+await eko.executeWorkflow(workflow);
 ```
+
+### Auto register tools
+
+Automatically register all tools in the current environment.
+
+* Browser Extension
+  ```typescript
+  import { Eko } from "@eko-ai/eko";
+  import { getAllTools } from "@eko-ai/eko/extension";
+
+  Eko.tools = getAllTools();
+  ```
+
+* Web
+  ```typescript
+  import { Eko } from "@eko-ai/eko";
+  import { getAllTools } from "@eko-ai/eko/web";
+
+  Eko.tools = getAllTools();
+  ```
+
+* Node.js
+  ```typescript
+  import { Eko } from "@eko-ai/eko";
+  import { getAllTools } from "@eko-ai/eko/nodejs";
+
+  Eko.tools = getAllTools();
+  ```
+
+After registering with `Eko.tools = getAllTools()`, there's no need to explicitly register tools in Eko - they can be used directly.
+
+```typescript
+import { Eko } from "@eko-ai/eko";
+
+const workflow = await eko.generateWorkflow(`
+  Your workflow
+`);
+
+await eko.executeWorkflow(workflow);
+```
+
+## Next Steps
+
+Now that you understand the concept of tools, let's look at what built-in Tools are available and how to customize Tools:
+
+- Built-in [Available Tools](/docs/tools/available.md) of the framework in different environments
+- Learn how to [Custom Tools](/docs/tools/custom.md)
+- Learn how to use [Tool Hook](/docs/tools/hook.md) to dynamically modify input and output parameters

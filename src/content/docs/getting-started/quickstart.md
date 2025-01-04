@@ -48,10 +48,6 @@ export async function main() {
   // Initialize eko
   let eko = new Eko(config as EkoConfig);
 
-  // Tools required for registration tasks
-  eko.registerTool(new tools.WebSearch());
-  eko.registerTool(new tools.ExportFile());
-
   // Generate a workflow from natural language description
   const workflow = await eko.generateWorkflow(`
     Search Sam Altman's information and summarize it into markdown format for export
