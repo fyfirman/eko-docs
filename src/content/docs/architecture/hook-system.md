@@ -7,7 +7,7 @@ Eko's hook system lets you monitor, modify, and control workflow execution at mu
 
 ## Understanding Hooks
 
-When Eko executes a workflow, it moves through a series of well-defined points where hooks can intercept and influence the execution. These points include workflow start/end, subtask transitions, tool selection, and error handling.
+When Eko executes a workflow, it moves through a series of well-defined points where hooks can intercept and influence the execution. These points include workflow start/end, subtask transitions, tool selection.
 
 ```typescript
 const result = await eko.executeWorkflow(workflow, {
@@ -95,25 +95,6 @@ Fine-grained control over tool execution:
 }
 ```
 
-### Error Handling Hooks
-Customize error recovery strategies:
-
-```typescript
-{
-  onError: async (error, context) => {
-    if (error.type === "tool_failed") {
-      // Try alternative tool
-      return "retry";
-    } else if (error.type === "invalid_input") {
-      // Skip failed step
-      return "continue";
-    }
-    // Stop execution
-    return "abort";
-  }
-}
-```
-
 ## Using Hooks Effectively
 
 Let's look at a complete example that shows how hooks can work together to implement sophisticated control flows:
@@ -154,14 +135,6 @@ await eko.executeWorkflow(workflow, {
         results.push(result);
       }
       return result;
-    },
-
-    onError: async (error, context) => {
-      if (error.code === "RATE_LIMIT_EXCEEDED") {
-        await sleep(5000);
-        return "retry";
-      }
-      return "continue";
     },
 
     afterWorkflow: async (workflow) => {
@@ -235,7 +208,6 @@ const hooks = {
 ## Best Practices
 
 1. Keep hooks focused and composable
-2. Handle errors gracefully in hooks
-3. Use typings for better development experience
-4. Document hook behaviors and side effects
-5. Test hooks independently of workflows
+2. Use typings for better development experience
+3. Document hook behaviors and side effects
+4. Test hooks independently of workflows
