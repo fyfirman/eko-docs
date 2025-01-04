@@ -5,49 +5,36 @@ description: Eko is an agent development framework that enables programmatic con
 
 ## What is Eko?
 
-Eko is an agent framework that empowers developers to build autonomous agents using natural language programming. It seamlessly integrates browser and system automation with large language models, featuring:
+Eko is an agent programming framework that empowers developers to build autonomous agents using natural language. It seamlessly integrates browser and system automation with large language models, featuring:
 
-1. **Natural Language Workflow Creation**
-   Transform plain English descriptions into executable workflows while maintaining full programmatic control
+1. **Natural language workflow creation:**
+   Transform plain natural language descriptions into executable workflows while maintaining full programmatic control
 
-2. **Rich Tool Ecosystem**
+2. **Rich tool ecosystem:**
    Unified API for browser automation, computer control, and custom tool integration - all accessible through both natural language and code
 
-3. **Hybrid Intelligence System**
+3. **Hybrid intelligence system:**
    Combines AI planning with dynamic execution, letting developers inspect and modify agent behavior at any stage
 
 [Video Placeholder]
 
-## Why we build Eko Framework?
+## Eko philosophy
 
-- **From an industry trend perspective:** The capabilities of large model Agents are becoming increasingly powerful, and Web/Mobile applications are transforming into Agent applications. As the saying goes, "Software eats the world, JavaScript eats the Software." With the enhanced computer use capabilities of large models, a new era of personal PC productivity is on the horizon. JavaScript, with its 14 million developers worldwide, is poised to continue shining brightly in the realm of personal productivity.
+Eko (like "echo") transforms natural language into action - your words become executable workflows. As JavaScript developers, we built Eko because we believe web technologies are the ideal foundation for human-AI interaction, with their universal reach and rich UI capabilities.
 
-- **From a language framework perspective:** The existing Agent frameworks are primarily within the Python ecosystem, JavaScript lacks an ecosystem for Agent Workflow orchestration and scheduling, which will hinder developers in creating Agent applications.
+### Core Principles
 
-- **From a language development perspective:** Programming languages are gradually evolving into a hybrid of natural and logical languages, making them increasingly easier to learn. Languages in the form of GenAIScript will become the entry-level and production-grade languages for the next generation of computer engineers.
+1. **Natural + Logical**: Blend natural language with JavaScript/TypeScript, giving you the best of both worlds - the expressiveness of natural language and the power of modern web tech
 
-- **From the user perspective:** Users will utilize a new generation of AI user interfaces. AI-generated GenUI will provide personalized UIs for users, and the creation of these personalized UIs relies on HTML and JavaScript.
+2. **Stability Through Structure**: Our [Two-Layer Execution Model](/docs/architecture/execution-model) provides predictable automation while remaining flexible enough to handle real-world complexity
 
-## Why is it called Eko?
+3. **Web-Native Design**: Built on the JavaScript ecosystem you already know, with seamless integration for browsers, Node.js, and modern frontend frameworks
 
-"Eko" is typically pronounced as "eh-koh," similar to the word "echo", which signifies replaying human language to turn it into action.
+4. **Developer Experience First**: Debug and modify workflows with familiar tools - no black boxes
 
-We believe that Agents are transitioning from being able to answer anything to being able to do anything, making action crucial.
+### Mission & Vision
 
-### Eko Mission
- Bridge human and AI through natural language programming.
-
-
-### Eko Vision
-The first, most natural programming language for all.
-
-
-## Design Philosophy
-
-1. Provide developers with an easy-to-use Agent development framework by **blending natural and logical languages**.
-2. Offer stable Agent tool usage capabilities through [**Two-Layer Execution Model**](/docs/architecture/execution-model), ensuring lower costs and more stable inference.
-3. Utilize an **Event-Driven Architecture**, allowing client Workflows to call each other in real-time and support scaling up.
-4. Provide developers with simple and easy-to-debug Agent **workflow debugging tools**.
+We believe the next evolution of programming will blend natural language with code. Eko aims to make this future accessible to the JavaScript community first, leveraging the ecosystem's strengths in UI, tooling, and cross-platform development.
 
 ## Key Features
 
@@ -86,4 +73,3 @@ The first, most natural programming language for all.
 
 - [GitHub Issues](https://github.com/FellouAI/eko/issues) for bug reports and feature requests
 - [Documentation](https://eko.fellou.ai/docs) for detailed guides and API reference
-- [Community Discord](https://discord.gg/eko) for discussions and help
