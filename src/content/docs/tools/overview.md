@@ -7,10 +7,10 @@ description: This guide introduces the built-in tools in eko and how to customiz
 
 In the Eko framework, Tools are reusable functional modules, just like various tools in a toolbox, each with specific functionality. For example:
 
-- Tools for sending HTTP requests
-- Tools for reading and writing files
-- Tools for processing data 
+- Tools for web search
+- Tools for computer use
 - Tools for calling APIs
+- Tools for reading and writing files
 
 ## Why Use Tools
 

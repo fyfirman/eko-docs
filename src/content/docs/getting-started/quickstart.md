@@ -82,9 +82,9 @@ $ npm run build:dev
   <source src="/docs/load_extension.mov" />
 </video>
 
-### Configure LLM Model ApiKey
+### Configure LLM Model Api Key
 
-Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model ApiKey
+Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model Api Key.
 
 <video controls>
   <source src="/docs/config_llm.mov" />
@@ -92,7 +92,7 @@ Click on the current eko extension details, find Extension Options in the detail
 
 ### Run
 
-Pin the current extension in the browser's top-right extensions menu, click the extension to open the popup, and click the RUN button to execute
+Pin the current extension in the browser's top-right extensions menu, click the extension to open the popup, and click the RUN button to execute.
 
 ![RUN](../assets/run_extension.png)
 
@@ -100,6 +100,6 @@ Pin the current extension in the browser's top-right extensions menu, click the 
 
 Now that you have run the first workflow, you can:
 
-- Understand the [Installation](/docs/getting-started/installation.md) of Eko in different environments
-- Learn about Eko's [Configuration](/docs/getting-started/configuration.md) in different environments
-- Learn more core concepts of eko: [Dive deep into Eko](/docs/getting-started/dive-deep.md)
+- Understand the [Installation](/docs/getting-started/installation) of Eko in different environments
+- Learn about Eko's [Configuration](/docs/getting-started/configuration) in different environments
+- Learn more core concepts of eko: [Dive deep into Eko](/docs/getting-started/dive-deep)
