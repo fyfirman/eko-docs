@@ -22,7 +22,7 @@ The framework is particularly focused on bridging the gap between natural langua
 
 - **From a language framework perspective:** The existing Agent frameworks are primarily within the Python ecosystem, JavaScript lacks an ecosystem for Agent Workflow orchestration and scheduling, which will hinder developers in creating Agent applications.
 
-- **From the perspective of language development perspective:** Programming languages are gradually evolving into a hybrid of natural and logical languages, making them increasingly easier to learn. Languages in the form of GenAIScript will become the entry-level and production-grade languages for the next generation of computer engineers.
+- **From a language development perspective:** Programming languages are gradually evolving into a hybrid of natural and logical languages, making them increasingly easier to learn. Languages in the form of GenAIScript will become the entry-level and production-grade languages for the next generation of computer engineers.
 
 - **From the user perspective:** Users will utilize a new generation of AI user interfaces. AI-generated GenUI will provide personalized UIs for users, and the creation of these personalized UIs relies on HTML and JavaScript.
 
@@ -43,7 +43,7 @@ The first, most natural programming language for all.
 ## Design Philosophy
 
 1. Provide developers with an easy-to-use Agent development framework by **blending natural and logical languages**.
-2. Offer stable Agent tool usage capabilities through [**Two-Layer Execution Model**](/docs/architecture/Two-Layer-Execution-Model), ensuring lower costs and more stable inference.
+2. Offer stable Agent tool usage capabilities through [**Two-Layer Execution Model**](/docs/architecture/execution-model), ensuring lower costs and more stable inference.
 3. Utilize an **Event-Driven Architecture**, allowing client Workflows to call each other in real-time and support scaling up.
 4. Provide developers with simple and easy-to-debug Agent **workflow debugging tools**.
 
@@ -54,15 +54,14 @@ The first, most natural programming language for all.
 - **Comprehensive Tooling**: Rich built-in tools for browser automation, computer control, file operations, and web interactions
 - **Hybrid Drive System:** Combine LLM capabilities with developer control, enabling "human in the loop" and allowing interference at multiple levels of granularity
 - **Event-Driven Automation:** Trigger workflows based on browser or system events
-- **Environment Flexibility**: Work across different environments ( [Browser Extensions](), [Web](), [Node.js](), [Next-Gen AI Browser Fellou]() ) with consistent APIs
+- **Environment Flexibility**: Work across different environments ( [Browser Extensions](/docs/browseruse/browser-extension), [Web](/docs/browseruse/browser-web), [Node.js](/docs/computeruse/computer-node), [Next-Gen AI Browser Fellou](/docs/computeruse/computer-fellou) ) with consistent APIs
 
-## Documentation Roadmap
+## Getting started
 
 1. [Quick Start Guide](quickstart)
 
-   - Basic Node.js usage
    - Creating your first workflow
-   - Understanding workflow concepts
+   - Showcased browser extension example
 
 2. [Installation Guide](installation)
 
@@ -76,12 +75,10 @@ The first, most natural programming language for all.
    - AI model setup
    - Tool configuration
 
-4. [Browser Extension Guide](browser-extension)
-   - Extension-specific setup
-   - Browser automation tools
-   - Real-world examples
+4. [Diving Deep](dive-deep)
 
-We recommend starting with the [Quick Start Guide](quickstart) to understand core concepts through a minimal example, even if you plan to use Eko in a browser extension. The concepts learned there will help you better understand the browser automation capabilities covered in the [Browser Extension Guide](browser-extension).
+   - Walkthrough of a complete example
+   - Understanding core concepts
 
 ## Support and Community
 
