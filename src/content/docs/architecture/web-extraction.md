@@ -25,7 +25,7 @@ Given these limitations, traditional methods often lack the reliability needed i
 
 3. **Combine Screenshots and Pseudo-HTML**: Construct pseudo-HTML that includes these element details, paired with screenshots, to be processed by automation models.
 
-### Technical Principles
+## Technical Principles
 
 Mark executable elements in the webpage, such as clickable, input-enabled elements and those with event listeners, and assign element IDs to each executable element
 
