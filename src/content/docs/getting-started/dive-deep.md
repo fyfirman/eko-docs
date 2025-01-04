@@ -1,35 +1,82 @@
 ---
-title: Dive deep into Eko
-description: Walk you through creating your first Eko workflow in a Node.js environment.
+title: Dive Deep into Eko
+description: Take a deeper look at Eko's core concepts through a complete Node.js example that demonstrates workflows, tools, and hooks working together.
 ---
 
-This guide will walk you through creating your first Eko workflow in a Node.js environment. While Eko also offers powerful browser automation capabilities (which we'll explore in the [Browser Extension Guide](browser-extension)), starting with Node.js provides the clearest introduction to core concepts:
+While our [Quickstart](/docs/getting-started/quickstart) introduced Eko through a visual browser extension example, this guide takes a deeper dive into how Eko thinks about and executes automation tasks. We'll use a file processing example in Node.js to explore the framework's core concepts, but the principles you'll learn here apply across all environments where Eko runs.
 
-1. Build Agent Workflows Easily with Natural Language
-2. Workflow DSL
-2. Workflow Hooks
-3. Custom Tools
+## A New Way of Thinking About Automation
 
-## Setting Up Your Environment
+Traditional automation frameworks often require you to specify exact steps: "click here", "type there", "wait 2 seconds". Eko takes a fundamentally different approach. Instead of thinking in terms of specific actions, you describe what you want to accomplish, and Eko figures out how to do it.
 
-Let's start by creating a new project and installing Eko:
+This might seem magical at first, but it's actually a carefully orchestrated process built on three key ideas:
+
+### 1. Natural Language Task Planning
+
+Instead of writing detailed instructions, you describe your goal in plain language. For example:
+
+```typescript
+const workflow = await eko.generateWorkflow(
+  "List all PDF files modified in the last week, extract their titles, and create a summary spreadsheet"
+);
+```
+
+Behind the scenes, Eko:
+
+- Analyzes the task to identify required capabilities (file operations, PDF processing, spreadsheet creation)
+- Breaks it down into logical subtasks
+- Determines the correct order of operations
+- Selects appropriate tools for each step
+
+This planning happens before any actual execution, allowing Eko to create a complete, validated plan that you can inspect or modify if needed.
+
+### 2. Two-Layer Execution
+
+Think of Eko as having two distinct personalities:
+
+- A thoughtful planner who breaks down complex tasks (the planning layer)
+- A skilled operator who knows how to use tools effectively (the execution layer)
+
+This separation, which we call the [two-layer execution model](/docs/architecture/execution-model), is crucial because it:
+
+- Makes automation more reliable by validating plans before execution
+- Enables adaptation to changing conditions during execution
+- Allows you to modify either planning or execution without affecting the other
+
+### 3. Tools and Hooks
+
+The real work in Eko happens through tools - discrete units of capability that know how to perform specific operations. But unlike traditional automation libraries, Eko's tools are self-describing. They tell the framework:
+
+- What they can do
+- What information they need
+- What conditions they require
+
+Meanwhile, hooks let you monitor and control the automation process at multiple levels, from high-level workflow progress to individual tool operations.
+
+## Exploring Through Example
+
+Let's see these concepts in action by building something real. We'll create a workflow that processes directory contents, but pay attention to how Eko's architectural principles manifest in the code.
+
+### Setting Up Your Environment
+
+First, create a new project and install dependencies:
 
 ```bash
 mkdir eko-demo
 cd eko-demo
 npm init -y
-npm install @eko-ai/eko
+npm install @eko-ai/eko dotenv
 ```
 
-You'll need an API key from Anthropic to use Claude, Eko's default language model. You can obtain one by visiting [Anthropic's API documentation](https://docs.anthropic.com/claude/reference/getting-started-with-the-api). Once you have your key, create a `.env` file in your project root:
+You'll need an API key from Anthropic to use Claude, which powers Eko's language understanding. Create a `.env` file:
 
 ```bash
 ANTHROPIC_API_KEY=your_api_key_here
 ```
 
-## Build your first workflow with Natural Language
+### Building the Workflow
 
-Let's create a simple workflow that lists directory contents and saves them to a file:
+Here's our complete example, which we'll break down piece by piece:
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
@@ -39,9 +86,12 @@ import fs from "fs/promises";
 dotenv.config();
 
 async function main() {
-  // Initialize Eko with LLM configuration
+  // Initialize Eko with specific LLM configuration
   const eko = new Eko({
+    llm: "claude", // Explicitly choose Claude as our LLM
     apiKey: process.env.ANTHROPIC_API_KEY,
+    modelName: "claude-3-5-sonnet-20241022", // Use Sonnet for balanced performance
+    maxTokens: 4096, // Adjust token limit if needed
   });
 
   // Generate a workflow from natural language description
@@ -49,105 +99,119 @@ async function main() {
     "List the contents of the current directory and save them to a file called contents.txt"
   );
 
-  // Let's examine the generated workflow
+  // Save the generated workflow for inspection
   const workflowJson = JSON.stringify(workflow, null, 2);
   await fs.writeFile("workflow.json", workflowJson);
   console.log("Generated workflow saved to workflow.json");
 
-  // Execute the workflow
-  const result = await eko.executeWorkflow(workflow);
+  // Execute with monitoring hooks
+  const result = await eko.executeWorkflow(workflow, {
+    hooks: {
+      // Monitor subtask progress
+      beforeSubtask: async (subtask, context) => {
+        console.log(`Starting subtask: ${subtask.name}`);
+        console.log(
+          `Available tools:`,
+          subtask.action.tools.map((t) => t.name)
+        );
+        return true; // Return false to skip this subtask
+      },
+      // Monitor individual tool usage
+      beforeToolUse: async (tool, context, input) => {
+        console.log(`Using tool ${tool.name} with input:`, input);
+        return input; // Can modify input before tool executes
+      },
+      afterSubtask: async (subtask, context, result) => {
+        console.log(`Completed ${subtask.name} with result:`, result);
+      },
+    },
+  });
+
   console.log("Workflow completed:", result);
 }
 
 main().catch(console.error);
 ```
 
-When you inspect `workflow.json`, you'll see how Eko has broken down your task:
+Let's examine what's happening here:
 
-```json
-{
-  "id": "directory-contents",
-  "nodes": [
-    {
-      "id": "list-contents",
-      "action": {
-        "type": "script",
-        "name": "getDirectoryContents",
-        "tools": ["execute_command"]
-      }
-    },
-    {
-      "id": "save-file",
-      "dependencies": ["list-contents"],
-      "action": {
-        "type": "script",
-        "name": "saveToFile",
-        "tools": ["file_operations"]
-      }
-    }
-  ]
-}
-```
+1. **Framework Initialization**
 
-When executing this workflow, Eko first plans the entire task by breaking it into subtasks (like listing files and saving output), then executes each subtask by having the language model decide which tool operations to perform. You can learn more about this process in our [Two-Layer Execution Model](../core-concepts/execution-model) guide.
+   ```typescript
+   const eko = new Eko({
+     llm: "claude",
+     apiKey: process.env.ANTHROPIC_API_KEY,
+     modelName: "claude-3-5-sonnet-20241022",
+   });
+   ```
 
-## Workflow Hooks
+   We're setting up Eko with Claude 3.5 Sonnet, a balanced model good for most tasks. You might choose other models based on your needs:
 
-Eko provides a powerful hook system that lets you not only monitor but actively control workflow execution. Through hooks, you can inspect each step, modify inputs and outputs, retry failed operations, or even skip certain steps entirely. Here's a simple example that demonstrates basic monitoring:
+   - `claude-3-opus-20240229` for complex tasks requiring deep understanding
+   - `claude-3-5-haiku-20241022` for simpler tasks where speed is important
 
-```typescript
-const result = await eko.executeWorkflow(workflow, {
-  hooks: {
-    // Called before each step begins
-    beforeNodeExecution: async (node) => {
-      console.log(`Starting step: ${node.name}`);
-      console.log(
-        "Tools available:",
-        node.action.tools.map((t) => t.name)
-      );
-      return true; // Return false to skip this step
-    },
+2. **Workflow Generation**
 
-    // Called after each step completes
-    afterNodeExecution: async (node, output) => {
-      console.log(`Completed ${node.name}`);
-      console.log("Output:", output);
-    },
+   ```typescript
+   const workflow = await eko.generateWorkflow(
+     "List the contents of the current directory and save them to a file called contents.txt"
+   );
+   ```
 
-    // Called when the LLM wants to use a tool
-    beforeToolUse: async (node, toolName, input) => {
-      console.log(`Using tool ${toolName} with input:`, input);
-      return true; // Return false to prevent tool use
-    },
+   This is where Eko's natural language understanding shines. It analyzes the request and creates a structured plan. Let's look at the generated workflow:
 
-    // Handle errors in specific steps
-    onError: async (node, error) => {
-      console.error(`Error in ${node.name}:`, error);
-      return "retry"; // 'continue' to skip, 'abort' to stop
-    },
-  },
-});
-```
+   ```json
+   {
+     "id": "directory-contents",
+     "name": "List and Save Directory Contents",
+     "nodes": [
+       {
+         "id": "list-contents",
+         "action": {
+           "type": "prompt",
+           "name": "getDirectoryContents",
+           "tools": ["execute_command"]
+         }
+       },
+       {
+         "id": "save-file",
+         "dependencies": ["list-contents"],
+         "action": {
+           "type": "prompt",
+           "name": "saveToFile",
+           "tools": ["file_operations"]
+         }
+       }
+     ]
+   }
+   ```
 
-Running this code produces output like:
+   Notice how Eko has:
 
-```
-Starting step: list-contents
-Tools available: ['execute_command']
-Using tool execute_command with input: { command: 'ls' }
-Completed list-contents
-Output: ['file1.txt', 'file2.txt', ...]
+   - Identified two main tasks (listing contents and saving)
+   - Established the correct dependency (can't save before listing)
+   - Selected appropriate tools for each task
 
-Starting step: save-file
-Tools available: ['file_operations']
-Using tool file_operations with input: { path: 'contents.txt', content: '...' }
-Completed save-file
-Output: { success: true }
-```
+3. **Execution with Hooks**
+   ```typescript
+   const result = await eko.executeWorkflow(workflow, {
+     hooks: {
+       beforeSubtask: async (subtask, context) => {
+         console.log(`Starting subtask: ${subtask.name}`);
+         return true;
+       },
+     },
+   });
+   ```
+   Hooks provide visibility and control over execution. You can:
+   - Monitor progress
+   - Modify inputs and outputs
+   - Skip tasks conditionally
+   - Handle errors gracefully
 
-## Custom Tools
+### Extending with Custom Tools
 
-You can extend Eko's capabilities by adding custom tools. Here's an example that formats directory listings:
+One of Eko's most powerful features is its extensibility. Here's how you can add custom capabilities:
 
 ```typescript
 import { Tool, InputSchema } from "@eko-ai/eko/types";
@@ -186,72 +250,108 @@ class DirectoryFormatter implements Tool {
       .join("\n");
   }
 }
+```
 
-// Register the tool
+This tool showcases several important principles:
+
+1. **Self-Description**
+   The tool describes its capabilities and requirements through its `name`, `description`, and `input_schema`. This enables Eko to:
+
+   - Understand when to use the tool
+   - Validate inputs before execution
+   - Generate appropriate tool combinations
+
+2. **Type Safety**
+   Using TypeScript interfaces ensures the tool integrates properly with the framework:
+
+   ```typescript
+   import { Tool, InputSchema } from "@eko-ai/eko/types";
+   ```
+
+3. **Context Awareness**
+   Tools receive an execution context that provides access to:
+   - Shared state
+   - Environment information
+   - Other tools' results
+
+After creating a tool, register it with Eko:
+
+```typescript
 eko.registerTool(new DirectoryFormatter());
+```
 
-// Now generate a workflow that uses formatting
+Now you can use it in workflows:
+
+```typescript
 const workflow = await eko.generateWorkflow(
-  "List the directory contents with detailed file information and save to contents.txt"
+  "List the directory contents in detailed format, including file sizes"
 );
 ```
 
-The generated workflow will now include an additional formatting step:
+## The Built-in Tool Ecosystem
 
-```json
-{
-  "id": "detailed-directory-contents",
-  "nodes": [
-    {
-      "id": "list-contents",
-      "action": {
-        "type": "script",
-        "name": "getDirectoryContents",
-        "tools": ["execute_command"]
-      }
-    },
-    {
-      "id": "format-contents",
-      "dependencies": ["list-contents"],
-      "action": {
-        "type": "script",
-        "name": "formatOutput",
-        "tools": ["format_directory"],
-        "input": {
-          "format": "detailed"
-        }
-      }
-    },
-    {
-      "id": "save-file",
-      "dependencies": ["format-contents"],
-      "action": {
-        "type": "script",
-        "name": "saveToFile",
-        "tools": ["file_operations"]
-      }
-    }
-  ]
-}
-```
+Eko comes with a rich set of built-in tools, organized by environment and capability:
 
-## Beyond File Operations
+### File System Tools
 
-While this example demonstrates core concepts using simple file operations, Eko's capabilities extend far beyond this. In the [Browser Extension Guide](browser-extension), you'll discover how to use these same principles with Eko's rich set of browser automation tools to:
+These tools handle file and directory operations:
 
-- Control web navigation
-- Interact with page elements
-- Extract web content
-- Manage browser windows and tabs
-- Automate complex sequences of browser actions
+- Reading/writing files
+- Directory listing and manipulation
+- File format conversions
+- Path operations
 
-The workflow concepts you've learned here - breaking down tasks, tool selection, and dependency management - form the foundation for understanding these more advanced capabilities.
+### Process Management
+
+Tools for working with system processes:
+
+- Command execution
+- Environment variables
+- Process spawning and control
+- Standard I/O handling
+
+### Utility Tools
+
+General-purpose helpers:
+
+- Data transformation
+- Text processing
+- Type conversion
+- Validation
+
+Each environment (Node.js, Browser Extension, Web) provides its own appropriate set of tools. Learn more in [Available Tools](/docs/tools/available).
+
+## Moving Beyond the Basics
+
+Now that you understand Eko's core concepts, you can explore more advanced topics:
+
+### Advanced Workflow Control
+
+- [Hook System](/docs/architecture/hook-system) for fine-grained execution control
+- Error handling and recovery strategies
+- State management between nodes
+- Parallel execution of independent tasks
+
+### Tool Development
+
+- Creating environment-specific tools
+- Tool composition and chaining
+- Handling asynchronous operations
+- Error handling best practices
+
+### Environment Integration
+
+- [Browser Extension Development](/docs/browseruse/browser-extension)
+- [Web Application Integration](/docs/browseruse/browser-web)
+- [Node.js Automation](/docs/computeruse/computer-node)
+
+Each of these topics is covered in depth in our detailed guides. The concepts you've learned here provide the foundation for understanding these more advanced capabilities.
 
 ## Next Steps
 
-Now that you understand the basics, you can:
+Ready to dive deeper? Here's where to go next:
 
-- Learn about the [Two-Layer Execution Model](../core-concepts/execution-model) in depth
 - Explore browser automation in the [Browser Extension Guide](/docs/browseruse/browser-extension)
-- Discover more about [Available tools](../tools/available)
-- Study the [Workflow](../core-concepts/workflow)
+- Study the [Tool System](/docs/core-concepts/tools) in depth
+- Learn about advanced patterns in the [Hook System](/docs/architecture/hook-system)
+- Understand how Eko adapts to different environments in [Environment-Aware Architecture](/docs/core-concepts/env-architecture)
