@@ -50,10 +50,10 @@ export default defineConfig({
 					label: 'Architecture',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Overview', slug: 'core-concepts' },
+						{ label: 'Overview', slug: 'architecture' },
 						{ label: 'Two-Layer Execution Model', slug: 'architecture/execution-model' },
-						{ label: 'Environment-Aware Architecture', slug: 'core-concepts/env-architecture' },
-						{ label: 'Workflow', slug: 'core-concepts/workflow' },
+						{ label: 'Environment-Aware Architecture', slug: 'architecture/env-architecture' },
+						{ label: 'Workflow', slug: 'architecture/workflow' },
 						{ label: 'Hook system', slug: 'architecture/hook-system' },
 						{ label: 'Web Extraction Technology', slug: 'architecture/web-extraction' },
 					],
