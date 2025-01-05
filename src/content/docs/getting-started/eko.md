@@ -70,7 +70,7 @@ We believe the next evolution of programming will blend natural language with co
 - **Comprehensive Tooling**: Rich built-in tools for browser automation, computer control, file operations, and web interactions
 - **Hybrid Drive System:** Combine LLM capabilities with developer control, enabling "human in the loop" and allowing interference at multiple levels of granularity
 - **Event-Driven Automation:** Trigger workflows based on browser or system events
-- **Environment Flexibility**: Work across different environments ( [Browser Extensions](/docs/browseruse/browser-extension), [Web](/docs/browseruse/browser-web), [Node.js](/docs/computeruse/computer-node), [Next-Gen AI Browser Fellou](/docs/computeruse/computer-fellou) ) with consistent APIs
+- **Environment Flexibility**: Work across different environments ( [Browser Extension](/docs/browseruse/browser-extension), [Web](/docs/browseruse/browser-web), [Node.js](/docs/computeruse/computer-node), [Next-Gen AI Browser Fellou](/docs/computeruse/computer-fellou) ) with consistent APIs
 
 
 ## Support and Community

@@ -1,5 +1,5 @@
 ---
-title: Using Eko in Browser Extensions
+title: Using Eko in Browser Extension
 description: This guide demonstrates how to use Eko's browser automation capabilities in a Chrome extension environment, building on those fundamental concepts.
 ---
 
