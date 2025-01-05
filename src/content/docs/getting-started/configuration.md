@@ -5,117 +5,92 @@ description: This guide covers how to configure Eko in different environments.
 
 This guide covers how to configure Eko in different environments.
 
-## LLM Configuration
+## Browser Extension
 
-The most essential configuration is setting up your LLM (Large Language Model) access:
+Here's how to initialize the demo project which includes configuring the model page:
 
+Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model Api Key.
+
+<video controls>
+  <source src="/docs/config_llm.mov" />
+</video>
+
+Load Configuration:
 ```typescript
 import { Eko } from "@eko-ai/eko";
-
-// Simple configuration with just API key
-const eko = new Eko({
-  apiKey: "your_anthropic_api_key",
-});
-
-// Full configuration
-const eko = new Eko({
-  apiKey: "your_anthropic_api_key",
-  modelName: "claude-3-5-sonnet-20241022", // Default model
-  maxTokens: 4096, // Maximum tokens per request
-});
-```
-
-### Available Models
-
-Eko currently supports Claude models:
-
-- `claude-3-5-sonnet-20241022` (default) - Balanced performance and capability
-- `claude-3-opus-20240229` - Most capable, best for complex tasks
-- `claude-3-5-haiku-20241022` - Fast, efficient for simple tasks
-
-Choose based on your needs:
-
-```typescript
-// For complex workflows
-const eko = new Eko({
-  modelName: "claude-3-opus-20240229",
-});
-
-// For quick tasks
-const eko = new Eko({
-  modelName: "claude-3-5-haiku-20241022",
-});
-```
-
-## Environment-Specific Configuration
-
-### Browser Extension Environment
-
-Store configuration in extension storage:
-
-```typescript
-// Save configuration
-await chrome.storage.sync.set({
-  llmConfig: {
-    llm: "claude",
-    apiKey: "your_api_key",
-    modelName: "claude-3-5-sonnet-20241022",
-  },
-});
-
-// Use configuration
+import { EkoConfig } from "@eko-ai/eko/types";
 import { getLLMConfig } from "@eko-ai/eko/extension";
 
-const config = await getLLMConfig();
-const eko = new Eko(config);
+let config = await getLLMConfig();
+let eko = new Eko(config as EkoConfig);
 ```
 
-### Node.js Environment
+## Node.js Environment
 
-Using environment variables is recommended:
+In the Node.js environment, it is recommended to configure the apiKey in `.env`, example:
+```
+ANTHROPIC_API_KEY=your api key
+OPENAI_API_KEY=your api key
+```
 
+Load Configuration:
 ```typescript
-// .env file
-ANTHROPIC_API_KEY = your_api_key_here;
-
-// Your code
-import dotenv from "dotenv";
 import { Eko } from "@eko-ai/eko";
 
-dotenv.config();
-
-const eko = new Eko({
-  apiKey: process.env.ANTHROPIC_API_KEY,
+let eko = new Eko({
+  llm: 'claude',
+  apiKey: process.env.ANTHROPIC_API_KEY
 });
 ```
 
-## Workflow Configuration
+## Web Environment
 
-### Generation Options
-
-Control how workflows are generated from natural language:
+In a web environment, be careful not to expose the apiKey in the frontend. Please proxy and forward requests through server-side interfaces, and authenticate users through the interfaces.
 
 ```typescript
-const workflow = await eko.generateWorkflow("Your task description", {
-  temperature: 0.7, // Control randomness (0.0-1.0)
-  maxTokens: 1000, // Max tokens for generation
-  validate: true, // Validate workflow structure
+import { Eko, ClaudeProvider } from "@eko-ai/eko";
+
+let llmProvider = new ClaudeProvider({
+  // Please use your API endpoint for authentication and forwarding on the server side, do not expose API keys in the frontend
+  baseURL: 'https://your-api-endpoint.com',
+  // User Authentication Request Header
+  defaultHeaders: {
+    // 'Authorization': `Bearer ${getToken()}`
+  }
 });
+
+// Initialize eko
+let eko = new Eko(llmProvider);
 ```
 
-### Execution Options
+## Supported LLMs
 
-Configure how workflows are executed:
+The most essential configuration is setting up your LLM (Large Language Model) access
 
+### Claude
 ```typescript
-const result = await eko.execute(workflow, {
-  timeout: 30000, // Maximum execution time (ms)
-  hooks: {
-    // Execution hooks
-    beforeNodeExecution: async (node) => {
-      console.log(`Executing: ${node.name}`);
-      return true;
-    },
-  },
+import { Eko, ClaudeProvider } from "@eko-ai/eko";
+
+let llmProvider = new ClaudeProvider({
+  apiKey: 'your_anthropic_api_key',
+  modelName: "claude-3-5-sonnet-20241022",
+  maxTokens: 8192
 });
+
+// Initialize eko
+let eko = new Eko(llmProvider);
+```
+
+### OpenAi
+```typescript
+import { Eko, OpenaiProvider } from "@eko-ai/eko";
+
+let llmProvider = new OpenaiProvider({
+  apiKey: 'your_openai_api_key',
+  modelName: "gpt-4o",
+  maxTokens: 8192
+});
+
+// Initialize eko
+let eko = new Eko(llmProvider);
 ```

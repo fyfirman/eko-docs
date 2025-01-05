@@ -3,9 +3,9 @@ title: Installation
 description: Eko is a JavaScript library that can be used in browser extensions, web pages, and node.js. This guide covers installation and setup for different environments.
 ---
 
-Eko is a JavaScript library that can be used in [**Browser Extension (Chromium-Based browser only)**](/docs/getting-started/installation#browser-extension-development), [**Node.js Enviroment**](http://localhost:4321/docs/getting-started/installation#nodejs-environment), and [**Web Enviroment**](http://localhost:4321/docs/getting-started/installation#web-environment). This guide covers installation and setup for different environments.
+Eko is a JavaScript library that can be used in [Browser Extension](/docs/getting-started/installation#browser-extension), [Node.js Enviroment](http://localhost:4321/docs/getting-started/installation#nodejs-environment), and [Web Enviroment](http://localhost:4321/docs/getting-started/installation#web-environment). This guide covers installation and setup for different environments.
 
-## Browser Extension Development
+## Browser Extension
 
 When building a browser extension that uses Eko, you'll need to:
 
@@ -32,48 +32,64 @@ extension/
 │   └── popup/
 │       └── index.ts
 ├── package.json
-└── webpack.config.js       # Configure bundling
+└── webpack.config.js
 ```
 
 For a complete example of using Eko in a browser extension, check out our [example extension project](https://github.com/FellouAI/eko-browser-extension).
 
+### Usage Example
+```typescript
+import { Eko } from "@eko-ai/eko";
+import { EkoConfig } from "@eko-ai/eko/types";
+import { getLLMConfig } from "@eko-ai/eko/extension";
+
+export async function main() {
+  // Load LLM model configuration 
+  // the current browser plugin project provides a page for configuring LLM parameters
+  let config = await getLLMConfig();
+
+  // Initialize eko
+  let eko = new Eko(config as EkoConfig);
+
+  // Generate workflow from natural language description
+  let workflow = await eko.generateWorkflow(`
+    Search for Elon Musk, summarize search results and export as md
+  `);
+
+  // Execute
+  await eko.execute(workflow);
+}
+```
+
 ## Node.js Environment
 
-### Prerequisites
-
-- Node.js >= 18.0.0
-- npm or yarn
-
-### Install via npm
+### Install
 
 ```bash
 npm install @eko-ai/eko
 ```
 
-### Install via yarn
+### Usage Example
+```typescript
+import { Eko } from "@eko-ai/eko";
+import { getAllTools } from "@eko-ai/eko/nodejs";
 
-```bash
-yarn add @eko-ai/eko
-```
+Eko.tools = getAllTools();
 
-### TypeScript Configuration (Recommended)
+export async function main() {
+  // Initialize eko
+  let eko = new Eko({
+    llm: 'claude',
+    apiKey: process.env.ANTHROPIC_API_KEY,
+  });
 
-Add the following tsconfig.json for optimal type checking and module resolution:
+  // Generate workflow from natural language description
+  let workflow = await eko.generateWorkflow(`
+    Clean up all files in the current directory larger than 1MB
+  `);
 
-```json
-{
-  "compilerOptions": {
-    "target": "ES2018",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "declaration": true,
-    "sourceMap": true
-  }
+  // Execute
+  await eko.execute(workflow);
 }
 ```
 
@@ -81,36 +97,41 @@ Add the following tsconfig.json for optimal type checking and module resolution:
 
 For web pages, you can include Eko using a module bundler like webpack or use it directly in the browser.
 
-### Using with Module Bundler
+### Install
+```bash
+npm install @eko-ai/eko
+```
 
-1. Install the package:
-
-   ```bash
-   npm install @eko-ai/eko
-   ```
-
-2. Import in your code:
-   ```javascript
-   import { Eko } from "@eko-ai/eko";
-   ```
-
-### Direct Browser Usage
-
-Coming soon: CDN distribution for direct browser usage.
-
-
-## Verify Installation
-
-Test your installation by creating a minimal example:
-
+### Usage Example
 ```typescript
-import { Eko } from "@eko-ai/eko";
+import { Eko, ClaudeProvider } from "@eko-ai/eko";
+import { tools } from "@eko-ai/eko/web";
 
-async function test() {
-  // default claude model
-  const eko = new Eko("apiKey");
-  console.log("Eko initialized successfully");
+Eko.tools = getAllTools();
+
+async function main() {
+  // Initialize LLM provider
+  let llmProvider = new ClaudeProvider({
+    // Please use your API endpoint for authentication and forwarding on the server side, do not expose API keys in the frontend
+    baseURL: 'https://your-api-endpoint.com',
+    // User Authentication Request Header
+    defaultHeaders: {
+      // 'Authorization': `Bearer ${getToken()}`
+    }
+  });
+
+  // Initialize eko
+  let eko = new Eko(llmProvider);
+
+  eko.registerTool(new tools.BorwserUse());
+
+  // Generate workflow from natural language description
+  // Eko will automatically select and sequence the appropriate tools
+  const workflow = await eko.generateWorkflow(`
+    Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
+  `);
+
+  // Execute
+  await eko.execute(workflow);
 }
-
-test().catch(console.error);
 ```

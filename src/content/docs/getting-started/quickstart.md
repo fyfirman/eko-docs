@@ -20,6 +20,8 @@ cd browser-extension-demo
 npm install
 ```
 
+For a complete example of using Eko in a browser extension, check out our [example extension project](https://github.com/FellouAI/eko-browser-extension).
+
 ## Your First Workflow
 
 Let's create a simple workflow to search for Sam Altman's information and export it to markdown.
@@ -41,9 +43,6 @@ export async function main() {
   // Load LLM model configuration 
   // the current browser plugin project provides a page for configuring LLM parameters
   let config = await getLLMConfig();
-  if (!config && !config.apiKey) {
-    throw Error("Please configure apiKey");
-  }
 
   // Initialize eko
   let eko = new Eko(config as EkoConfig);
