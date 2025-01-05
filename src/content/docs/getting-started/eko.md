@@ -16,7 +16,24 @@ Eko is an agent programming framework that empowers developers to build autonomo
 3. **Hybrid intelligence system:**
    Combines AI planning with dynamic execution, letting developers inspect and modify agent behavior at any stage
 
+## What is Eko? (Jiaqi Chen version)
+
+Eko is an agent development framework designed to help developers build reliable autonomous agents by supporting natural language and programming languages. It provides a unified interface for executing agents in the digital world, including both computer and browser environments, with the following key features:
+
+- **Hybrid design language**: Developers can write agents by both natural language with programming languages, enabling production-grade agent design.
+
+- **Unified digital World interaction**: Eko offers a unified syntax that is applicable across various digital environments, including computers and browsers, for seamless agent development.
+
+- **Transparent and intervenable agents**: During agent execution, users can inspect its state in real-time and modify its behavior, ensuring greater control and security.
+
+## Eko's Abilities
 [Video Placeholder]
+
+## Examples
+[Demo Link Placeholder]
+
+## Supported environment
+[Compariasion Figure Placeholder]
 
 ## Eko philosophy
 
