@@ -99,7 +99,7 @@ async function example() {
     const workflow = await eko.generateWorkflow(`
         Open Google search for information about Musk and export it as an md file.
     `);
-    await eko.executeWorkflow(workflow);
+    await eko.execute(workflow);
 }
 ```
 

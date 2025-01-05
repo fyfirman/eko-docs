@@ -90,6 +90,6 @@ async function auto_test_case() {
   `);
 
   // Execute
-  await eko.executeWorkflow(workflow);
+  await eko.execute(workflow);
 }
 ```

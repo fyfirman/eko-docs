@@ -95,7 +95,7 @@ async function main() {
     console.log(workflowJson);
 
     console.log("Executing workflow...");
-    await eko.executeWorkflow(workflow);
+    await eko.execute(workflow);
     console.log("Done!");
   } catch (error) {
     console.error("Error:", error);

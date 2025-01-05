@@ -47,7 +47,7 @@ afterToolUse?: (
 ### Basic Usage
 
 ```typescript
-await eko.executeWorkflow(workflow, {
+await eko.execute(workflow, {
   hooks: {
     beforeToolUse: async (tool, context, input) => {
       console.log(`Executing tool ${tool.name}, Input:`, input);
@@ -66,7 +66,7 @@ await eko.executeWorkflow(workflow, {
 #### Scenario 1: Parameter Validation and Conversion
 
 ```typescript
-await eko.executeWorkflow(workflow, {
+await eko.execute(workflow, {
   hooks: {
     beforeToolUse: async (tool, context, input) => {
       // Validate numerical parameters
@@ -90,7 +90,7 @@ await eko.executeWorkflow(workflow, {
 ```typescript
 const MAX_RETRIES = 3;
 
-await eko.executeWorkflow(workflow, {
+await eko.execute(workflow, {
   hooks: {
     beforeToolUse: async (tool, context, input) => {
       context.retryCount = 0;
@@ -112,7 +112,7 @@ await eko.executeWorkflow(workflow, {
 #### Scenario 3: Performance Monitoring
 
 ```typescript
-await eko.executeWorkflow(workflow, {
+await eko.execute(workflow, {
   hooks: {
     beforeToolUse: async (tool, context, input) => {
       context.startTime = Date.now();
@@ -139,7 +139,7 @@ await eko.executeWorkflow(workflow, {
 #### Scenario 4: Data Encryption for Sensitive Information
 
 ```typescript
-await eko.executeWorkflow(workflow, {
+await eko.execute(workflow, {
   hooks: {
     beforeToolUse: async (tool, context, input) => {
       // Encrypt sensitive data

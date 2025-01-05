@@ -152,7 +152,7 @@ const callback: WorkflowCallback = {
 };
 
 const workflow = await eko.generateWorkflow("task description");
-await eko.executeWorkflow(workflow, callback);
+await eko.execute(workflow, callback);
 ```
 
 ## Common Hook Patterns

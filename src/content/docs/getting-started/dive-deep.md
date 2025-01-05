@@ -105,7 +105,7 @@ async function main() {
   console.log("Generated workflow saved to workflow.json");
 
   // Execute with monitoring hooks
-  const result = await eko.executeWorkflow(workflow, {
+  const result = await eko.execute(workflow, {
     hooks: {
       // Monitor subtask progress
       beforeSubtask: async (subtask, context) => {
@@ -194,7 +194,7 @@ Let's examine what's happening here:
 
 3. **Execution with Hooks**
    ```typescript
-   const result = await eko.executeWorkflow(workflow, {
+   const result = await eko.execute(workflow, {
      hooks: {
        beforeSubtask: async (subtask, context) => {
          console.log(`Starting subtask: ${subtask.name}`);

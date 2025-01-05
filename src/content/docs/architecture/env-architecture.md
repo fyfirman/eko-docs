@@ -209,7 +209,7 @@ Eko implements environment-appropriate security measures:
 3. **Error Handling**
    ```typescript
    try {
-     await eko.executeWorkflow(workflow);
+     await eko.execute(workflow);
    } catch (error) {
      // Environment-specific error handling
      console.error("Workflow execution failed:", error);

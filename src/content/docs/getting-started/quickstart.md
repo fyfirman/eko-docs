@@ -54,7 +54,7 @@ export async function main() {
   `);
 
   // Execute the workflow
-  await eko.executeWorkflow(workflow);
+  await eko.execute(workflow);
 }
 ```
 

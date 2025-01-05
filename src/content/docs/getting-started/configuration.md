@@ -108,7 +108,7 @@ const workflow = await eko.generateWorkflow("Your task description", {
 Configure how workflows are executed:
 
 ```typescript
-const result = await eko.executeWorkflow(workflow, {
+const result = await eko.execute(workflow, {
   timeout: 30000, // Maximum execution time (ms)
   hooks: {
     // Execution hooks

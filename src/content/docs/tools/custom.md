@@ -158,5 +158,5 @@ const workflow = await eko.generateWorkflow(`
 `);
 
 // execute workflow
-await eko.executeWorkflow(workflow);
+await eko.execute(workflow);
 ```

@@ -74,7 +74,7 @@ const workflow = await eko.generateWorkflow(`
 `);
 
 // Execute the workflow
-await eko.executeWorkflow(workflow);
+await eko.execute(workflow);
 ```
 
 ### Custom tools
@@ -93,7 +93,7 @@ const workflow = await eko.generateWorkflow(`
 `);
 
 // Execute the workflow
-await eko.executeWorkflow(workflow);
+await eko.execute(workflow);
 ```
 
 ### Auto register tools
@@ -133,7 +133,7 @@ const workflow = await eko.generateWorkflow(`
   Your workflow
 `);
 
-await eko.executeWorkflow(workflow);
+await eko.execute(workflow);
 ```
 
 ## Next Steps
