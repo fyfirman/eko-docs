@@ -5,22 +5,9 @@ description: Eko is an agent development framework that enables programmatic con
 
 ## What is Eko?
 
-Eko is an agent programming framework that empowers developers to build autonomous agents using natural language. It seamlessly integrates browser and system automation with large language models, featuring:
+Eko is an agent development framework designed to help developers build reliable agents by supporting natural language and programming languages. It provides a unified interface for executing agents in the digital world, including both computer and browser environments, with the following key features:
 
-1. **Natural language workflow creation:**
-   Transform plain natural language descriptions into executable workflows while maintaining full programmatic control
-
-2. **Rich tool ecosystem:**
-   Unified API for browser automation, computer control, and custom tool integration - all accessible through both natural language and code
-
-3. **Hybrid intelligence system:**
-   Combines AI planning with dynamic execution, letting developers inspect and modify agent behavior at any stage
-
-## What is Eko? (Jiaqi Chen version)
-
-Eko is an agent development framework designed to help developers build reliable autonomous agents by supporting natural language and programming languages. It provides a unified interface for executing agents in the digital world, including both computer and browser environments, with the following key features:
-
-- **Hybrid design language**: Developers can write agents by both natural language with programming languages, enabling production-grade agent design.
+- **Hybrid design language**: Developers can write agents by both natural language and programming languages, enabling production-grade agent design.
 
 - **Unified digital World interaction**: Eko offers a unified syntax that is applicable across various digital environments, including computers and browsers, for seamless agent development.
 
@@ -35,6 +22,29 @@ Eko is an agent development framework designed to help developers build reliable
 ## Supported environment
 [Compariasion Figure Placeholder]
 
+## Getting started
+1. [Quick Start Guide](quickstart)
+
+   - Creating your first workflow
+   - Showcased browser extension example
+
+2. [Installation Guide](installation)
+
+   - Package installation
+   - Environment setup
+   - TypeScript configuration
+
+3. [Configuration Guide](configuration)
+
+   - Environment configuration
+   - AI model setup
+   - Tool configuration
+
+4. [Diving Deep](dive-deep)
+
+   - Walkthrough of a complete example
+   - Understanding core concepts
+   - 
 ## Eko philosophy
 
 Eko (like "echo") transforms natural language into action - your words become executable workflows. As JavaScript developers, we built Eko because we believe web technologies are the ideal foundation for human-AI interaction, with their universal reach and rich UI capabilities.
@@ -62,29 +72,6 @@ We believe the next evolution of programming will blend natural language with co
 - **Event-Driven Automation:** Trigger workflows based on browser or system events
 - **Environment Flexibility**: Work across different environments ( [Browser Extensions](/docs/browseruse/browser-extension), [Web](/docs/browseruse/browser-web), [Node.js](/docs/computeruse/computer-node), [Next-Gen AI Browser Fellou](/docs/computeruse/computer-fellou) ) with consistent APIs
 
-## Getting started
-
-1. [Quick Start Guide](quickstart)
-
-   - Creating your first workflow
-   - Showcased browser extension example
-
-2. [Installation Guide](installation)
-
-   - Package installation
-   - Environment setup
-   - TypeScript configuration
-
-3. [Configuration Guide](configuration)
-
-   - Environment configuration
-   - AI model setup
-   - Tool configuration
-
-4. [Diving Deep](dive-deep)
-
-   - Walkthrough of a complete example
-   - Understanding core concepts
 
 ## Support and Community
 
