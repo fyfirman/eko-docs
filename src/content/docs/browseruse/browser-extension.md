@@ -5,138 +5,54 @@ description: This guide demonstrates how to use Eko's browser automation capabil
 
 Before diving into browser extension specifics, we recommend completing the [Quickstart](/docs/getting-started/quickstart) first. The core concepts of workflows and tools introduced there are essential for understanding how Eko operates in a browser extension environment.
 
-This guide demonstrates how to use Eko's browser automation capabilities in a Chrome extension environment, building on those fundamental concepts.
+This guide demonstrates how to use Eko's browser automation capabilities in a browser extension environment.
 
-## How Browser Automation Works
+## What is browser use
+Browser Use is a automation tool that operates web pages through screenshot and [element extraction techniques](/docs/architecture/web-extraction). It can perform various automated operations on web pages and interact with elements without real mouse operations. Browser Use enables you to complete daily tasks efficiently and accurately.
 
-When used in a browser extension, Eko provides three main categories of tools that work together to enable browser automation:
+## Why use it in browser extension?
 
-### Browse Use Tools
+The browser extension solution provides an ideal execution environment for automated operations, retaining the browser's native powerful features while delivering efficient and stable automation capabilities. This approach is particularly suitable for scenarios requiring complex web interactions and multi-page coordinated operations.
 
-These tools interact with the browser itself through Chrome's extension APIs:
+1. Seamless operation across tabs and windows
+2. Direct DOM manipulation advantages
+3. Native screenshot capabilities
 
-- Opening/closing tabs
-- Managing windows
-- Navigating to URLs
-- Handling browser events
+## Use Cases
 
-For example, `OpenUrl` is a built-in tool that not only navigates to a URL but also ensures the page is fully loaded and ready for interaction:
+Browser extension have various practical applications in automation:
 
-```typescript
-const workflow = await eko.generateWorkflow(
-  "Open GitHub and navigate to the Chromium repository"
-);
-```
+1. **Automated Operations**: Automatically log into websites and perform complex cross-page tasks.
 
-The LLM might translate this into steps using `OpenUrl` and other tools:
+2. **Data Collection and Crawling**: Automatically scrape web data, analyze and extract key information.
 
-```json
-{
-  "nodes": [
-    {
-      "id": "open-github",
-      "action": {
-        "type": "script",
-        "name": "openPage",
-        "tools": ["open_url"],
-        "input": {
-          "url": "https://github.com"
-        }
-      }
-    }
-  ]
-}
-```
+3. **Automated Testing**: Used to simulate user actions to verify website functionality.
 
-### Web Page Interaction Tools
+4. **Reducing Repetitive Work**: Automate routine tedious tasks such as data entry and information verification to improve work efficiency.
 
-These tools interact with web page content through the content script interface:
+## Example
 
-- Finding elements on the page
-- Clicking and typing
-- Scrolling and navigation
-- Extracting content
-
-The `BrowserUse` tool provides mouse and keyboard control capabilities. For example, clicking a button:
-
-```typescript
-// When generating a workflow that needs to click something:
-const workflow = await eko.generateWorkflow(
-  "Click the search box and type 'Chromium'"
-);
-```
-
-This will be converted into an executable action:
-
-```json
-{
-  "nodes": [
-    {
-      "id": "click-search",
-      "action": {
-        "type": "script",
-        "name": "clickElement",
-        "tools": ["browser_use"],
-        "input": {
-          "action": "click",
-          "index": 12 // index of element
-        }
-      }
-    },
-    {
-      "id": "type-search",
-      "dependencies": ["click-search"],
-      "action": {
-        "type": "script",
-        "name": "typeText",
-        "tools": ["browser_use"],
-        "input": {
-          "action": "input_text",
-          "text": "Chromium"
-        }
-      }
-    }
-  ]
-}
-```
-
-### Content Extraction Tools
-
-These tools help gather and process information from web pages:
-
-- Extracting structured data
-- Taking screenshots
-- Saving files
-- Processing results
-
-## Example: Deep Web Search
-
-Let's look at a complete example that combines these capabilities. We'll create a workflow that:
-
-1. Searches for developers on GitHub
-2. Visits each profile
-3. Extracts and saves their information
+Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
-import { tools, getLLMConfig } from "@eko-ai/eko/extension";
+import { EkoConfig } from "@eko-ai/eko/types";
+import { getLLMConfig } from "@eko-ai/eko/extension";
 
-async function searchDevelopers() {
-  // Get configuration from extension storage
-  const config = await getLLMConfig();
-  const eko = new Eko(config);
+export async function main() {
+  // Load LLM model configuration 
+  // the current browser plugin project provides a page for configuring LLM parameters
+  let config = await getLLMConfig();
+  if (!config && !config.apiKey) {
+    throw Error("Please configure apiKey");
+  }
 
-  eko.registerTool(new tools.BorwserUse());
+  // Initialize eko
+  let eko = new Eko(config as EkoConfig);
 
   // Generate workflow from natural language description
-  // Eko will automatically select and sequence the appropriate tools
-  const workflow = await eko.generateWorkflow(`
-    1. Open GitHub
-    2. Search for "Chromium Developer"
-    3. For each profile in search results:
-       - Extract their name, bio, and contributions
-       - Take a screenshot of their profile
-    4. Save all collected data to a CSV file
+  let workflow = await eko.generateWorkflow(`
+    Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
   `);
 
   // Execute
@@ -144,100 +60,16 @@ async function searchDevelopers() {
 }
 ```
 
-Let's examine the workflow Eko generates for this task:
+Workflow execution process:
 
-```json
-{
-  "id": "github-search",
-  "nodes": [
-    {
-      "id": "open-github",
-      "action": {
-        "type": "script",
-        "name": "openGitHub",
-        "tools": ["open_url"],
-        "input": {
-          "url": "https://github.com"
-        }
-      }
-    },
-    {
-      "id": "perform-search",
-      "dependencies": ["open-github"],
-      "action": {
-        "type": "script",
-        "name": "searchDevelopers",
-        "tools": ["browser_use"],
-        "input": {
-          "steps": [
-            {
-              "action": "mouse_move",
-              "coordinate": [
-                /* search box coordinates */
-              ]
-            },
-            {
-              "action": "left_click"
-            },
-            {
-              "action": "type",
-              "text": "Chromium Developer"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "extract-profiles",
-      "dependencies": ["perform-search"],
-      "action": {
-        "type": "script",
-        "name": "extractProfiles",
-        "tools": ["extract_content"],
-        "input": {
-          "selectors": {
-            "name": ".profile-name",
-            "bio": ".profile-bio",
-            "contributions": ".contributions"
-          }
-        }
-      }
-    },
-    {
-      "id": "take-screenshots",
-      "dependencies": ["extract-profiles"],
-      "action": {
-        "type": "script",
-        "name": "captureProfiles",
-        "tools": ["screenshot"]
-      }
-    },
-    {
-      "id": "save-results",
-      "dependencies": ["extract-profiles", "take-screenshots"],
-      "action": {
-        "type": "script",
-        "name": "exportData",
-        "tools": ["export_file"],
-        "input": {
-          "format": "csv",
-          "filename": "developers.csv"
-        }
-      }
-    }
-  ]
-}
-```
+<video controls>
+  <source src="/docs/run_browser_use.mov" />
+</video>
 
-This workflow demonstrates how Eko:
+## Next Steps
 
-1. Breaks down a complex task into discrete steps
-2. Selects appropriate tools for each action
-3. Manages dependencies between steps
-4. Handles both Browse use and data processing
+You now understand the browser use based on extended plugins, you can:
 
-The execution is coordinated across multiple contexts:
-
-- Background script: Manages workflow execution
-- Content script: Handles page interactions
-- Browser APIs: Controls tabs and windows
+- Learn about [web extraction techniques](/docs/architecture/web-extraction) in Browser use
+- Explore [Available Tools](/docs/tools/available#browser-extension) for Browser extension
+- Learn more core concepts of eko: [Dive deep into Eko](/docs/getting-started/dive-deep)

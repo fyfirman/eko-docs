@@ -158,4 +158,4 @@ const workflow = await eko.generateWorkflow(`
 
 - Explore [Available Tools](/docs/tools/available#nodejs) for Node.js
 - Learn about [Custom Tool Development](/docs/tools/custom)
-- Understand [Hook System](/docs/tools/hook) for workflow control``
+- Understand [Hook System](/docs/tools/hook) for workflow control

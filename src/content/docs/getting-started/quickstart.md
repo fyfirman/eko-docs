@@ -58,8 +58,6 @@ export async function main() {
 }
 ```
 
-Import the main function from the newly created `first_workflow.ts` into the background `index.ts` file.
-
 Project initialization is complete, let's run it!
 
 ## Run Project
