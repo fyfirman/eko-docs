@@ -42,7 +42,7 @@ Before running any commands, make sure you have Node.js installed. You can downl
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `git clone `             | Clone document project                            |
+| `git clone git@github.com:FellouAI/eko-docs.git`             | Clone document project                            |
 | `cd eko-docs`             | Go into dictionary                            |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
