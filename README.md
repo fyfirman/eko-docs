@@ -38,11 +38,12 @@ Images can be added to `src/assets/` and embedded in Markdown with a relative li
 Static assets, like favicons, can be placed in the `public/` directory.
 
 ## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+Before running any commands, make sure you have Node.js installed. You can download and install Node.js from the official website, or use a package manager like Homebrew on macOS. Then please open a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
+| `git clone `             | Clone document project                            |
+| `cd eko-docs`             | Go into dictionary                            |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
