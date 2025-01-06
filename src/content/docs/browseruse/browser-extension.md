@@ -18,18 +18,6 @@ The browser extension solution provides an ideal execution environment for autom
 2. Direct DOM manipulation advantages
 3. Native screenshot capabilities
 
-## Use Cases
-
-Browser extension have various practical applications in automation:
-
-1. **Automated Operations**: Automatically log into websites and perform complex cross-page tasks.
-
-2. **Data Collection and Crawling**: Automatically scrape web data, analyze and extract key information.
-
-3. **Automated Testing**: Used to simulate user actions to verify website functionality.
-
-4. **Reducing Repetitive Work**: Automate routine tedious tasks such as data entry and information verification to improve work efficiency.
-
 ## Example: Search Elon Musk in youtube and summarize
 
 Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
@@ -63,9 +51,21 @@ Workflow execution process:
   <source src="/docs/run_browser_use.mov" />
 </video>
 
+## Use Cases
+
+Browser extension have various practical applications in automation:
+
+1. **Automated Operations**: Automatically log into websites and perform complex cross-page tasks.
+
+2. **Data Collection and Crawling**: Automatically scrape web data, analyze and extract key information.
+
+3. **Automated Testing**: Used to simulate user actions to verify website functionality.
+
+4. **Reducing Repetitive Work**: Automate routine tedious tasks such as data entry and information verification to improve work efficiency.
+
 ## Next Steps
 
-You now understand the browser use based on extended plugins, you can:
+You now understand the browser use based on extension, you can:
 
 - Learn about [Web Extraction Technology](/docs/architecture/web-extraction) in Browser use
 - Explore [Available Tools](/docs/tools/available#browser-extension) for Browser extension
