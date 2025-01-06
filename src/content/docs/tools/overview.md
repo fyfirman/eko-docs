@@ -103,28 +103,28 @@ Automatically register all tools in the current environment.
 * Browser Extension
   ```typescript
   import { Eko } from "@eko-ai/eko";
-  import { getAllTools } from "@eko-ai/eko/extension";
+  import { loadTools } from "@eko-ai/eko/extension";
 
-  Eko.tools = getAllTools();
+  Eko.tools = loadTools();
   ```
 
 * Web
   ```typescript
   import { Eko } from "@eko-ai/eko";
-  import { getAllTools } from "@eko-ai/eko/web";
+  import { loadTools } from "@eko-ai/eko/web";
 
-  Eko.tools = getAllTools();
+  Eko.tools = loadTools();
   ```
 
 * Node.js
   ```typescript
   import { Eko } from "@eko-ai/eko";
-  import { getAllTools } from "@eko-ai/eko/nodejs";
+  import { loadTools } from "@eko-ai/eko/nodejs";
 
-  Eko.tools = getAllTools();
+  Eko.tools = loadTools();
   ```
 
-After registering with `Eko.tools = getAllTools()`, there's no need to explicitly register tools in Eko - they can be used directly.
+After registering with `Eko.tools = loadTools()`, there's no need to explicitly register tools in Eko - they can be used directly.
 
 ```typescript
 import { Eko } from "@eko-ai/eko";

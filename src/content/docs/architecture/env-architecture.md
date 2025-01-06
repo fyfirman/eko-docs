@@ -153,14 +153,14 @@ When using Eko in a web environment, follow these security best practices:
 
 ## Automatic Tool Registration
 
-Each environment provides a `getAllTools()` helper for easy setup:
+Each environment provides a `loadTools()` helper for easy setup:
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
-import { getAllTools } from "@eko-ai/eko/extension"; // or /web or /nodejs
+import { loadTools } from "@eko-ai/eko/extension"; // or /web or /nodejs
 
 // Register all tools for current environment
-Eko.tools = getAllTools();
+Eko.tools = loadTools();
 ```
 
 ## Security and Access Control
@@ -193,7 +193,7 @@ Eko implements environment-appropriate security measures:
 
    ```typescript
    // Tools are automatically filtered based on environment
-   const tools = getAllTools();
+   const tools = loadTools();
    ```
 
 2. **Tool Registration**
@@ -203,7 +203,7 @@ Eko implements environment-appropriate security measures:
    eko.registerTool(new tools.TabManagement());
 
    // Or register all available tools
-   Eko.tools = getAllTools();
+   Eko.tools = loadTools();
    ```
 
 3. **Error Handling**

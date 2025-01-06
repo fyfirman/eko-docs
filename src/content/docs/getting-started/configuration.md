@@ -81,7 +81,7 @@ let llmProvider = new ClaudeProvider({
 let eko = new Eko(llmProvider);
 ```
 
-### OpenAi
+### OpenAI
 ```typescript
 import { Eko, OpenaiProvider } from "@eko-ai/eko";
 

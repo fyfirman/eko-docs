@@ -72,11 +72,11 @@ pnpm install @eko-ai/eko
 ### Usage Example
 ```typescript
 import { Eko } from "@eko-ai/eko";
-import { getAllTools } from "@eko-ai/eko/nodejs";
+import { loadTools } from "@eko-ai/eko/nodejs";
 
-Eko.tools = getAllTools();
+Eko.tools = loadTools();
 
-export async function main() {
+async function main() {
   // Initialize eko
   let eko = new Eko({
     llm: 'claude',
@@ -91,6 +91,8 @@ export async function main() {
   // Execute
   await eko.execute(workflow);
 }
+
+await main();
 ```
 
 ## Web Environment
@@ -105,9 +107,9 @@ pnpm install @eko-ai/eko
 ### Usage Example
 ```typescript
 import { Eko, ClaudeProvider } from "@eko-ai/eko";
-import { tools } from "@eko-ai/eko/web";
+import { loadTools } from "@eko-ai/eko/web";
 
-Eko.tools = getAllTools();
+Eko.tools = loadTools();
 
 async function main() {
   // Initialize LLM provider
@@ -123,8 +125,6 @@ async function main() {
   // Initialize eko
   let eko = new Eko(llmProvider);
 
-  eko.registerTool(new tools.BorwserUse());
-
   // Generate workflow from natural language description
   // Eko will automatically select and sequence the appropriate tools
   const workflow = await eko.generateWorkflow(`
@@ -134,4 +134,6 @@ async function main() {
   // Execute
   await eko.execute(workflow);
 }
+
+await main();
 ```
