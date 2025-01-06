@@ -74,5 +74,5 @@ For new users, Eko can provide necessary guidance to help them master website op
 You now understand the browser use based on web, you can:
 
 - Learn about [Web Extraction Technology](/docs/architecture/web-extraction) in Browser use
-- Explore [Available Tools](/docs/tools/available#browser-extension) for Browser extension
+- Explore [Available Tools](/docs/tools/available#web) for web
 - Learn more core concepts of eko: [Dive deep into Eko](/docs/getting-started/dive-deep)
