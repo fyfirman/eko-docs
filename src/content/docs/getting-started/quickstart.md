@@ -59,6 +59,8 @@ export async function main() {
 
 Project initialization is complete, let's run it!
 
+Click [here]() to view the sample demo code, or directly [download the extension]() to experience the workflow.
+
 ## Run Project
 
 ### Build
@@ -79,9 +81,9 @@ $ npm run build:dev
   <source src="/docs/load_extension.mov" />
 </video>
 
-### Configure LLM Model Api Key
+### Configure LLM Model API Key
 
-Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model Api Key.
+Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model API Key.
 
 <video controls>
   <source src="/docs/config_llm.mov" />
