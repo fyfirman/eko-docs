@@ -23,7 +23,7 @@ const workflow = await eko.generateWorkflow(
 
 Behind the scenes, Eko:
 
-- Analyzes the task to identify required capabilities (file operations, PDF processing, spreadsheet creation)
+- Analyzes the task to identify required capabilities (File operations, PDF processing, spreadsheet creation)
 - Breaks it down into logical subtasks
 - Determines the correct order of operations
 - Selects appropriate tools for each step
@@ -64,8 +64,8 @@ First, create a new project and install dependencies:
 ```bash
 mkdir eko-demo
 cd eko-demo
-npm init -y
-npm install @eko-ai/eko dotenv
+pnpm init -y
+pnpm install @eko-ai/eko dotenv
 ```
 
 You'll need an API key from Anthropic to use Claude, which powers Eko's language understanding. Create a `.env` file:
@@ -80,10 +80,13 @@ Here's our complete example, which we'll break down piece by piece:
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
+import { loadTools } from "@eko-ai/eko/nodejs";
 import dotenv from "dotenv";
 import fs from "fs/promises";
 
 dotenv.config();
+
+Eko.tools = loadTools();
 
 async function main() {
   // Initialize Eko with specific LLM configuration

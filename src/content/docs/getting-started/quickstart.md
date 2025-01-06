@@ -11,16 +11,14 @@ Let's start by creating a new project and installing Eko:
 
 ```bash
 # install cli (used to initialize browser extension projects)
-npm install @eko-ai/eko-cli -g
+pnpm install @eko-ai/eko-cli -g
 # initialize project
 eko-cli init browser-extension-demo
 
 cd browser-extension-demo
 # install dependencies
-npm install
+pnpm install
 ```
-
-For a complete example of using Eko in a browser extension, check out our [example extension project](https://github.com/FellouAI/eko-browser-extension).
 
 ## Your First Workflow
 
@@ -37,7 +35,7 @@ Create ts files in the background directory:
 // src/background/first_workflow.ts
 import { Eko } from "@eko-ai/eko";
 import { EkoConfig } from "@eko-ai/eko/types";
-import { tools, getLLMConfig } from "@eko-ai/eko/extension";
+import { getLLMConfig } from "@eko-ai/eko/extension";
 
 export async function main() {
   // Load LLM model configuration 
@@ -59,6 +57,8 @@ export async function main() {
 
 Project initialization is complete, let's run it!
 
+Click [here](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo) to view the sample demo code, or directly [download the extension](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo/dist) to experience the workflow.
+
 ## Run Project
 
 ### Build
@@ -66,7 +66,7 @@ Project initialization is complete, let's run it!
 Build the project into browser-loadable extension code:
 
 ```
-$ npm run build:dev
+$ pnpm run build:dev
 ```
 
 ### Load Extension
@@ -79,9 +79,9 @@ $ npm run build:dev
   <source src="/docs/load_extension.mov" />
 </video>
 
-### Configure LLM Model Api Key
+### Configure LLM Model API Key
 
-Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model Api Key.
+Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model API Key.
 
 <video controls>
   <source src="/docs/config_llm.mov" />

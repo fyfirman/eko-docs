@@ -11,13 +11,13 @@ When building a browser extension that uses Eko, you'll need to:
 
 ```bash
 # install cli (used to initialize browser extension projects)
-npm install @eko-ai/eko-cli -g
+pnpm install @eko-ai/eko-cli -g
 # initialize project
 eko-cli init browser-extension-demo
 
 cd browser-extension-demo
 # install dependencies
-npm install
+pnpm install
 ```
 
 ### Extension Project Structure
@@ -39,6 +39,7 @@ For a complete example of using Eko in a browser extension, check out our [examp
 
 ### Usage Example
 ```typescript
+// src/background/first_workflow.ts
 import { Eko } from "@eko-ai/eko";
 import { EkoConfig } from "@eko-ai/eko/types";
 import { getLLMConfig } from "@eko-ai/eko/extension";
@@ -66,17 +67,17 @@ export async function main() {
 ### Install
 
 ```bash
-npm install @eko-ai/eko
+pnpm install @eko-ai/eko
 ```
 
 ### Usage Example
 ```typescript
 import { Eko } from "@eko-ai/eko";
-import { getAllTools } from "@eko-ai/eko/nodejs";
+import { loadTools } from "@eko-ai/eko/nodejs";
 
-Eko.tools = getAllTools();
+Eko.tools = loadTools();
 
-export async function main() {
+async function main() {
   // Initialize eko
   let eko = new Eko({
     llm: 'claude',
@@ -91,6 +92,8 @@ export async function main() {
   // Execute
   await eko.execute(workflow);
 }
+
+await main();
 ```
 
 ## Web Environment
@@ -99,15 +102,15 @@ For web pages, you can include Eko using a module bundler like webpack or use it
 
 ### Install
 ```bash
-npm install @eko-ai/eko
+pnpm install @eko-ai/eko
 ```
 
 ### Usage Example
 ```typescript
 import { Eko, ClaudeProvider } from "@eko-ai/eko";
-import { tools } from "@eko-ai/eko/web";
+import { loadTools } from "@eko-ai/eko/web";
 
-Eko.tools = getAllTools();
+Eko.tools = loadTools();
 
 async function main() {
   // Initialize LLM provider
@@ -123,8 +126,6 @@ async function main() {
   // Initialize eko
   let eko = new Eko(llmProvider);
 
-  eko.registerTool(new tools.BorwserUse());
-
   // Generate workflow from natural language description
   // Eko will automatically select and sequence the appropriate tools
   const workflow = await eko.generateWorkflow(`
@@ -134,4 +135,6 @@ async function main() {
   // Execute
   await eko.execute(workflow);
 }
+
+await main();
 ```
