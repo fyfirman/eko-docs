@@ -11,16 +11,14 @@ Let's start by creating a new project and installing Eko:
 
 ```bash
 # install cli (used to initialize browser extension projects)
-npm install @eko-ai/eko-cli -g
+pnpm install @eko-ai/eko-cli -g
 # initialize project
 eko-cli init browser-extension-demo
 
 cd browser-extension-demo
 # install dependencies
-npm install
+pnpm install
 ```
-
-For a complete example of using Eko in a browser extension, check out our [example extension project](https://github.com/FellouAI/eko-browser-extension).
 
 ## Your First Workflow
 
@@ -37,7 +35,7 @@ Create ts files in the background directory:
 // src/background/first_workflow.ts
 import { Eko } from "@eko-ai/eko";
 import { EkoConfig } from "@eko-ai/eko/types";
-import { tools, getLLMConfig } from "@eko-ai/eko/extension";
+import { getLLMConfig } from "@eko-ai/eko/extension";
 
 export async function main() {
   // Load LLM model configuration 
@@ -66,7 +64,7 @@ Project initialization is complete, let's run it!
 Build the project into browser-loadable extension code:
 
 ```
-$ npm run build:dev
+$ pnpm run build:dev
 ```
 
 ### Load Extension
@@ -92,6 +90,8 @@ Click on the current eko extension details, find Extension Options in the detail
 Pin the current extension in the browser's top-right extensions menu, click the extension to open the popup, and click the RUN button to execute.
 
 ![RUN](../assets/run_extension.png)
+
+Browser extension complete example code download link: [browser-extension-demo](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo), load unpacked directory: [dist](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo/dist).
 
 ## Next Steps
 

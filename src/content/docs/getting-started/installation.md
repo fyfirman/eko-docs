@@ -11,13 +11,13 @@ When building a browser extension that uses Eko, you'll need to:
 
 ```bash
 # install cli (used to initialize browser extension projects)
-npm install @eko-ai/eko-cli -g
+pnpm install @eko-ai/eko-cli -g
 # initialize project
 eko-cli init browser-extension-demo
 
 cd browser-extension-demo
 # install dependencies
-npm install
+pnpm install
 ```
 
 ### Extension Project Structure
@@ -66,7 +66,7 @@ export async function main() {
 ### Install
 
 ```bash
-npm install @eko-ai/eko
+pnpm install @eko-ai/eko
 ```
 
 ### Usage Example
@@ -99,7 +99,7 @@ For web pages, you can include Eko using a module bundler like webpack or use it
 
 ### Install
 ```bash
-npm install @eko-ai/eko
+pnpm install @eko-ai/eko
 ```
 
 ### Usage Example
