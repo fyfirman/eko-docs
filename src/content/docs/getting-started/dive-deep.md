@@ -64,8 +64,8 @@ First, create a new project and install dependencies:
 ```bash
 mkdir eko-demo
 cd eko-demo
-npm init -y
-npm install @eko-ai/eko dotenv
+pnpm init -y
+pnpm install @eko-ai/eko dotenv
 ```
 
 You'll need an API key from Anthropic to use Claude, which powers Eko's language understanding. Create a `.env` file:
