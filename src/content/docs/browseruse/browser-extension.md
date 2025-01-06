@@ -69,4 +69,5 @@ You now understand the browser use based on extension, you can:
 
 - Learn about [Web Extraction Technology](/docs/architecture/web-extraction) in Browser use
 - Explore [Available Tools](/docs/tools/available#browser-extension) for Browser extension
-- Learn more core concepts of eko: [Dive deep into Eko](/docs/getting-started/dive-deep)
+- Learn about [Custom Tool Development](/docs/tools/custom)
+- Understand [Hook System](/docs/tools/hook) for workflow control
