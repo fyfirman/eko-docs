@@ -8,7 +8,7 @@ Before diving into browser extension specifics, we recommend completing the [Qui
 This guide demonstrates how to use Eko's browser automation capabilities in a browser extension environment.
 
 ## What is browser use
-Browser Use is a automation tool that operates web pages through screenshot and [element extraction techniques](/docs/architecture/web-extraction). It can perform various automated operations on web pages and interact with elements without real mouse operations. Browser Use enables you to complete daily tasks efficiently and accurately.
+Browser Use is a automation tool that operates web pages through screenshot and [Web Extraction Technology](/docs/architecture/web-extraction). It can perform various automated operations on web pages and interact with elements without real mouse operations. Browser Use enables you to complete daily tasks efficiently and accurately.
 
 ## Why use it in browser extension?
 
@@ -30,7 +30,7 @@ Browser extension have various practical applications in automation:
 
 4. **Reducing Repetitive Work**: Automate routine tedious tasks such as data entry and information verification to improve work efficiency.
 
-## Example
+## Example: Search Elon Musk in youtube and summarize
 
 Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
 
@@ -67,6 +67,6 @@ Workflow execution process:
 
 You now understand the browser use based on extended plugins, you can:
 
-- Learn about [web extraction techniques](/docs/architecture/web-extraction) in Browser use
+- Learn about [Web Extraction Technology](/docs/architecture/web-extraction) in Browser use
 - Explore [Available Tools](/docs/tools/available#browser-extension) for Browser extension
 - Learn more core concepts of eko: [Dive deep into Eko](/docs/getting-started/dive-deep)
