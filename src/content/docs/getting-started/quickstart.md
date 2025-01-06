@@ -46,7 +46,7 @@ export async function main() {
   let eko = new Eko(config as EkoConfig);
 
   // Generate a workflow from natural language description
-  const workflow = await eko.generateWorkflow(`
+  const workflow = await eko.generate(`
     Search Sam Altman's information and summarize it into markdown format for export
   `);
 

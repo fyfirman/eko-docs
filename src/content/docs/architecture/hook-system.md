@@ -151,7 +151,7 @@ const callback: WorkflowCallback = {
   },
 };
 
-const workflow = await eko.generateWorkflow("task description");
+const workflow = await eko.generate("task description");
 await eko.execute(workflow, callback);
 ```
 

@@ -153,7 +153,7 @@ let eko = new Eko("your apiKey");
 eko.registerTool(new SendEmail());
 
 // workflow
-const workflow = await eko.generateWorkflow(`
+const workflow = await eko.generate(`
   Search for today's NASDAQ stock market data and generate a report to send via email to example@email.com
 `);
 

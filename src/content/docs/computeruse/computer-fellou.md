@@ -96,7 +96,7 @@ async function example() {
     eko.registerTool(new ComputerUse());
     eko.registerTool(new ExportFile());
 
-    const workflow = await eko.generateWorkflow(`
+    const workflow = await eko.generate(`
         Open Google search for information about Musk and export it as an md file.
     `);
     await eko.execute(workflow);

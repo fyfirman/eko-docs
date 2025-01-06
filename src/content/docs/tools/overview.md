@@ -69,7 +69,7 @@ let eko = new Eko("apiKey");
 eko.registerTool(new tools.CommandExecute());
 
 // Generate a workflow from natural language description
-const workflow = await eko.generateWorkflow(`
+const workflow = await eko.generate(`
   Clean up log files larger than 100M on the system
 `);
 
@@ -88,7 +88,7 @@ let eko = new Eko("apiKey");
 eko.registerTool(new MyQueryOrderTool());
 
 // Generate a workflow from natural language description
-const workflow = await eko.generateWorkflow(`
+const workflow = await eko.generate(`
   Get the unshipped orders of user ID 1000 within the last 3 days
 `);
 
@@ -129,7 +129,7 @@ After registering with `Eko.tools = loadTools()`, there's no need to explicitly 
 ```typescript
 import { Eko } from "@eko-ai/eko";
 
-const workflow = await eko.generateWorkflow(`
+const workflow = await eko.generate(`
   Your workflow
 `);
 

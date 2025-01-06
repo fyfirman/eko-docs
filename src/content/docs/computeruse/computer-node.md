@@ -86,7 +86,7 @@ async function main() {
 
   try {
     // Create and execute a simple workflow
-    const workflow = await eko.generateWorkflow(`
+    const workflow = await eko.generate(`
       Clean up all files in the current directory larger than 1MB
     `);
 
@@ -120,7 +120,7 @@ This workflow will:
 ### 1. DevOps Automation
 
 ```typescript
-const workflow = await eko.generateWorkflow(`
+const workflow = await eko.generate(`
   Deploy the application:
   1. Run unit tests
   2. Build the project
@@ -133,7 +133,7 @@ const workflow = await eko.generateWorkflow(`
 ### 2. File Management
 
 ```typescript
-const workflow = await eko.generateWorkflow(`
+const workflow = await eko.generate(`
   Organize photos:
   1. Find all image files
   2. Group by date taken
@@ -145,7 +145,7 @@ const workflow = await eko.generateWorkflow(`
 ### 3. System Maintenance
 
 ```typescript
-const workflow = await eko.generateWorkflow(`
+const workflow = await eko.generate(`
   Daily system maintenance:
   1. Check disk usage
   2. Remove temp files

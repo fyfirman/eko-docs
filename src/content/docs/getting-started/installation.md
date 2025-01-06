@@ -53,7 +53,7 @@ export async function main() {
   let eko = new Eko(config as EkoConfig);
 
   // Generate workflow from natural language description
-  let workflow = await eko.generateWorkflow(`
+  let workflow = await eko.generate(`
     Search for Elon Musk, summarize search results and export as md
   `);
 
@@ -85,7 +85,7 @@ async function main() {
   });
 
   // Generate workflow from natural language description
-  let workflow = await eko.generateWorkflow(`
+  let workflow = await eko.generate(`
     Clean up all files in the current directory larger than 1MB
   `);
 
@@ -128,7 +128,7 @@ async function main() {
 
   // Generate workflow from natural language description
   // Eko will automatically select and sequence the appropriate tools
-  const workflow = await eko.generateWorkflow(`
+  const workflow = await eko.generate(`
     Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
   `);
 

@@ -48,7 +48,7 @@ export async function main() {
   let eko = new Eko(config as EkoConfig);
 
   // Generate workflow from natural language description
-  let workflow = await eko.generateWorkflow(`
+  let workflow = await eko.generate(`
     Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
   `);
 

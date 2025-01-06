@@ -81,7 +81,7 @@ async function auto_test_case() {
 
   // Generate workflow from natural language description
   // Eko will automatically select and sequence the appropriate tools
-  const workflow = await eko.generateWorkflow(`
+  const workflow = await eko.generate(`
     Product Management Test Cases, Output test report:
     1. Add New Product
     2. Edit Product Details
