@@ -39,6 +39,7 @@ For a complete example of using Eko in a browser extension, check out our [examp
 
 ### Usage Example
 ```typescript
+// src/background/first_workflow.ts
 import { Eko } from "@eko-ai/eko";
 import { EkoConfig } from "@eko-ai/eko/types";
 import { getLLMConfig } from "@eko-ai/eko/extension";
