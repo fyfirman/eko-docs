@@ -57,7 +57,7 @@ export async function main() {
 
 Project initialization is complete, let's run it!
 
-Click [here]() to view the sample demo code, or directly [download the extension]() to experience the workflow.
+Click [here](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo) to view the sample demo code, or directly [download the extension](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo/dist) to experience the workflow.
 
 ## Run Project
 
@@ -92,8 +92,6 @@ Click on the current eko extension details, find Extension Options in the detail
 Pin the current extension in the browser's top-right extensions menu, click the extension to open the popup, and click the RUN button to execute.
 
 ![RUN](../assets/run_extension.png)
-
-Browser extension complete example code download link: [browser-extension-demo](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo), load unpacked directory: [dist](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo/dist).
 
 ## Next Steps
 
