@@ -25,6 +25,24 @@ let config = await getLLMConfig();
 let eko = new Eko(config as EkoConfig);
 ```
 
+Or you can use baseURL to config LLM model:
+
+```typescript
+import { Eko, ClaudeProvider } from "@eko-ai/eko";
+
+let llmProvider = new ClaudeProvider({
+  // Please use your API endpoint for authentication and forwarding on the server side, do not expose API keys in the frontend
+  baseURL: 'https://your-api-endpoint.com',
+  // User Authentication Request Header
+  defaultHeaders: {
+    // 'Authorization': `Bearer ${getToken()}`
+  }
+});
+
+// Initialize eko
+let eko = new Eko(llmProvider);
+```
+
 ## Node.js Environment
 
 In the Node.js environment, it is recommended to configure the API Key in `.env`, example:
@@ -65,7 +83,9 @@ let eko = new Eko(llmProvider);
 
 ## Supported LLMs
 
-The most essential configuration is setting up your LLM (Large Language Model) access.
+The most essential configuration is setting up your LLM (Large Language Model) access, which is availbale on both **Chromium Extension, Web and Node.js environment**.
+
+> **NOTICE:** It is NOT recommended to configure the apiKey directly in the web environment, except for debugging purposes only.
 
 ### Claude
 ```typescript
