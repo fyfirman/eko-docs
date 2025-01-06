@@ -9,7 +9,7 @@ This guide covers how to configure Eko in different environments.
 
 Here's how to initialize the demo project which includes configuring the model page:
 
-Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model Api Key.
+Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model API Key.
 
 <video controls>
   <source src="/docs/config_llm.mov" />
@@ -27,7 +27,7 @@ let eko = new Eko(config as EkoConfig);
 
 ## Node.js Environment
 
-In the Node.js environment, it is recommended to configure the apiKey in `.env`, example:
+In the Node.js environment, it is recommended to configure the API Key in `.env`, example:
 ```
 ANTHROPIC_API_KEY=your api key
 OPENAI_API_KEY=your api key
@@ -45,7 +45,7 @@ let eko = new Eko({
 
 ## Web Environment
 
-In a web environment, be careful not to expose the apiKey in the frontend. Please proxy and forward requests through server-side interfaces, and authenticate users through the interfaces.
+In a web environment, be careful not to expose the API Key in the frontend. Please proxy and forward requests through server-side interfaces, and authenticate users through the interfaces.
 
 ```typescript
 import { Eko, ClaudeProvider } from "@eko-ai/eko";
