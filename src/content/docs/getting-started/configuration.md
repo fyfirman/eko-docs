@@ -45,7 +45,7 @@ let eko = new Eko({
 
 ## Web Environment
 
-In a web environment, be careful not to expose the API Key in the frontend. Please proxy and forward requests through server-side interfaces, and authenticate users through the interfaces.
+In a web environment, be careful not to expose the API Key in the frontend. Please **proxy and forward** requests through server-side interfaces, and authenticate users through the interfaces.
 
 ```typescript
 import { Eko, ClaudeProvider } from "@eko-ai/eko";
@@ -65,7 +65,7 @@ let eko = new Eko(llmProvider);
 
 ## Supported LLMs
 
-The most essential configuration is setting up your LLM (Large Language Model) access
+The most essential configuration is setting up your LLM (Large Language Model) access.
 
 ### Claude
 ```typescript
