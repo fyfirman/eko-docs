@@ -4,13 +4,9 @@ description: Eko is an agent development framework that enables programmatic con
 ---
 
 ## What is Eko?
-
-Eko is an agent development framework designed to help web developers build reliable agents by supporting natural language and programming languages. It provides a unified interface for executing agents in the digital world, including both computer and browser environments, with the following key features:
-
+Eko is an agent development framework designed to help developers build reliable agents by supporting natural language and programming languages. It provides a unified interface for executing agents in the digital world, including both computer and browser environments, with the following key features:
 - **Hybrid design language**: Developers can write agents by both natural language and programming languages, enabling production-grade agent design.
-
 - **Unified digital World interaction**: Eko offers a unified syntax that is applicable across various digital environments, including computers and browsers, for seamless agent development.
-
 - **Transparent and intervenable agents**: During agent execution, users can inspect its state in real-time and modify its behavior, ensuring greater control and security.
 
 ## Eko's Abilities
@@ -21,47 +17,25 @@ Eko is an agent development framework designed to help web developers build reli
 
 ## Supported environment
 [Compariasion Figure Placeholder]
-
+o0
+ 
 ## Getting started
-1. [Quick Start Guide](quickstart)
+- [Quickstart](quickstart)
+- [Installation](installation)
+- [Configuration](configuration)
+- [Diving deep into Eko](dive-deep)
 
-   - Creating your first workflow
-   - Showcased browser extension example
+## Mission & Vision
+We believe that the next evolution of programming will seamlessly integrate natural language with code. Eko's mission is to bring this future to life for the JavaScript community first, harnessing the ecosystem’s strengths in UI, tooling, and cross-platform development.
 
-2. [Installation Guide](installation)
-
-   - Package installation
-   - Environment setup
-   - TypeScript configuration
-
-3. [Configuration Guide](configuration)
-
-   - Environment configuration
-   - AI model setup
-   - Tool configuration
-
-4. [Diving Deep](dive-deep)
-
-   - Walkthrough of a complete example
-   - Understanding core concepts
-   - 
 ## Eko philosophy
+Eko (pronounced like 'echo') transforms natural language into action—turning your words into executable workflows. As JavaScript developers, we created Eko because we believe web technologies provide the perfect foundation for human-AI interaction, thanks to their universal accessibility and rich UI capabilities.
 
-Eko (like "echo") transforms natural language into action - your words become executable workflows. As JavaScript developers, we built Eko because we believe web technologies are the ideal foundation for human-AI interaction, with their universal reach and rich UI capabilities.
-
-### Core Principles
-
-1. **Natural + Logical**: Blend natural language with JavaScript/TypeScript, giving you the best of both worlds - the expressiveness of natural language and the power of modern web tech
-
-2. **Stability Through Structure**: Our [Two-Layer Execution Model](/docs/architecture/execution-model) provides predictable automation while remaining flexible enough to handle real-world complexity
-
-3. **Web-Native Design**: Built on the JavaScript ecosystem you already know, with seamless integration for browsers, Node.js, and modern frontend frameworks
-
-4. **Developer Experience First**: Debug and modify workflows with familiar tools - no black boxes
-
-### Mission & Vision
-
-We believe the next evolution of programming will blend natural language with code. Eko aims to make this future accessible to the JavaScript community first, leveraging the ecosystem's strengths in UI, tooling, and cross-platform development.
+## Core Principles
+- **Natural + Logical**: Combine natural language with JavaScript/TypeScript to offer the best of both worlds—expressive language and the power of modern web technologies.
+- **Stability Through Structure**: Our Two-Layer Execution Model delivers predictable automation while remaining flexible enough to tackle real-world complexity.
+- **Web-Native Design**: Built on the JavaScript ecosystem you already know, offering seamless integration with browsers, Node.js, and modern frontend frameworks.
+- **Developer Experience First**: Debug and modify workflows using familiar tools—no black boxes, just full transparency.
 
 ## Key Features
 
@@ -74,6 +48,5 @@ We believe the next evolution of programming will blend natural language with co
 
 
 ## Support and Community
-
 - [GitHub Issues](https://github.com/FellouAI/eko/issues) for bug reports and feature requests
 - [Documentation](https://eko.fellou.ai/docs) for detailed guides and API reference
