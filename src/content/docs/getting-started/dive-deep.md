@@ -5,11 +5,11 @@ description: Take a deeper look at Eko's core concepts through a complete Node.j
 
 While our [Quickstart](/docs/getting-started/quickstart) introduced Eko through a visual browser extension example, this guide takes a deeper dive into how Eko thinks about and executes automation tasks. We'll use a file processing example in Node.js to explore the framework's core concepts, but the principles you'll learn here apply across all environments where Eko runs.
 
-## A New Way of Thinking About Automation
+## Concepts
 
-Traditional automation frameworks often require you to specify exact steps: "click here", "type there", "wait 2 seconds". Eko takes a fundamentally different approach. Instead of thinking in terms of specific actions, you describe what you want to accomplish, and Eko figures out how to do it.
+Traditional automation frameworks typically require you to specify exact steps to ensure stable execution: “click here,” “type there,” “wait for 2 seconds.” Eko, however, takes an entirely different approach. Instead of focusing on specific actions, it allows you to describe the goal you want to accomplish, and then Eko determines how to execute it efficiently.
 
-This might seem magical at first, but it's actually a carefully orchestrated process built on three key ideas:
+At first, this might seem like magic, but in reality, it is a carefully designed process built on three key principles:
 
 ### 1. Natural Language Task Planning
 

@@ -76,6 +76,9 @@ See the [Available Tools](/docs/tools/available#nodejs) section for complete doc
 
 ## Example: File Cleanup Workflow
 
+<video controls>
+  <source src="/docs/nodejs_clean_computer.mov" />
+</video>
 Let's examine how Eko can automate a file cleanup task:
 
 ```typescript

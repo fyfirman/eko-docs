@@ -31,13 +31,12 @@ pnpm install
 
 ## Creat your first workflow
 
-1. **Create a workflow file**: Create a workflow ts file in the background directory:
+Write your workflow in the `src/background/first_workflow.ts` file:
 ```bash
-# Remove the existing first_workflow.ts file and create a new one
-rm src/background/first_workflow.ts && vim src/background/first_workflow.ts
+# Create a new first_workflow.ts
+vim src/background/first_workflow.ts
 ```
-
-2. **Write your workflow**: Write your workflow in the `src/background/first_workflow.ts` file:
+Use the `:%d` command to clear the document. Then, paste the following content. Press `:wq` to exit.
 ```typescript
 // src/background/first_workflow.ts
 import { Eko } from "@eko-ai/eko";
