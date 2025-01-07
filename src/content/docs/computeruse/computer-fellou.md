@@ -5,7 +5,7 @@ description: This guide demonstrates how to use the built-in computer use functi
 
 Fellou is a next-generation AI browser designed to boost productivity, and the `computer use` capability is one of its core features.
 
-> **NOTICE**: Computeruse in [Fellou](https://fellou.ai) browser is **in Beta**, click [here](https://0ki826721va.typeform.com/to/wQjB1dsS?utm_source=xxxxx&typeform-source=[Fellou](https://fellou.ai).ai) to apply to be an early adopter.
+> **NOTICE**: Computer use in [Fellou](https://fellou.ai) browser is **in Beta**, click [here](https://0ki826721va.typeform.com/to/wQjB1dsS?utm_source=xxxxx&typeform-source=[Fellou](https://fellou.ai).ai) to apply to be an early adopter.
 
 ### Why use the `computer use` capability in Fellou?  
 
