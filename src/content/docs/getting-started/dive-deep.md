@@ -355,6 +355,6 @@ Each of these topics is covered in depth in our detailed guides. The concepts yo
 Ready to dive deeper? Here's where to go next:
 
 - Explore browser automation in the [Browser Extension Guide](/docs/browseruse/browser-extension)
-- Study the [Tool System](/docs/core-concepts/tools) in depth
+- Study the [Tool System](/docs/tools/overview) in depth
 - Learn about advanced patterns in the [Hook System](/docs/architecture/hook-system)
 - Understand how Eko adapts to different environments in [Environment-Aware Architecture](/docs/core-concepts/env-architecture)
