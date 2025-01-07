@@ -114,7 +114,7 @@ let result = await tool.execute(context, {
 });
 ```
 
-### BrowserUse
+### Browser Use
 `browser_use`: Use structured commands to interact with the browser, manipulating page elements through screenshots and webpage element extraction.
 
 ```typescript
@@ -213,7 +213,7 @@ let result = await tool.execute(context, {
 });
 ```
 
-### BrowserUse
+### Browser Use
 `browser_use`: Use structured commands to interact with the browser, manipulating page elements through screenshots and webpage element extraction.
 
 ```typescript
@@ -285,7 +285,7 @@ let result = await tool.execute(context, {
 
 The current tools can be used in both extension and web environments of the Fellou browser.
 
-### ComputerUse
+### Computer Use
 `computer_use`: Use a mouse and keyboard to interact with a computer, and take screenshots.
 
 ```typescript
