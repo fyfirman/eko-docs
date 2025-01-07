@@ -88,6 +88,8 @@ const {
 } = tools;
 ```
 
+Learn more: [Available Tools](/docs/tools/available);
+
 ### 3. Environment Bridge
 
 The bridge layer handles:

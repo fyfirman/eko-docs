@@ -310,6 +310,6 @@ While hooks are commonly used for monitoring and debugging, their potential goes
 
 ## Next Steps
 
-- Learn about [Tool Development](../tools/overview.md)
-- Explore [Workflow Execution](execution-model.md)
-- Understand [Environment Architecture](env-architecture.md)
+- Learn about [Tool Overview](/docs/tools/overview)
+- Explore [Workflow](/docs/architecture/workflow)
+- Understand [Environment Architecture](/docs/architecture/env-architecture)

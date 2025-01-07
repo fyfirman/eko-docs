@@ -32,7 +32,7 @@ Mark executable elements in the webpage, such as clickable, input-enabled elemen
 ![google](../assets/element_extraction.png)
 
 
-Extract text labels and executable element tagNames and attributes, build pseudo HTML for model recognition using text + visual approach
+Extract text labels and executable element tagNames and attributes, build pseudo HTML for model recognition using text + visual approach.
 
 ```html
 [0]:<body></body>
@@ -62,10 +62,14 @@ Utilizing pseudo-HTML and screenshot information allows models to clearly unders
 
 ## Advantages of Web Extraction Technology
 
-1. **Improved Accuracy**: Reduces misoperations and errors in element recognition through bounding and ID management.
+1. **Low Cost**: Reduce costs by lowering token usage and minimizing large model expenses.
 
-2. **Performance Optimization**: Pseudo-HTML significantly decreases the data volume compared to processing massive HTML directly, enhancing efficiency.
+2. **Improved Accuracy**: Reduces misoperations and errors in element recognition through bounding and ID management.
 
-3. **Enhanced Adaptability**: Maintains consistency across different devices and browser environments.
+3. **Performance Optimization**: Pseudo-HTML significantly decreases the data volume compared to processing massive HTML directly, enhancing efficiency.
 
-4. **Strong Capability for Complex Pages**: Suitable for automation needs in complex structured web pages by integrating visual recognition and text understanding.
+4. **Enhanced Adaptability**: Maintains consistency across different devices and browser environments.
+
+5. **Strong Capability for Complex Pages**: Suitable for automation needs in complex structured web pages by integrating visual recognition and text understanding.
+
+
