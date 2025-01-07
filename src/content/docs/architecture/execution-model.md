@@ -25,7 +25,7 @@ When Eko receives a task description, it first breaks it down into logical subta
 
 Each subtask has an associated set of tools that could potentially help accomplish it. These are determined during the planning phase based on the subtask's requirements and the tools' capabilities. In our example, we use three fictitious tools - "Move hand" (🔴), "Door use" (🟢), and "Exert force" (🟡) - to illustrate this concept.
 
-In real Eko applications, the actual tools are much more practical. The framework provides tools for browser automation ([Browser Tools](../guides/tools/browser-tools.md)), computer control ([Computer Use Tools](../guides/tools/computer-tools.md)), and web interactions ([Web Tools](../guides/tools/web-tools.md)). You can also create custom tools to extend Eko's capabilities ([Custom Tools](../guides/tools/custom-tools.md)).
+In real Eko applications, the actual tools are much more practical. The framework provides tools for browser automation ([Browser Extension Tools](/docs/tools/available#browser-extension)), web-to-local computer control ([Fellou Computer Use Tools](/docs/tools/available#fellou-browser)), local-computer control ([Node.js Tools](/docs/tools/available#fellou-browser)), and web interactions ([Web Tools](/docs/tools/available#web)). You can also create custom tools to extend Eko's capabilities ([Custom Tools](/docs/tools/custom)).
 
 ### Tool Calls
 
@@ -76,4 +76,8 @@ const result = await eko.execute(workflow, {
 
 This separation of planning and execution, combined with the ability to inspect and modify the plan, makes Eko particularly well-suited for complex automation tasks. Whether you're automating web interactions, controlling computer operations, or building custom workflows, the two-layer execution model ensures both reliability and flexibility.
 
-Ready to explore further? Learn about Eko's [Tool System](tools.md), dive into the [Hook System](hooks.md) for execution control, or understand how Eko adapts to different environments in the [Environment-Aware Architecture](architecture.md).
+## Next Steps
+
+- Learn about Eko's [Tool System](/docs/tools/overview)
+- dive into the [Hook System](/docs/architecture/hook-system) for execution control
+- understand how Eko adapts to different environments in the [Environment-Aware Architecture](/docs/architecture/env-architecture)
