@@ -5,32 +5,39 @@ description: This guide will walk you through creating your first Eko workflow i
 
 This guide teaches you how to create an eko workflow in a browser extension to accomplish complex tasks through browser automation.
 
-## Initialize Project
+## Prerequisites
+1. **Install `npm`**: Make sure you have [Node.js](https://nodejs.org/) installed. You will also need either `npm` or `pnpm` for managing dependencies. If you haven't installed `pnpm` yet, follow these steps:
 
+2. **Install `pnpm`**
+   ```bash
+   npm install -g pnpm
+   ```
+> Note: If you prefer using `npm` for the setup, you can skip the pnpm installation and use npm commands instead. However, pnpm is faster and more efficient with handling dependencies.
+
+## Install Eko
 Let's start by creating a new project and installing Eko:
 
 ```bash
-# install cli (used to initialize browser extension projects)
+# Install the Eko CLI globally
 pnpm install @eko-ai/eko-cli -g
-# initialize project
+
+# Create a new browser extension project
 eko-cli init browser-extension-demo
 
+# Install dependencies
 cd browser-extension-demo
-# install dependencies
 pnpm install
 ```
 
-## Your First Workflow
+## Creat your first workflow
 
-Let's create a simple workflow to search for Sam Altman's information and export it to markdown.
+1. **Create a workflow file**: Create a workflow ts file in the background directory:
+```bash
+# Remove the existing first_workflow.ts file and create a new one
+rm src/background/first_workflow.ts && vim src/background/first_workflow.ts
+```
 
-<video controls>
-  <source src="/docs/run_workflow.mov" />
-</video>
-
-
-Create ts files in the background directory:
-
+2. **Write your workflow**: Write your workflow in the `src/background/first_workflow.ts` file:
 ```typescript
 // src/background/first_workflow.ts
 import { Eko } from "@eko-ai/eko";
@@ -46,7 +53,7 @@ export async function main() {
   let eko = new Eko(config as EkoConfig);
 
   // Generate a workflow from natural language description
-  const workflow = await eko.generateWorkflow(`
+  const workflow = await eko.generate(`
     Search Sam Altman's information and summarize it into markdown format for export
   `);
 
@@ -55,43 +62,42 @@ export async function main() {
 }
 ```
 
-Project initialization is complete, let's run it!
+> Click [here](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo) to view the sample demo code, or directly [download the extension](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo/dist) to experience the workflow.
 
-Click [here](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo) to view the sample demo code, or directly [download the extension](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo/dist) to experience the workflow.
-
-## Run Project
-
-### Build
-
-Build the project into browser-loadable extension code:
-
-```
-$ pnpm run build:dev
+3. **Build**: Build the project into browser-loadable extension code:
+```bash
+pnpm run build:dev
 ```
 
-### Load Extension
+### Load extension
 
-- Open Chrome browser extensions page `chrome://extensions/`
-- Enable Developer Mode
-- Load unpacked extension, select the dist directory of current project
+- Open the [Chrome browser](https://www.google.com/chrome/) and navigate to `chrome://extensions/`.
+- Turn on `Developer mode` (toggle switch in the top right corner).
+- Click `Load unpacked` button (the blue text in the top-left corner) and select the `dist` folder of the project (_e.g._, `[root_directory]/Eko/browser-extension-demo/dist`).
 
 <video controls>
   <source src="/docs/load_extension.mov" />
 </video>
 
-### Configure LLM Model API Key
+### Configure LLM model API Key
 
-Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model API Key.
+- Click the `Details` button on the `eko agent` card.
+- Scroll down to find the `Extension options` section.
+- Open it and enter your LLM model API Key.
 
 <video controls>
   <source src="/docs/config_llm.mov" />
 </video>
 
-### Run
-
+## Let's run it!
 Pin the current extension in the browser's top-right extensions menu, click the extension to open the popup, and click the RUN button to execute.
-
 ![RUN](../assets/run_extension.png)
+Run your workflow by clicking the RUN button in the extension popup.
+<video controls>
+  <source src="/docs/run_workflow.mov" />
+</video>
+
+### Run
 
 ## Next Steps
 
