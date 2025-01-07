@@ -27,12 +27,20 @@ Given these limitations, traditional methods often lack the reliability needed i
 
 ## Technical Principles
 
-Mark executable elements in the webpage, such as clickable, input-enabled elements and those with event listeners, and assign element IDs to each executable element
+Mark executable elements in the webpage, such as clickable, input-enabled elements and those with event listeners, and assign element IDs to each executable element.
 
 ![google](../assets/element_extraction.png)
 
 
 Extract text labels and executable element tagNames and attributes, build pseudo HTML for model recognition using text + visual approach.
+
+### Original HTML
+
+![google-html-characters-numbers](../assets/google-html-characters-numbers.jpeg)
+
+As shown in the image, the original HTML of the Google homepage is 221,805 characters.
+
+### Extracted HTML
 
 ```html
 [0]:<body></body>
@@ -41,7 +49,7 @@ Extract text labels and executable element tagNames and attributes, build pseudo
 [3]:<a aria-label="Search for Images ">Images</a>
 [4]:<div id="gbwa"></div>
 [5]:<a role="button" tabindex="0" aria-label="Google apps" aria-expanded="false"></a>
-[6]:<a role="button" tabindex="0" aria-label="Google Account: Luozhuowei   (zhuowei@fellou.ai)" aria-expanded="false"></a>
+[6]:<a role="button" tabindex="0" aria-label="Google Account: ACCOUNT EMAIL" aria-expanded="false"></a>
 [7]:<img alt="Google"></img>
 [8]:<div></div>
 [9]:<textarea id="APjFqb" title="Search" name="q" role="combobox" aria-label="Search" aria-expanded="false"></textarea>
@@ -58,7 +66,7 @@ Extract text labels and executable element tagNames and attributes, build pseudo
 [20]:<div role="button" tabindex="0" aria-expanded="false">Settings</div>
 ```
 
-Utilizing pseudo-HTML and screenshot information allows models to clearly understand page structure and interaction points.
+Using web extraction technology, the HTML string of the Google homepage was successfully reduced from **221,805** to **1,058** characters.
 
 ## Advantages of Web Extraction Technology
 
