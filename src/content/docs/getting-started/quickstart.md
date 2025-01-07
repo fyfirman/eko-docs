@@ -91,13 +91,11 @@ pnpm run build:dev
 
 ## Let's run it!
 Pin the current extension in the browser's top-right extensions menu, click the extension to open the popup, and click the RUN button to execute.
-![RUN](../assets/run_extension.png)
+![](../assets/run_extension.png)
 Run your workflow by clicking the RUN button in the extension popup.
 <video controls>
   <source src="/docs/run_workflow.mov" />
 </video>
-
-### Run
 
 ## Next Steps
 
