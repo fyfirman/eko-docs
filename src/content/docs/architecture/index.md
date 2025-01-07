@@ -74,7 +74,7 @@ Tools are the building blocks of automation in Eko:
 - Implements specific execution logic
 - Can access shared execution context
 
-### Tool Registry
+### Tool Registration
 
 - Manages available tools for each environment
 - Handles tool registration and validation
