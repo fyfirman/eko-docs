@@ -69,7 +69,7 @@ export async function main() {
 pnpm run build:dev
 ```
 
-### Load extension
+## Load extension
 
 - Open the [Chrome browser](https://www.google.com/chrome/) and navigate to `chrome://extensions/`.
 - Turn on `Developer mode` (toggle switch in the top right corner).
@@ -79,7 +79,7 @@ pnpm run build:dev
   <source src="/docs/load_extension.mov" />
 </video>
 
-### Configure LLM model API Key
+## Configure LLM model API Key
 
 - Click the `Details` button on the `eko agent` card.
 - Scroll down to find the `Extension options` section.
