@@ -29,36 +29,42 @@ The execution model ensures safety through:
 
 ## Key Tools for Node.js
 
-### CommandExecute Tool
+### CommandExecute
 
 Executes shell commands with safety controls:
 
 ```typescript
-const tool = new CommandExecute();
+import { tools } from "@eko-ai/eko/nodejs";
+
+const tool = new tools.CommandExecute();
 await tool.execute(context, {
   command: "ls -la",
   // Will prompt for confirmation before executing
 });
 ```
 
-### FileRead Tool
+### FileRead
 
 Safely read file contents:
 
 ```typescript
-const tool = new FileRead();
+import { tools } from "@eko-ai/eko/nodejs";
+
+const tool = new tools.FileRead();
 const content = await tool.execute(context, {
   path: "/path/to/file.txt",
   encoding: "utf8",
 });
 ```
 
-### FileWrite Tool
+### FileWrite
 
 Write content to files with confirmation:
 
 ```typescript
-const tool = new FileWrite();
+import { tools } from "@eko-ai/eko/nodejs";
+
+const tool = new tools.FileWrite();
 await tool.execute(context, {
   path: "/path/to/output.txt",
   content: "Hello World",
@@ -75,15 +81,21 @@ Let's examine how Eko can automate a file cleanup task:
 ```typescript
 import { config } from "dotenv";
 import { Eko, WorkflowParser } from "@eko-ai/eko";
-import { CommandExecute, FileRead, FileWrite } from "@eko-ai/eko/nodejs";
+import { loadTools } from "@eko-ai/eko/nodejs";
 
 // Initialize environment variables
 config();
 
+// Load Node.js environment available tools
+Eko.tools = loadTools();
+
 async function main() {
   // Initialize Eko
-  const eko = new Eko(process.env.ANTHROPIC_API_KEY);
-
+  const eko = new Eko({
+    llm: "claude", // Explicitly choose Claude as our LLM
+    apiKey: process.env.ANTHROPIC_API_KEY,
+  });
+  
   try {
     // Create and execute a simple workflow
     const workflow = await eko.generate(`
@@ -102,7 +114,7 @@ async function main() {
   }
 }
 
-main().catch(console.error);
+await main().catch(console.error);
 ```
 
 This workflow will:
@@ -157,5 +169,5 @@ const workflow = await eko.generate(`
 ## Next Steps
 
 - Explore [Available Tools](/docs/tools/available#nodejs) for Node.js
-- Learn about [Custom Tool Development](/docs/tools/custom)
+- Learn about [Custom Tools](/docs/tools/custom)
 - Understand [Hook System](/docs/tools/hook) for workflow control

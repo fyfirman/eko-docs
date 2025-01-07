@@ -1,5 +1,5 @@
 ---
-title: Custom Tool
+title: Custom Tools
 description: This guide introduces how to customize tools in eko.
 ---
 

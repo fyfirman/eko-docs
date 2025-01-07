@@ -103,6 +103,8 @@ async function example() {
 }
 ```
 
-## Fellou Computer Use Tool Refrerence
+## Next Steps
 
-See in [Tools - Available Tools - Fellou - Computeruse](/docs/tools/available#computeruse).
+- Explore [Available Tools](/docs/tools/available#computeruse) for Fellou
+- Learn about [Custom Tools](/docs/tools/custom)
+- Understand [Hook System](/docs/tools/hook) for workflow control

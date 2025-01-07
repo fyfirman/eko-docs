@@ -27,7 +27,7 @@ import { Eko } from "@eko-ai/eko";
 import { EkoConfig } from "@eko-ai/eko/types";
 import { getLLMConfig } from "@eko-ai/eko/extension";
 
-export async function main() {
+async function main() {
   // Load LLM model configuration 
   // the current browser plugin project provides a page for configuring LLM parameters
   let config = await getLLMConfig();
@@ -43,6 +43,8 @@ export async function main() {
   // Execute
   await eko.execute(workflow);
 }
+
+await main();
 ```
 
 Workflow execution process:
@@ -55,13 +57,21 @@ Workflow execution process:
 
 Browser extension have various practical applications in automation:
 
-1. **Automated Operations**: Automatically log into websites and perform complex cross-page tasks.
+### 1. Automated Operations
 
-2. **Data Collection and Crawling**: Automatically scrape web data, analyze and extract key information.
+Automatically log into websites and perform complex cross-page tasks.
 
-3. **Automated Testing**: Used to simulate user actions to verify website functionality.
+### 2. Data Collection and Crawling
 
-4. **Reducing Repetitive Work**: Automate routine tedious tasks such as data entry and information verification to improve work efficiency.
+Automatically scrape web data, analyze and extract key information.
+
+### 3. Automated Testing
+
+Used to simulate user actions to verify website functionality.
+
+### 4. Reducing Repetitive Work
+
+Automate routine tedious tasks such as data entry and information verification to improve work efficiency.
 
 ## Next Steps
 

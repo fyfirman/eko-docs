@@ -12,7 +12,7 @@ In the modern internet era, users are faced with increasingly complex web operat
 - **Testing and Validation Challenges**: Developers struggle to efficiently simulate user operations during web automation testing.
 - **Inefficiency**: Extracting information from web pages, entering data, and other tasks can waste a huge amount of time if done manually.
 
-The emergence of Eko Browser Use is aimed at solving these problems. It provides automation capabilities based on natural language workflows, helping users easily manage tedious web tasks.
+The emergence of Eko in Web is aimed at solving these problems. It provides automation capabilities based on natural language workflows, helping users easily manage tedious web tasks.
 
 ## Example: Login Automation Testing
 
