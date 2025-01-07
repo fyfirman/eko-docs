@@ -61,7 +61,7 @@ export async function main() {
 }
 ```
 
-> Click [here](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo) to view the sample demo code, or directly [download the extension](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-demo/dist) to experience the workflow.
+> Click [here](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-quickstart) to view the sample demo code, or directly [download the extension](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-quickstart/dist) to experience the workflow.
 
 3. **Build**: Build the project into browser-loadable extension code:
 ```bash
