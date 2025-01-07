@@ -315,9 +315,9 @@ The action to perform. The available actions are:
 * `scroll`: Scroll to the specified (x, y) pixel coordinates on the screen.
 
 
-## Use Cases
+## Example: Search Elon Musk on Google
 
-### Google search Elon Musk
+> **NOTICE:** This example can only run on [**Browser Extension Enviroment**](http://localhost:4321/docs/browseruse/browser-extension).
 
 ```typescript
 import { tools, browser, utils } from "@eko-ai/eko/extension";

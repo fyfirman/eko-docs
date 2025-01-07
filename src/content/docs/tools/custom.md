@@ -9,7 +9,7 @@ In the Eko framework, Tools are core components that implement different functio
 
 Custom Tools allow developers to design and implement their own function modules based on specific business logic or application needs, without relying on built-in tools. Through custom Tools, developers can extend the capabilities of the Eko framework and enhance its flexibility and adaptability.
 
-## Why Create Custom Tools?
+## Why Custom Tools?
 
 Custom Tools help developers solve the following problems:
 
@@ -18,7 +18,7 @@ Custom Tools help developers solve the following problems:
 - Modularize repeated functionality for easier management and debugging.
 - Call internal company services and integrate specific business logic.
 
-## How to Create Custom Tools in Eko?
+## How to Custom Tools in Eko?
 
 Each Tool needs to implement the following core elements:
 
@@ -147,7 +147,7 @@ class SendEmail implements Tool<SendEmailParams, SendEmailResult> {
 ```typescript
 import { Eko } from "@eko-ai/eko";
 
-let eko = new Eko("your apiKey");
+let eko = new Eko("apiKey");
 
 // Register the tool
 eko.registerTool(new SendEmail());

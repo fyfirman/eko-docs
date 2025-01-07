@@ -106,7 +106,7 @@ Hooks provide deep visibility and control over workflow execution:
 - Monitor and modify subtask execution
 - Access to execution context and results
 
-### Tool Hooks
+### Tools Hook
 
 - beforeToolUse/afterToolUse for fine-grained control
 - Modify tool inputs and outputs

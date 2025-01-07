@@ -72,7 +72,7 @@ const callback = {
 };
 ```
 
-### 3. Tool Hooks
+### 3. Tools Hook
 
 These provide the finest level of control, letting you monitor and modify individual tool operations. Think of them as quality control points in your automation assembly line:
 

@@ -51,7 +51,7 @@ In the Eko framework, a Workflow is a process of sequential or parallel executio
 
 4. **Task Destruction**: For tools that need to clean up resources, Tools also provide an optional `destroy` method, allowing timely release of resources after task completion to maintain system cleanliness and efficiency.
 
-## Used in eko
+## Using in eko
 
 eko framework provides various built-in tools for different environments that can be used directly, and you can also customize tools to complete workflow tasks.
 
@@ -61,25 +61,31 @@ Here is a demonstration of the node.js environment
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
-import { tools } from "@eko-ai/eko/nodejs";
+import { loadTools } from "@eko-ai/eko/nodejs";
+
+// Register all tools for current environment
+Eko.tools = loadTools();
 
 let eko = new Eko("apiKey");
 
-// register tool
-eko.registerTool(new tools.CommandExecute());
-
 // Generate a workflow from natural language description
 const workflow = await eko.generate(`
-  Clean up log files larger than 100M on the system
+  Clean up log files larger than 1M on current directory
 `);
 
 // Execute the workflow
 await eko.execute(workflow);
 ```
 
+Learn more: [Available Tools](/docs/tools/available).
+
 ### Custom tools
 ```typescript
 import { Eko } from "@eko-ai/eko";
+import { loadTools } from "@eko-ai/eko/nodejs";
+
+// Register all tools for current environment
+Eko.tools = loadTools();
 
 let eko = new Eko("apiKey");
 
@@ -95,6 +101,8 @@ const workflow = await eko.generate(`
 // Execute the workflow
 await eko.execute(workflow);
 ```
+
+Learn more: [Custom Tools](/docs/tools/custom).
 
 ### Auto register tools
 
@@ -128,6 +136,10 @@ After registering with `Eko.tools = loadTools()`, there's no need to explicitly 
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
+import { loadTools } from "@eko-ai/eko/nodejs";
+
+// Register all tools for current environment
+Eko.tools = loadTools();
 
 const workflow = await eko.generate(`
   Your workflow
@@ -140,6 +152,6 @@ await eko.execute(workflow);
 
 Now that you understand the concept of tools, let's look at what built-in Tools are available and how to customize Tools:
 
-- Built-in [Available Tools](/docs/tools/available.md) of the framework in different environments
-- Learn how to [Custom Tools](/docs/tools/custom.md)
-- Learn how to use [Tool Hook](/docs/tools/hook.md) to dynamically modify input and output parameters
+- Built-in [Available Tools](/docs/tools/available) of the framework in different environments
+- Learn how to [Custom Tools](/docs/tools/custom)
+- Learn how to use [Tools Hook](/docs/tools/hook) to dynamically modify input and output parameters
