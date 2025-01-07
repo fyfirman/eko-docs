@@ -23,25 +23,25 @@ const workflow = await eko.generate(
 
 Behind the scenes, Eko:
 
+```
 - Analyzes the task to identify required capabilities (File operations, PDF processing, spreadsheet creation)
 - Breaks it down into logical subtasks
 - Determines the correct order of operations
 - Selects appropriate tools for each step
-
+```
 This planning happens before any actual execution, allowing Eko to create a complete, validated plan that you can inspect or modify if needed.
 
-### 2. Two-Layer Execution
+### 2. Two-layer Execution
 
-Think of Eko as having two distinct personalities:
+Eko can be seen as having two distinct personalities:
 
-- A thoughtful planner who breaks down complex tasks (the planning layer)
-- A skilled operator who knows how to use tools effectively (the execution layer)
+- The Planning layer, which excels at breaking down complex tasks into actionable steps (Planning Layer)
+- The Operation layer, which is proficient in using tools effectively to execute tasks (Execution Layer)
+This layered structure, known as the "[two-layer Execution Model](/docs/architecture/execution-model)," is crucial for the following reasons:
 
-This separation, which we call the [two-layer execution model](/docs/architecture/execution-model), is crucial because it:
-
-- Makes automation more reliable by validating plans before execution
-- Enables adaptation to changing conditions during execution
-- Allows you to modify either planning or execution without affecting the other
+- It ensures automation reliability by validating plans before execution.
+- It allows for flexibility in adapting to changing conditions during execution.
+- It enables independent adjustments to either the planning or execution layers without affecting the other.
 
 ### 3. Tools and Hooks
 
@@ -53,18 +53,17 @@ The real work in Eko happens through tools - discrete units of capability that k
 
 Meanwhile, hooks let you monitor and control the automation process at multiple levels, from high-level workflow progress to individual tool operations.
 
-## Exploring Through Example
+## Exploring through Example
 
 Let's see these concepts in action by building something real. We'll create a workflow that processes directory contents, but pay attention to how Eko's architectural principles manifest in the code.
 
-### Setting Up Your Environment
+### Environment
 
 First, create a new project and install dependencies:
 
 ```bash
 mkdir eko-demo
 cd eko-demo
-pnpm init -y
 pnpm install @eko-ai/eko dotenv
 ```
 

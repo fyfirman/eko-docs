@@ -36,7 +36,7 @@ Write your workflow in the `src/background/first_workflow.ts` file:
 # Create a new first_workflow.ts
 vim src/background/first_workflow.ts
 ```
-Use the `:%d` command to clear the document. Then, paste the following content. Press `:wq` to exit.
+Paste the following content. Press `:wq` to exit.
 ```typescript
 // src/background/first_workflow.ts
 import { Eko } from "@eko-ai/eko";
