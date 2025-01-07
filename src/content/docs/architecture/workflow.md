@@ -60,7 +60,7 @@ Here's a simplified workflow structure:
 
 The action definition in each node specifies how the subtask should be executed. In Eko, actions are prompt-driven - the LLM determines how to use the available tools to accomplish the subtask. Each action specifies which tools it needs access to, but the precise sequence of tool usage is determined during execution based on the context and requirements.
 
-For example, when executing a "search GitHub" subtask, the LLM might be given access to web navigation and content extraction tools. During execution, it decides the exact sequence of operations - when to scroll, what elements to interact with, how to extract required information - based on its understanding of the task and the current page state.
+For example, when executing a "Search GitHub" subtask, the LLM might be given access to web navigation and content extraction tools. During execution, it decides the exact sequence of operations - when to scroll, what elements to interact with, how to extract required information - based on its understanding of the task and the current page state.
 
 ## Runtime Behavior
 
@@ -78,10 +78,10 @@ Invalid workflows are rejected early, with specific error messages identifying s
 
 ## Workflow Modification
 
-Workflows support both static and dynamic modification. Before execution, nodes and dependencies can be added or modified programmatically. During execution, the hook system enables dynamic adjustments to node behavior and data flow while maintaining DAG properties.
+Workflows support both static and dynamic modification. Before execution, nodes and dependencies can be added or modified programmatically. During execution, the [hook system](/docs/architecture/hook-system) enables dynamic adjustments to node behavior and data flow while maintaining DAG properties.
 
 Changes must preserve the workflow's structural integrity - particularly its acyclic nature and schema compatibility between connected nodes. The validation system ensures modifications don't introduce cycles or break data flow contracts.
 
 ## Next Steps
 
-The hook system provides fine-grained execution control, while the tool system enables workflow capabilities to be extended. Understanding this workflow structure provides the foundation for working with these more advanced features.
+The [hook system](/docs/architecture/hook-system) provides fine-grained execution control, while the tool system enables workflow capabilities to be extended, let's delve into the complete hook system in Eko to learn how to implement human-in-the-loop with LLMs.

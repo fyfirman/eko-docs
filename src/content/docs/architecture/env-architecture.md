@@ -7,12 +7,16 @@ description: Eko provides consistent capabilities across different JavaScript en
 
 Eko's environment-aware architecture consists of three key layers:
 
+1. Universal Core
+2. Environment-Specific Tools
+3. Environment Bridge
+
 ### 1. Universal Core
 
 The framework's core layer provides environment-independent functionality:
 
 - Workflow management and execution
-- Tool registry and management
+- Tool Registration management
 - LLM integration (Claude/OpenAI)
 - Hook system
 
@@ -83,6 +87,8 @@ const {
   CommandExecute, // Shell command execution
 } = tools;
 ```
+
+Learn more: [Available Tools](/docs/tools/available);
 
 ### 3. Environment Bridge
 
@@ -187,6 +193,13 @@ Eko implements environment-appropriate security measures:
    - Command execution safeguards
    - Direct API key usage permitted
 
+4. Fellou Browser Environment
+
+   - User-approved computer use
+   - Manages tab and window access
+   - Server-side API key management
+
+
 ## Best Practices
 
 1. **Environment Detection**
@@ -206,6 +219,8 @@ Eko implements environment-appropriate security measures:
    Eko.tools = loadTools();
    ```
 
+   Learn more: [Custom Tools](/docs/tools/custom).
+
 3. **Error Handling**
    ```typescript
    try {
@@ -215,9 +230,10 @@ Eko implements environment-appropriate security measures:
      console.error("Workflow execution failed:", error);
    }
    ```
+   Learn more: [Hook System](/docs/architecture/hook-system).
 
 ## Next Steps
 
-- Learn about [Tool System](tools.md) capabilities
-- Explore [Workflow Execution](execution-model.md)
-- Understand the [Hook System](hooks.md)
+- Learn about [Tool System](/docs/tools/overview) capabilities
+- Explore [Workflow Execution](/docs/architecture/workflow)
+- Understand the [Hook System](/docs/architecture/hook-system)

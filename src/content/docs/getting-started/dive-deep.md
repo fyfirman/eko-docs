@@ -16,7 +16,7 @@ This might seem magical at first, but it's actually a carefully orchestrated pro
 Instead of writing detailed instructions, you describe your goal in plain language. For example:
 
 ```typescript
-const workflow = await eko.generateWorkflow(
+const workflow = await eko.generate(
   "List all PDF files modified in the last week, extract their titles, and create a summary spreadsheet"
 );
 ```
@@ -98,7 +98,7 @@ async function main() {
   });
 
   // Generate a workflow from natural language description
-  const workflow = await eko.generateWorkflow(
+  const workflow = await eko.generate(
     "List the contents of the current directory and save them to a file called contents.txt"
   );
 
@@ -156,7 +156,7 @@ Let's examine what's happening here:
 2. **Workflow Generation**
 
    ```typescript
-   const workflow = await eko.generateWorkflow(
+   const workflow = await eko.generate(
      "List the contents of the current directory and save them to a file called contents.txt"
    );
    ```
@@ -286,7 +286,7 @@ eko.registerTool(new DirectoryFormatter());
 Now you can use it in workflows:
 
 ```typescript
-const workflow = await eko.generateWorkflow(
+const workflow = await eko.generate(
   "List the directory contents in detailed format, including file sizes"
 );
 ```
@@ -355,6 +355,6 @@ Each of these topics is covered in depth in our detailed guides. The concepts yo
 Ready to dive deeper? Here's where to go next:
 
 - Explore browser automation in the [Browser Extension Guide](/docs/browseruse/browser-extension)
-- Study the [Tool System](/docs/core-concepts/tools) in depth
+- Study the [Tool System](/docs/tools/overview) in depth
 - Learn about advanced patterns in the [Hook System](/docs/architecture/hook-system)
 - Understand how Eko adapts to different environments in [Environment-Aware Architecture](/docs/core-concepts/env-architecture)

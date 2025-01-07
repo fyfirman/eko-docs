@@ -72,7 +72,7 @@ const callback = {
 };
 ```
 
-### 3. Tool Hooks
+### 3. Tools Hook
 
 These provide the finest level of control, letting you monitor and modify individual tool operations. Think of them as quality control points in your automation assembly line:
 
@@ -151,7 +151,7 @@ const callback: WorkflowCallback = {
   },
 };
 
-const workflow = await eko.generateWorkflow("task description");
+const workflow = await eko.generate("task description");
 await eko.execute(workflow, callback);
 ```
 
@@ -310,6 +310,6 @@ While hooks are commonly used for monitoring and debugging, their potential goes
 
 ## Next Steps
 
-- Learn about [Tool Development](../tools/overview.md)
-- Explore [Workflow Execution](execution-model.md)
-- Understand [Environment Architecture](env-architecture.md)
+- Learn about [Tool Overview](/docs/tools/overview)
+- Explore [Workflow](/docs/architecture/workflow)
+- Understand [Environment Architecture](/docs/architecture/env-architecture)

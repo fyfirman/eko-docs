@@ -68,7 +68,7 @@ export default defineConfig({
 					label: 'Release',
 					items: [
 						{ label: 'Roadmap', slug: 'release/overview' },
-						{ label: 'Versions', slug: 'release/versions' },
+						{ label: 'Release Notes', slug: 'release/versions' },
 					]
 				},
 			],

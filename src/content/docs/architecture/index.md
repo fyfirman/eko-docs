@@ -23,7 +23,7 @@ At the heart of Eko is a unique two-layer execution model that separates task pl
 - Manages dependencies between workflow nodes
 - Provides hook-based execution control
 
-Learn more in [Two-Layer Execution Model](execution-model.md).
+Learn more in [Two-Layer Execution Model](/docs/architecture/execution-model).
 
 ## Web Extraction Technology
 
@@ -34,7 +34,7 @@ Eko employs an innovative approach to web interaction through its Web Extraction
 - Combines screenshots with pseudo-HTML for robust element identification
 - Enhances accuracy of browser automation through combined visual and structural understanding
 
-This technology is particularly important for browser automation tasks, providing reliable element identification across different page states. Learn more in [Web Extraction Technology](web-extraction.md).
+This technology is particularly important for browser automation tasks, providing reliable element identification across different page states. Learn more in [Web Extraction Technology](/docs/architecture/web-extraction).
 
 ## Environment-Aware Architecture
 
@@ -61,7 +61,7 @@ Eko provides consistent capabilities across different JavaScript environments wh
 - Full access to Node.js APIs
 - Direct access to local resources
 
-See [Environment-Aware Architecture](env-architecture.md) for details on how Eko adapts to each environment.
+See [Environment-Aware Architecture](/docs/architecture/env-architecture) for details on how Eko adapts to each environment.
 
 ## Tool System
 
@@ -74,7 +74,7 @@ Tools are the building blocks of automation in Eko:
 - Implements specific execution logic
 - Can access shared execution context
 
-### Tool Registry
+### Tool Registration
 
 - Manages available tools for each environment
 - Handles tool registration and validation
@@ -106,17 +106,17 @@ Hooks provide deep visibility and control over workflow execution:
 - Monitor and modify subtask execution
 - Access to execution context and results
 
-### Tool Hooks
+### Tools Hook
 
 - beforeToolUse/afterToolUse for fine-grained control
 - Modify tool inputs and outputs
 - Implement custom error handling and recovery
 
-Learn more in [Hook System](hook-system.md).
+Learn more in [Hook System](/docs/architecture/hook-system).
 
 ## Next Steps
 
-- Understand how workflows are structured in [Workflow Structure](workflow.md)
-- Learn about browser automation in [Web Extraction Technology](web-extraction.md)
+- Understand how workflows are structured in [Workflow Structure](/docs/architecture/workflow)
+- Learn about browser automation in [Web Extraction Technology](/docs/architecture/web-extraction)
 - Explore tool development in [Tools Overview](/docs/tools/overview)
-- Master execution control with the [Hook System](hook-system.md)
+- Master execution control with the [Hook System](/docs/architecture/hook-system)

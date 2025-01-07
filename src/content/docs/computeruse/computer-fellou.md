@@ -7,19 +7,15 @@ Fellou is a next-generation AI browser designed to boost productivity, and the `
 
 > **NOTICE**: Computeruse in [Fellou](https://fellou.ai) browser is **in Beta**, click [here](https://0ki826721va.typeform.com/to/wQjB1dsS?utm_source=xxxxx&typeform-source=[Fellou](https://fellou.ai).ai) to apply to be an early adopter.
 
-### Why use the `computer use` capability in [Fellou](https://fellou.ai)?  
+### Why use the `computer use` capability in Fellou?  
 
 In daily tasks, we often need to perform complex actions on local devices, such as organizing files, processing media, or interacting with local APIs. Traditional browsers, limited by their sandbox environment, can’t access these local resources. With the `computer use` capability, [Fellou](https://fellou.ai) bridges the gap between the browser and the operating system, bringing AI-powered automation directly to your local environment.
-
-Traditionally, developers need to build separate clients or applications to enable local system interactions. This adds complexity and increases development time. With [Fellou](https://fellou.ai), that’s no longer necessary. Developers can leverage `computer use` directly in the browser, allowing users to access the latest capabilities simply by installing [Fellou](https://fellou.ai)—no additional setup required.  
-
-This streamlined approach makes it easier for developers to create powerful workflows, while users benefit from immediate, seamless access to advanced productivity tools. 
 
 In short, `computer use` makes [Fellou](https://fellou.ai) a true personal AI assistant, helping you tackle tasks that were previously complicated, tedious, or even impossible.
 
 ---
 
-### How does `computer use` work in [Fellou](https://fellou.ai)?  
+### How does `computer use` work in Fellou?  
 
 `Computer use` is built on the eko framework and enhanced by [Fellou](https://fellou.ai)’s unique capabilities, working in the following ways:  
 
@@ -28,13 +24,9 @@ In short, `computer use` makes [Fellou](https://fellou.ai) a true personal AI as
 3. **Built-in RPA with Accessibility (a11y)**: [Fellou](https://fellou.ai) leverages a11y features to provide native robotic process automation (RPA) capabilities. This allows users to automate complex tasks across web pages effortlessly, enhancing efficiency.  
 4. **Secure Web-to-Local Interaction**: With user authorization, the `computer use` capability enables web pages to securely access and interact with the user’s computer. This opens the door to advanced workflows while ensuring full control and safety for the user.
 
- <div style="position:absolute;;margin-top:-90px;margin-left:760px">
+ <div style="position:absolute;;margin-top:-290px;margin-left:760px">
     <img src="https://fellou.s3.us-west-1.amazonaws.com/images/images/home/user-approve-img-da-new-1.svg" alt="User grant computer use access" />
 </div>
-
-<p>
-At its core, eko provides a unified abstraction and execution environment, enabling Fellou to seamlessly perform tasks both within the browser and on local systems. Combined with Fellou’s built-in RPA and secure access features, this makes it a comprehensive solution for automating and enhancing productivity.
-</p>
 
 ---
 
@@ -76,33 +68,14 @@ A user wants to combine real-time weather data with their local calendar events 
    - Show the clothing recommendation directly in the Fellou browser interface.  
    - Alternatively, use a notification to alert the user about the attire suggestion for the day.
 
-#### **User Benefits**:  
-- **Quick and Simple**: Combines two simple data sources (weather and calendar) to give a personalized recommendation.  
-- **Convenient**: Saves users time by providing a ready-made suggestion based on current and future conditions.  
-- **Practical**: Useful for users who need to make quick decisions about their daily outfit based on weather and schedule.
-
 ---
 
 ### Implemention with Eko
 
-```typescript
-import { Eko } from "@eko-ai/eko";
-import { ExportFile } from "@eko-ai/eko/web";
-import { ComputerUse } from "@eko-ai/eko/[Fellou](https://fellou.ai)";
+Coming Soon.
 
-async function example() {
-    let eko = new Eko(config);
+## Next Steps
 
-    eko.registerTool(new ComputerUse());
-    eko.registerTool(new ExportFile());
-
-    const workflow = await eko.generateWorkflow(`
-        Open Google search for information about Musk and export it as an md file.
-    `);
-    await eko.execute(workflow);
-}
-```
-
-## Fellou Computer Use Tool Refrerence
-
-See in [Tools - Available Tools - Fellou - Computeruse](/docs/tools/available#computeruse).
+- Explore [Available Tools](/docs/tools/available#fellou-browser) for Fellou
+- Learn about [Custom Tools](/docs/tools/custom)
+- Understand [Hook System](/docs/tools/hook) for workflow control

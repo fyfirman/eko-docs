@@ -7,7 +7,7 @@ description: This guide introduces tools hook handling and how to modify input a
 
 Eko is a flexible framework that supports calling tools through workflows to achieve data orchestration and processing. To enhance the flexibility and customizability of this process, Eko provides a hook mechanism. Hooks allow users to intercept and process inputs and outputs before and after tool execution, thus optimizing workflow execution.
 
-## Why Customize Hooks?
+## Why Tools Hooks?
 
 In practical applications, we may need to make specific modifications or validations to the inputs or outputs of the tools. For example:
 
@@ -163,3 +163,10 @@ await eko.execute(workflow, {
   }
 });
 ```
+## Next Steps
+
+Now that you understand the concept of tool hooks, let's explore the more powerful hook system in Eko to learn how to implement human-in-the-loop with LLMs:
+
+- Eko [Architecture Overview](/docs/architecture)
+- Learn how Eko infers workflows: [Two-Layer Execution Model](/docs/architecture/execution-model)
+- Learn the complete [hook system](/docs/architecture/hook-system)

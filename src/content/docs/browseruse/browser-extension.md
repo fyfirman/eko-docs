@@ -18,18 +18,6 @@ The browser extension solution provides an ideal execution environment for autom
 2. Direct DOM manipulation advantages
 3. Native screenshot capabilities
 
-## Use Cases
-
-Browser extension have various practical applications in automation:
-
-1. **Automated Operations**: Automatically log into websites and perform complex cross-page tasks.
-
-2. **Data Collection and Crawling**: Automatically scrape web data, analyze and extract key information.
-
-3. **Automated Testing**: Used to simulate user actions to verify website functionality.
-
-4. **Reducing Repetitive Work**: Automate routine tedious tasks such as data entry and information verification to improve work efficiency.
-
 ## Example: Search Elon Musk in youtube and summarize
 
 Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
@@ -39,7 +27,7 @@ import { Eko } from "@eko-ai/eko";
 import { EkoConfig } from "@eko-ai/eko/types";
 import { getLLMConfig } from "@eko-ai/eko/extension";
 
-export async function main() {
+async function main() {
   // Load LLM model configuration 
   // the current browser plugin project provides a page for configuring LLM parameters
   let config = await getLLMConfig();
@@ -48,13 +36,15 @@ export async function main() {
   let eko = new Eko(config as EkoConfig);
 
   // Generate workflow from natural language description
-  let workflow = await eko.generateWorkflow(`
+  let workflow = await eko.generate(`
     Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
   `);
 
   // Execute
   await eko.execute(workflow);
 }
+
+await main();
 ```
 
 Workflow execution process:
@@ -63,10 +53,31 @@ Workflow execution process:
   <source src="/docs/run_browser_use.mov" />
 </video>
 
+## Use Cases
+
+Browser extension have various practical applications in automation:
+
+### 1. Automated Operations
+
+Automatically log into websites and perform complex cross-page tasks.
+
+### 2. Data Collection and Crawling
+
+Automatically scrape web data, analyze and extract key information.
+
+### 3. Automated Testing
+
+Used to simulate user actions to verify website functionality.
+
+### 4. Reducing Repetitive Work
+
+Automate routine tedious tasks such as data entry and information verification to improve work efficiency.
+
 ## Next Steps
 
-You now understand the browser use based on extended plugins, you can:
+You now understand the browser use based on extension, you can:
 
 - Learn about [Web Extraction Technology](/docs/architecture/web-extraction) in Browser use
 - Explore [Available Tools](/docs/tools/available#browser-extension) for Browser extension
-- Learn more core concepts of eko: [Dive deep into Eko](/docs/getting-started/dive-deep)
+- Learn about [Custom Tool Development](/docs/tools/custom)
+- Understand [Hook System](/docs/tools/hook) for workflow control
