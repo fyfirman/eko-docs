@@ -29,6 +29,7 @@ Behind the scenes, Eko:
 - Determines the correct order of operations
 - Selects appropriate tools for each step
 ```
+
 This planning happens before any actual execution, allowing Eko to create a complete, validated plan that you can inspect or modify if needed.
 
 ### 2. Two-layer Execution
@@ -37,7 +38,7 @@ Eko can be seen as having two distinct personalities:
 
 - The Planning layer, which excels at breaking down complex tasks into actionable steps (Planning Layer)
 - The Operation layer, which is proficient in using tools effectively to execute tasks (Execution Layer)
-This layered structure, known as the "[two-layer Execution Model](/docs/architecture/execution-model)," is crucial for the following reasons:
+  This layered structure, known as the "[two-layer Execution Model](/docs/architecture/execution-model)," is crucial for the following reasons:
 
 - It ensures automation reliability by validating plans before execution.
 - It allows for flexibility in adapting to changing conditions during execution.
@@ -80,6 +81,7 @@ Here's our complete example, which we'll break down piece by piece:
 ```typescript
 import { Eko } from "@eko-ai/eko";
 import { loadTools } from "@eko-ai/eko/nodejs";
+import { WorkflowParser } from "@eko-ai/eko";
 import dotenv from "dotenv";
 import fs from "fs/promises";
 
@@ -102,7 +104,7 @@ async function main() {
   );
 
   // Save the generated workflow for inspection
-  const workflowJson = JSON.stringify(workflow, null, 2);
+  const workflowJson = WorkflowParser.serialize(workflow);
   await fs.writeFile("workflow.json", workflowJson);
   console.log("Generated workflow saved to workflow.json");
 
@@ -213,7 +215,7 @@ Let's examine what's happening here:
 
 ### Extending with Custom Tools
 
-One of Eko's most powerful features is its extensibility. Here's how you can add custom capabilities:
+One of Eko's most powerful features is its extensibility. The following example requires TypeScript to run. Here's how you can add custom capabilities:
 
 ```typescript
 import { Tool, InputSchema } from "@eko-ai/eko/types";
@@ -228,11 +230,32 @@ class DirectoryFormatter implements Tool {
       entries: {
         type: "array",
         description: "Array of directory entries",
+        items: {
+          type: "object",
+          properties: {
+            name: {
+              type: "string",
+              description: "Name of the file or directory",
+            },
+            size: {
+              type: "integer",
+              description: "Size of the file in bytes",
+            },
+            modifiedAt: {
+              type: "string",
+              description:
+                "Last modification date in ISO 8601 format (e.g., '2024-01-08T15:30:00Z')",
+            },
+          },
+          required: ["name", "size", "modifiedAt"],
+        },
       },
       format: {
         type: "string",
         enum: ["simple", "detailed"],
-        description: "Output format style",
+        description:
+          "Output format style - 'simple' shows only names, 'detailed' includes size and modification date",
+        default: "simple",
       },
     },
     required: ["entries"],
@@ -290,38 +313,49 @@ const workflow = await eko.generate(
 );
 ```
 
+To see the full example in action, save [format-dir.ts](examples/format-dir.ts), set up the Typescript environment, and run:
+
+```bash
+tsx format-dir.ts
+```
+
+
 ## The Built-in Tool Ecosystem
 
-Eko comes with a rich set of built-in tools, organized by environment and capability:
+Eko comes with a rich set of built-in tools, organized by environment:
 
-### File System Tools
+### Browser Extension Tools
+Tools for browser automation including:
+- Web search and content extraction
+- Tab management and navigation
+- Element interaction and form filling
+- Screenshot capture
+- File export
 
-These tools handle file and directory operations:
+### Web Tools
+A subset of browser automation tools that work in web environments:
+- Element interaction
+- Content extraction
+- Screenshot capture
+- File export
 
-- Reading/writing files
-- Directory listing and manipulation
-- File format conversions
-- Path operations
-
-### Process Management
-
-Tools for working with system processes:
-
+### Node.js Tools
+Tools for system automation:
+- File operations (read/write)
 - Command execution
-- Environment variables
-- Process spawning and control
-- Standard I/O handling
 
-### Utility Tools
+### Fellou Browser Tools
+Tools for computer control in the Fellou browser environment:
+- Mouse and keyboard control
+- Screen capture
+- System interaction
 
-General-purpose helpers:
+Each environment provides its own appropriate set of tools based on the available capabilities and security constraints. For complete details on available tools and their usage, see:
 
-- Data transformation
-- Text processing
-- Type conversion
-- Validation
-
-Each environment (Node.js, Browser Extension, Web) provides its own appropriate set of tools. Learn more in [Available Tools](/docs/tools/available).
+- [Available Tools](/docs/tools/available) for a comprehensive reference
+- [Tool System Overview](/docs/tools/overview) for understanding tool concepts
+- [Browser Use Guide](/docs/browseruse/browser-extension) for browser automation details
+- [Computer Use Guide](/docs/computeruse/computer-fellou) for system automation details
 
 ## Moving Beyond the Basics
 
