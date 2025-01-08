@@ -3,15 +3,15 @@ title: Dive Deep into Eko
 description: Take a deeper look at Eko's core concepts through a complete Node.js example that demonstrates workflows, tools, and hooks working together.
 ---
 
-While our [Quickstart](/docs/getting-started/quickstart) introduced Eko through a visual browser extension example, this guide takes a deeper dive into how Eko thinks about and executes automation tasks. We'll use a file processing example in Node.js to explore the framework's core concepts, but the principles you'll learn here apply across all environments where Eko runs.
+Traditional automation frameworks require detailed step-by-step instructions. Eko is fully automatic and intelligent - you simply describe your goal, and it autonomously determines the optimal execution path and provides the finial result end-to-end.
 
 ## Concepts
 
 Traditional automation frameworks typically require you to specify exact steps to ensure stable execution: “click here,” “type there,” “wait for 2 seconds.” Eko, however, takes an entirely different approach. Instead of focusing on specific actions, it allows you to describe the goal you want to accomplish, and then Eko determines how to execute it efficiently.
 
-At first, this might seem like magic, but in reality, it is a carefully designed process built on three key principles:
+Eko is built on three key principles:
 
-### 1. Natural Language Task Planning
+### 1. Planning
 
 Instead of writing detailed instructions, you describe your goal in plain language. For example:
 
@@ -31,19 +31,21 @@ Behind the scenes, Eko:
 ```
 This planning happens before any actual execution, allowing Eko to create a complete, validated plan that you can inspect or modify if needed.
 
-### 2. Two-layer Execution
+### 2. Hierarchical structure
 
-Eko can be seen as having two distinct personalities:
+Eko has a hierarchical structure:
 
-- The Planning layer, which excels at breaking down complex tasks into actionable steps (Planning Layer)
-- The Operation layer, which is proficient in using tools effectively to execute tasks (Execution Layer)
-This layered structure, known as the "[two-layer Execution Model](/docs/architecture/execution-model)," is crucial for the following reasons:
+- **Planning layer**: excels at breaking down complex tasks into actionable steps
+- **Operation layer**: is proficient in using tools effectively to execute tasks
 
+This layered structure, known as the "_[Two-layer Execution](/docs/architecture/execution-model)_," is crucial for the following reasons:
 - It ensures automation reliability by validating plans before execution.
 - It allows for flexibility in adapting to changing conditions during execution.
 - It enables independent adjustments to either the planning or execution layers without affecting the other.
 
-### 3. Tools and Hooks
+![ENVS](../assets/two_layer_execution.png)
+
+### 3. Tool Integration and Hooks
 
 The real work in Eko happens through tools - discrete units of capability that know how to perform specific operations. But unlike traditional automation libraries, Eko's tools are self-describing. They tell the framework:
 
@@ -53,7 +55,7 @@ The real work in Eko happens through tools - discrete units of capability that k
 
 Meanwhile, hooks let you monitor and control the automation process at multiple levels, from high-level workflow progress to individual tool operations.
 
-## Exploring through Example
+## Exploring through an Example
 
 Let's see these concepts in action by building something real. We'll create a workflow that processes directory contents, but pay attention to how Eko's architectural principles manifest in the code.
 

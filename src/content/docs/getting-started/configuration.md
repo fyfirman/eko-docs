@@ -9,7 +9,7 @@ This guide covers how to configure Eko in different environments.
 
 Here's how to initialize the demo project which includes configuring the model page:
 
-Click on the current eko extension details, find Extension Options in the details page, then click to configure LLM model API Key.
+Click on the current eko extension details, find `Extension Options` in the details page, then click to configure LLM model API Key.
 
 <video controls>
   <source src="/docs/config_llm.mov" />
@@ -83,9 +83,12 @@ let eko = new Eko(llmProvider);
 
 ## Supported LLMs
 
-The most essential configuration is setting up your LLM (Large Language Model) access, which is availbale on both **Chromium Extension, Web and Node.js environment**.
+- **OpenAI**: GPT-4o/GPT-4o-mini/GPT-4, _etc_.
+- **Claude**: Claude 3.5 Sonnet/Claude Opus, _etc_.
 
-> **NOTICE:** It is NOT recommended to configure the apiKey directly in the **Web and Chromium Extension environment**, except for debugging purposes only.
+The most essential configuration is setting up your Large Language Models (LLMs) access, which is availbale on both **Chromium Extension, Web** and **Node.js environment**.
+
+> **NOTICE:** It is NOT recommended to configure the API Key directly in the **Web and Chromium Extension environment**, except for debugging purposes only.
 
 ### Claude
 ```typescript

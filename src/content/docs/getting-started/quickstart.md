@@ -3,7 +3,13 @@ title: Quickstart
 description: This guide will walk you through creating your first Eko workflow in a browser extension environment.
 ---
 
-This guide teaches you how to create an eko workflow in a browser extension to accomplish complex tasks through browser automation.
+Let's create an eko workflow together in a browser extension to automate the task that `Search Sam Altman's information and summarize it into markdown format for export`. 
+
+> With this plugin, you no longer need to manually open multiple web pages; instead, you can run everything with a single click.
+
+<video controls>
+  <source src="/docs/run_workflow.mov" />
+</video>
 
 ## Prerequisites
 1. **Install `npm`**: Make sure you have [Node.js](https://nodejs.org/) installed. You will also need either `npm` or `pnpm` for managing dependencies. If you haven't installed `pnpm` yet, follow these steps:
