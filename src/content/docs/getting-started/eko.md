@@ -12,6 +12,8 @@ Eko (pronounced like ‘echo’) is a production-ready agent development framewo
 ## Eko's Abilities
 [Video Placeholder]
 
+Learn more: [Eko Demos](https://github.com/FellouAI/eko-demos).
+
 ## Supported environment
 ![ENVS](../assets/envs.png)
 
@@ -20,7 +22,6 @@ Learn more:
 - [Web Environment](/docs/browseruse/browser-web)
 - [Node.js Environment](/docs/computeruse/computer-node)
 - [Next-Gen AI Browser Fellou Environment](/docs/computeruse/computer-fellou)
-
 
 ## Getting started
 - [Quickstart](quickstart)
