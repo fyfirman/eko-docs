@@ -29,7 +29,6 @@ const callback = {
     // Before workflow starts - perfect for setup and validation
     beforeWorkflow: async (workflow: Workflow) => {
       console.log("Starting workflow:", workflow.name);
-      return workflow;
     },
 
     // After workflow completes - ideal for cleanup and final processing
@@ -55,8 +54,6 @@ const callback = {
     // Before each subtask - monitor and potentially skip tasks
     beforeSubtask: async (subtask: WorkflowNode, context: ExecutionContext) => {
       console.log(`Starting subtask: ${subtask.name}`);
-      // Optionally skip tasks based on conditions
-      return true;
     },
 
     // After subtask completion - process intermediate results
@@ -104,6 +101,68 @@ const callback = {
 };
 ```
 
+## Skip and abort
+
+Support skipping the current node to execute the next node or terminating workflow execution in hooks.
+
+Skip the current node and execute the next node by using `context.next()` in the callback:
+```typescript
+const callback = {
+  hooks: {
+    beforeSubtask: async (subtask: WorkflowNode, context: ExecutionContext) => {
+      // example
+      let condition = true;
+      if (condition) {
+        // Skip the current subtask node when the condition is met.
+        context.next();
+      }
+    },
+    beforeToolUse: async (
+      tool: Tool<any, any>,
+      context: ExecutionContext,
+      input: any
+    ) => {
+      // example
+      let condition = true;
+      if (condition) {
+        // Skip the current tool execution when the condition is met.
+        context.next();
+      }
+      return input;
+    },
+  },
+};
+```
+
+Abort the current workflow by using `context.abortAll()` in callback:
+```typescript
+const callback = {
+  hooks: {
+    beforeSubtask: async (subtask: WorkflowNode, context: ExecutionContext) => {
+      // example
+      let condition = true;
+      if (condition) {
+        // abort
+        context.abortAll();
+      }
+    },
+    afterToolUse: async (
+      tool: Tool<any, any>,
+      context: ExecutionContext,
+      result: any
+    ) => {
+      // example
+      let condition = true;
+      if (condition) {
+        // abort
+        context.abortAll();
+      }
+      return result;
+    },
+  },
+};
+```
+
 ## Using Hooks
 
 Hooks are provided to the workflow executor via the callback parameter:
@@ -119,13 +178,11 @@ const callback: WorkflowCallback = {
     beforeWorkflow: async (workflow) => {
       // Setup resources
       await setupResources();
-      return workflow;
     },
 
     beforeSubtask: async (subtask, context) => {
       // Log subtask start
       logSubtaskStart(subtask);
-      return true;
     },
 
     beforeToolUse: async (tool, context, input) => {
@@ -164,7 +221,6 @@ const performanceCallback: WorkflowCallback = {
   hooks: {
     beforeSubtask: async (subtask, context) => {
       context.variables.set(`${subtask.id}_start`, Date.now());
-      return true;
     },
 
     afterSubtask: async (subtask, context, result) => {
@@ -260,30 +316,12 @@ The hook system is fully typed with TypeScript:
 interface WorkflowCallback {
   hooks: {
     beforeWorkflow?: (workflow: Workflow) => Promise<void>;
-    beforeSubtask?: (
-      subtask: WorkflowNode,
-      context: ExecutionContext
-    ) => Promise<boolean>;
-    beforeToolUse?: (
-      tool: Tool<any, any>,
-      context: ExecutionContext,
-      input: any
-    ) => Promise<any>;
-    afterToolUse?: (
-      tool: Tool<any, any>,
-      context: ExecutionContext,
-      result: any
-    ) => Promise<any>;
-    afterSubtask?: (
-      subtask: WorkflowNode,
-      context: ExecutionContext,
-      result: any
-    ) => Promise<void>;
-    afterWorkflow?: (
-      workflow: Workflow,
-      variables: Map<string, unknown>
-    ) => Promise<void>;
-  };
+    beforeSubtask?: (subtask: WorkflowNode, context: ExecutionContext) => Promise<void>;
+    beforeToolUse?: (tool: Tool<any, any>, context: ExecutionContext, input: any) => Promise<any>;
+    afterToolUse?: (tool: Tool<any, any>, context: ExecutionContext, result: any) => Promise<any>;
+    afterSubtask?: (subtask: WorkflowNode, context: ExecutionContext, result: any) => Promise<void>;
+    afterWorkflow?: (workflow: Workflow, variables: Map<string, unknown>) => Promise<void>;
+  }
 }
 ```
 
