@@ -18,9 +18,11 @@ The emergence of Eko in Web is aimed at solving these problems. It provides auto
 
 ```typescript
 import { Eko, ClaudeProvider } from "@eko-ai/eko";
-import { tools } from "@eko-ai/eko/web";
+import { loadTools } from "@eko-ai/eko/web";
 
-async function auto_test_case() {
+Eko.tools = loadTools();
+
+export async function auto_test_case() {
   // Initialize LLM provider
   let llmProvider = new ClaudeProvider({
     // Please use your API endpoint for authentication and forwarding on the server side, do not expose API keys in the frontend
@@ -28,28 +30,34 @@ async function auto_test_case() {
     // User Authentication Request Header
     defaultHeaders: {
       // 'Authorization': `Bearer ${getToken()}`
-    }
+    },
+    dangerouslyAllowBrowser: true
   });
 
   // Initialize eko
   let eko = new Eko(llmProvider);
 
-  eko.registerTool(new tools.BorwserUse());
-
   // Generate workflow from natural language description
   // Eko will automatically select and sequence the appropriate tools
   const workflow = await eko.generate(`
-    Product Management Test Cases, Output test report:
-    1. Add New Product
-    2. Edit Product Details
-    3. Update Product Price
-    4. Delete Product
+    Current login page automation test:
+    1. Correct account and password are: admin / 666666 
+    2. Please randomly combine usernames and passwords for testing to verify if login validation works properly, such as: username cannot be empty, password cannot be empty, incorrect username, incorrect password
+    3. Finally, try to login with the correct account and password to verify if login is successful
+    4. Generate test report and export
   `);
 
   // Execute
   await eko.execute(workflow);
 }
 ```
+
+Complete project code: [web-demo-login-autotest](https://github.com/FellouAI/eko-demos/tree/main/web-demo-login-autotest)
+
+The execution effect is as follows:
+<video controls>
+  <source src="/docs/autotest_login.mov" />
+</video>
 
 ## Use Cases
 
