@@ -36,14 +36,8 @@ This planning happens before any actual execution, allowing Eko to create a comp
 
 Eko has a hierarchical structure:
 
-<<<<<<< HEAD
 - **Planning layer**: excels at breaking down complex tasks into actionable steps
 - **Operation layer**: is proficient in using tools effectively to execute tasks
-=======
-- The Planning layer, which excels at breaking down complex tasks into actionable steps (Planning Layer)
-- The Operation layer, which is proficient in using tools effectively to execute tasks (Execution Layer)
-  This layered structure, known as the "[two-layer Execution Model](/docs/architecture/execution-model)," is crucial for the following reasons:
->>>>>>> 8c67834fb909aaa42bf67d1045af204736cfac2b
 
 This layered structure, known as the "_[Two-layer Execution](/docs/architecture/execution-model)_," is crucial for the following reasons:
 - It ensures automation reliability by validating plans before execution.
