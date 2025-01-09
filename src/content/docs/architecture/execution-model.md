@@ -7,7 +7,7 @@ At the heart of Eko lies a unique two-layer execution model that fundamentally c
 
 ## Understanding Through Example
 
-![Two-Layer Execution Model](../assets/workflow.svg)
+![](../assets/two_layer_execution.png)
 
 To understand this model, let's explore a purposefully whimsical example: placing an elephant into a fridge. While this example uses fictitious tools for clarity, it perfectly illustrates how Eko decomposes and executes complex tasks.
 

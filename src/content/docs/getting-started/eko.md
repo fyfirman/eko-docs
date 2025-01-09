@@ -37,12 +37,6 @@ Learn more:
 - [Configuration](configuration)
 - [Diving deep into Eko](dive-deep)
 
-## Core Principles
-- **Natural + Logical:** Combine natural language with JavaScript/TypeScript to offer the best of both worlds—expressive language and the power of modern web technologies.
-- **Stability Through Structure:** Our Two-Layer Execution Model delivers predictable automation while remaining flexible enough to tackle real-world complexity.
-- **Web-Native Design:** Built on the JavaScript ecosystem you already know, offering seamless integration with browsers, Node.js, and modern frontend frameworks.
-- **Developer Experience First:** Debug and modify workflows using familiar tools—no black boxes, just full transparency.
-
 ## Support and Community
 - [GitHub Issues](https://github.com/FellouAI/eko/issues) for bug reports and feature requests
 - [Documentation](https://eko.fellou.ai/docs) for detailed guides and API reference
