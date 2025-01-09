@@ -9,6 +9,17 @@ Eko (pronounced like ‘echo’) is a production-ready agent development framewo
 - **Unified Digital World Interaction**: Eko offers a unified interface that is applicable across various digital environments, including computers and browsers, for seamless agent development.
 - **Transparent and Intervenable Agents**: During agent execution, users can inspect its state in real-time and modify its behavior, ensuring better control and security.
 
+# Framework Comparison
+
+| Feature                              | Eko   | Langchain  | Browser-use  | Dify.ai  | Coze   | 
+|--------------------------------------|-------|------------|--------------|----------|--------|
+| **Supported Platform**               | **All platform**  | Server side  | Browser  | Web  | Web  |
+| **One sentence to multi-step workflow** | ✅    | ❌          | ✅            | ❌        | ❌      |
+| **Intervenability**                  | ✅    | ✅          | ❌            | ❌        | ❌      | 
+| **Development Efficiency**           | **High**  | Low      | Middle        | Middle    | Low    |
+| **Open-source**                      | ✅    | ✅          | ✅            | ✅        | ❌      | 
+| **Access to private web resources** | ✅ **(Coming soon)** | ❌          | ❌            | ❌        | ❌      |
+
 ## Eko's Abilities
 - **Browser Use**: Collect the latest NASDAQ data on Yahoo Finance, including price changes, market capitalization, trading volume of major stocks, analyze the data and generate visualization reports.
 <video controls>

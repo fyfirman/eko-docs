@@ -7,19 +7,7 @@ description: Planned releases and feature roadmap for Eko
 
 Eko aims to revolutionize automation by combining natural language programming with powerful tooling across browsers and operating systems. Our development focuses on expandability, reliability, and developer experience.
 
-## Version Summary
-
-| Version     | Key Features                                                                                              | Detailed Features                                                                                           | Release Date  |
-|-------------|-----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|
-| **Eko 1.0** | **Core Foundation & Basic Workflow Features**                                                              | 1. Support for Workflow DSL / Hooks / Execution <br> 2. Workflow Modification <br> 3. Tool Definition & Usage <br> 4. Model Selection Support | 2025.01    |
-| **Eko 1.1** | **Enhanced Features & Multi-Workflow Support**                                                              | 1. Support for MCP Architecture <br> 2. Multi-Agent Execution / Agentic workflow <br> 3. Customizable multi-layer inference structure | 2025.02   |
-| **Eko 1.2** | **Tool Expansion & Shadow Workspace Support**                                                               | 1. Support for More Tools & Localization <br> 2. Support for Memory Mechanism <br> 3. Shadow Workspace Support      | 2025.03   |
-| **Eko 1.3** | **xx**                                                               |      | 2025.04   |
-| **Eko 1.4** | **xx**                                                               |      | 2025.05   |
-| **Eko 1.5** | **xx**                                                               |      | 2025.06   |
-
-
-## Version Detailed Feature List
+## Upcoming Features
 
 ### Workflow Enhancements
 
