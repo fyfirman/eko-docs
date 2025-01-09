@@ -6,8 +6,7 @@ description: Eko is an agent development framework that enables programmatic con
 ![eko-logo](/docs/eko-dark.jpg)
 
 ## What is Eko?
-Eko (pronounced like 'echo') is a production-ready framework for building reliable agentic workflows. It provides an efficient, cross-platform platform for developing complex agentic workflows using a mix of natural language and programming language, with real-time monitoring and intervention capabilities.
-
+Eko (pronounced like 'echo') is a framework designed for building production-ready agentic workflows. It offers an efficient, cross-platform solution for developing complex workflows that allow developers to combine natural and programming languages. For production safety, Eko provides real-time monitoring and intervention capabilities.
 # Framework Comparison
 
 | Feature                              | Eko   | Langchain  | Browser-use  | Dify.ai  | Coze   | 
