@@ -3,6 +3,8 @@ title: Eko Overview
 description: Eko is an agent development framework that enables programmatic control of browsers and operating systems through a combination of natural language and traditional programming interfaces.
 ---
 
+![eko-logo](/docs/eko-dark.jpg)
+
 ## What is Eko?
 Eko (pronounced like ‘echo’) is a production-ready agent development framework designed to help developers build reliable agents by supporting natural language and programming languages. It provides a unified interface for executing agents in the digital world, including both computer and browser environments, with the following key features:
 - **Hybrid Design Language**: Developers can design agents by both natural language and programming languages, enabling production-grade agent design.
