@@ -3,8 +3,21 @@ title: Eko Overview
 description: Eko is an agent development framework that enables programmatic control of browsers and operating systems through a combination of natural language and traditional programming interfaces.
 ---
 
+![eko-logo](/docs/eko-dark.jpg)
+
 ## What is Eko?
 Eko (pronounced like 'echo') is a production-ready framework for building reliable agentic workflows. It provides an efficient, cross-platform platform for developing complex agentic workflows using a mix of natural language and programming language, with real-time monitoring and intervention capabilities.
+
+# Framework Comparison
+
+| Feature                              | Eko   | Langchain  | Browser-use  | Dify.ai  | Coze   | 
+|--------------------------------------|-------|------------|--------------|----------|--------|
+| **Supported Platform**               | **All platform**  | Server side  | Browser  | Web  | Web  |
+| **One sentence to multi-step workflow** | ✅    | ❌          | ✅            | ❌        | ❌      |
+| **Intervenability**                  | ✅    | ✅          | ❌            | ❌        | ❌      | 
+| **Development Efficiency**           | **High**  | Low      | Middle        | Middle    | Low    |
+| **Open-source**                      | ✅    | ✅          | ✅            | ✅        | ❌      | 
+| **Access to private web resources** | ✅ **(Coming soon)** | ❌          | ❌            | ❌        | ❌      |
 
 ## Eko's Abilities
 - **Browser Use**: Collect the latest NASDAQ data on Yahoo Finance, including price changes, market capitalization, trading volume of major stocks, analyze the data and generate visualization reports.

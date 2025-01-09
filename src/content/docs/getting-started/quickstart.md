@@ -39,7 +39,6 @@ pnpm install
 
 Write your workflow in the `src/background/first_workflow.ts` file:
 ```bash
-# Create a new first_workflow.ts
 vim src/background/first_workflow.ts
 ```
 Paste the following content. Press `:wq` to exit.
