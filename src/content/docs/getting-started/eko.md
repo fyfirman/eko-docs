@@ -4,10 +4,7 @@ description: Eko is an agent development framework that enables programmatic con
 ---
 
 ## What is Eko?
-Eko (pronounced like ‘echo’) is a production-ready agent development framework designed to help developers build reliable agents by supporting natural language and programming languages. It provides a unified interface for executing agents in the digital world, including both computer and browser environments, with the following key features:
-- **Hybrid Design Language**: Developers can design agents by both natural language and programming languages, enabling production-grade agent design.
-- **Unified Digital World Interaction**: Eko offers a unified interface that is applicable across various digital environments, including computers and browsers, for seamless agent development.
-- **Transparent and Intervenable Agents**: During agent execution, users can inspect its state in real-time and modify its behavior, ensuring better control and security.
+Eko (pronounced like 'echo') is a production-ready framework for building reliable agentic workflows. It provides an efficient, cross-platform platform for developing complex agentic workflows using a mix of natural language and programming language, with real-time monitoring and intervention capabilities.
 
 ## Eko's Abilities
 - **Browser Use**: Collect the latest NASDAQ data on Yahoo Finance, including price changes, market capitalization, trading volume of major stocks, analyze the data and generate visualization reports.
@@ -21,6 +18,18 @@ Eko (pronounced like ‘echo’) is a production-ready agent development framewo
 </video>
 
 Learn more: [Eko Demos](https://github.com/FellouAI/eko-demos).
+
+# Framework Comparison
+| Feature                              | Eko   | Langchain  | Browser-use  | Dify.ai  | Coze   | Midscene.js |
+|--------------------------------------|-------|------------|--------------|----------|--------|-------------|
+| **Supported Platform**               | All platform  | Server side  | Browser  | Web  | Web  | Web  |
+| **One sentence to multi-step workflow** | ✅    | ❌          | ✅            | ❌        | ❌      | ❌           |
+| **Intervenability**                  | ✅    | ✅          | ❌            | ❌        | ❌      | ❌           |
+| **Development Efficiency**           | High  | Low      | Middle        | Middle    | Low    | Middle       |
+| **Task Complexity**           | High  | High      | Low        | Middle    | Middle    | Middle       |
+| **Open-source**                      | ✅    | ✅          | ✅            | ✅        | ❌      | ✅           |
+| **Access to private web resources** | ✅ (Coming soon) | ❌          | ❌            | ❌        | ❌      | ❌           |
+
 
 ## Supported environment
 ![ENVS](../assets/envs.png)

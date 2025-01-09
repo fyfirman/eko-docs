@@ -1,16 +1,19 @@
 ---
-title: Using Eko in Browser Extension
+title: Browser Extension
 description: This guide demonstrates how to use Eko's browser automation capabilities in a Chrome extension environment, building on those fundamental concepts.
 ---
 
 Before diving into browser extension specifics, we recommend completing the [Quickstart](/docs/getting-started/quickstart) first. The core concepts of workflows and tools introduced there are essential for understanding how Eko operates in a browser extension environment.
-
 This guide demonstrates how to use Eko's browser automation capabilities in a browser extension environment.
 
-## What is browser use
-Browser Use is a automation tool that operates web pages through screenshot and [Web Extraction Technology](/docs/architecture/web-extraction). It can perform various automated operations on web pages and interact with elements without real mouse operations. Browser Use enables you to complete daily tasks efficiently and accurately.
+<video controls>
+  <source src="/docs/run_browser_use.mov" />
+</video>
 
-## Why use it in browser extension?
+## What is Browser Use
+Browser use is a automation tool that operates web pages through screenshot and [Web Extraction Technology](/docs/architecture/web-extraction). It can perform various automated operations on web pages and interact with elements without real mouse operations. Browser Use enables you to complete daily tasks efficiently and accurately.
+
+## Why Use Eko in Browser Extension?
 
 The browser extension solution provides an ideal execution environment for automated operations, retaining the browser's native powerful features while delivering efficient and stable automation capabilities. This approach is particularly suitable for scenarios requiring complex web interactions and multi-page coordinated operations.
 
@@ -20,7 +23,7 @@ The browser extension solution provides an ideal execution environment for autom
 
 ## Example: Search Elon Musk in youtube and summarize
 
-Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
+Task prompt: `Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.`
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
@@ -47,33 +50,7 @@ async function main() {
 await main();
 ```
 
-Workflow execution process:
-
-<video controls>
-  <source src="/docs/run_browser_use.mov" />
-</video>
-
-## Use Cases
-
-Browser extension have various practical applications in automation:
-
-### 1. Automated Operations
-
-Automatically log into websites and perform complex cross-page tasks.
-
-### 2. Data Collection and Crawling
-
-Automatically scrape web data, analyze and extract key information.
-
-### 3. Automated Testing
-
-Used to simulate user actions to verify website functionality.
-
-### 4. Reducing Repetitive Work
-
-Automate routine tedious tasks such as data entry and information verification to improve work efficiency.
-
-## Next Steps
+## Learn More
 
 You now understand the browser use based on extension, you can:
 
