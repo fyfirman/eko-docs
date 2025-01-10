@@ -3,36 +3,61 @@ title: Eko Overview
 description: Eko is an agent development framework that enables programmatic control of browsers and operating systems through a combination of natural language and traditional programming interfaces.
 ---
 
-![eko-logo](/docs/eko-dark.jpg)
+<img src="/docs/eko-colorful.png" width="120" height="auto">
+
 
 ## What is Eko?
-Eko is a revolutionary framework designed to empower developers and users alike to program their browser and operating system using natural language. With seamless integration of browser APIs, OS-level capabilities, and cutting-edge AI tools like Claude 3.5, Eko redefines how we interact with technology, making it intuitive, powerful, and accessible.
+Eko (pronounced like 'echo') is a framework designed for building production-ready agentic workflows. It offers an efficient, cross-platform solution for developing complex workflows that allow developers to combine natural and programming languages. For production safety, Eko provides real-time monitoring and intervention capabilities.
+
+![](../assets/architecture.png)
 
 # Framework Comparison
 
-| Feature                              | Eko   | Langchain  | Browser-use  | Dify.ai  | Coze   |
+| Feature                              | Eko   | Langchain  | Browser-use  | Dify.ai  | Coze   | 
 |--------------------------------------|-------|------------|--------------|----------|--------|
 | **Supported Platform**               | **All platform**  | Server side  | Browser  | Web  | Web  |
 | **One sentence to multi-step workflow** | ✅    | ❌          | ✅            | ❌        | ❌      |
 | **Intervenability**                  | ✅    | ✅          | ❌            | ❌        | ❌      | 
-| **Development Efficiency**           | **High**  | Low      | Middle        | Middle    | Low    | 
-| **Task Complexity**           | High  | High      | Low        | Middle    | Middle    | Middle       |
-| **Open-source**                      | ✅    | ✅          | ✅            | ✅        | ❌      |
+| **Development Efficiency**           | **High**  | Low      | Middle        | Middle    | Low    |
+| **Open-source**                      | ✅    | ✅          | ✅            | ✅        | ❌      | 
 | **Access to private web resources** | ✅ **(Coming soon)** | ❌          | ❌            | ❌        | ❌      |
 
-
 ## Eko's Abilities
-- **Browser Use**: Collect the latest NASDAQ data on Yahoo Finance, including price changes, market capitalization, trading volume of major stocks, analyze the data and generate visualization reports.
+- **Browser Use**
+
+> Collect the latest NASDAQ data on Yahoo Finance, including price changes, market capitalization, trading volume of major stocks, analyze the data and generate visualization reports.
+
 <video controls>
-  <source src="/docs/web_use.mp4" />
+  <source src="/docs/demo_stock_analysis.mp4" />
 </video>
 
-- **Computer Use**: Clean up all files in current directory larger than 1MB.
+> Based on the README of FellouAI/eko on github, search for competitors, highlight the key contributions of Eko, write a blog post advertising Eko, and post it on Write.as.
+
 <video controls>
-  <source src="/docs/computer_use.mp4" />
+  <source src="/docs/demo_SEO.mp4" />
 </video>
+
+> Current login page automation test: 
+1. Correct account and password are: admin / 666666 
+2. Please randomly combine usernames and passwords for testing to verify if login validation works properly, such as: username cannot be empty, password cannot be empty, incorrect username, incorrect password 
+3. Finally, try to login with the correct account and password to verify if login is successful 
+4. Generate test report and export
+
+<video controls>
+  <source src="/docs/demo_web_test.mp4" />
+</video>
+
+- **Computer Use**:
+
+> Clean up all files in the current directory larger than 1MB.
+
+<video controls>
+  <source src="/docs/demo_clean_computer.mp4" />
+</video>
+
 
 Learn more: [Eko Demos](https://github.com/FellouAI/eko-demos).
+
 
 ## Supported environment
 ![ENVS](../assets/envs.png)
