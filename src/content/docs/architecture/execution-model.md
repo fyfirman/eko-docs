@@ -5,7 +5,7 @@ description: Eko's two-layer execution model separates task planning from execut
 
 At the heart of Eko lies a unique two-layer execution model that fundamentally changes how agents interact with their environment. Unlike traditional tool-based agents that directly map user requests to tool calls, Eko introduces a deliberate separation between planning and execution. This separation enables both predictable automation and adaptive behavior.
 
-## Understanding through Example
+## Understanding Through Example
 
 ![](../assets/two_layer_execution.png)
 
