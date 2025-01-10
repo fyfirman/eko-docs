@@ -76,9 +76,12 @@ See the [Available Tools](/docs/tools/available#nodejs) section for complete doc
 
 ## Example: File Cleanup Workflow
 
+Prompt: `Clean up all files in the current directory larger than 1MB`.
+
 <video controls>
   <source src="/docs/computer_use.mp4" />
 </video>
+
 Let's examine how Eko can automate a file cleanup task:
 
 ```typescript
