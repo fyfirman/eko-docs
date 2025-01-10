@@ -56,7 +56,7 @@ Complete project code: [web-demo-login-autotest](https://github.com/FellouAI/eko
 
 The execution effect is as follows:
 <video controls>
-  <source src="/docs/demo_web_test.mov" />
+  <source src="/docs/demo_web_test.mp4" />
 </video>
 
 ## Use Cases
