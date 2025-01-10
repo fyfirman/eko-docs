@@ -20,7 +20,13 @@ The browser extension solution provides an ideal execution environment for autom
 
 ## Example: Search Elon Musk in youtube and summarize
 
-Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md.
+Prompt: `Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md`.
+
+<video controls>
+  <source src="/docs/run_browser_use.mov" />
+</video>
+
+Let's examine how Eko can automate a search task:
 
 ```typescript
 import { Eko } from "@eko-ai/eko";
@@ -46,12 +52,6 @@ async function main() {
 
 await main();
 ```
-
-Workflow execution process:
-
-<video controls>
-  <source src="/docs/run_browser_use.mov" />
-</video>
 
 ## Use Cases
 
