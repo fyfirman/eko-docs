@@ -5,9 +5,10 @@ description: This conceptual guide introduces the key architectural principles a
 
 This section provides a conceptual overview of Eko's architecture. While the implementation details may vary, understanding these core principles will help you effectively build and maintain Eko-based automation.
 
-## Two-Layer Execution Model
+![](../assets/architecture.png)
 
-At the heart of Eko is a unique two-layer execution model that separates task planning from execution:
+## Hierarchical Planning
+At the heart of Eko is a hierarchical planning framework that separates task planning from execution:
 
 ### Planning Layer (eko.generate)
 
@@ -23,18 +24,21 @@ At the heart of Eko is a unique two-layer execution model that separates task pl
 - Manages dependencies between workflow nodes
 - Provides hook-based execution control
 
-Learn more in [Two-Layer Execution Model](/docs/architecture/execution-model).
+![](../assets/hierarchical_planning.png)
 
-## Web Extraction Technology
+Learn more in [Hierarchical Planning](/docs/architecture/execution-model).
 
-Eko employs an innovative approach to web interaction through its Web Extraction Technology:
+## Web Information Extraction
+
+![](../assets/element_extraction.png)
+Eko employs an innovative approach to web information through:
 
 - Identifies and tags interactive elements on web pages with unique IDs
 - Creates visual overlays showing element relationships
 - Combines screenshots with pseudo-HTML for robust element identification
 - Enhances accuracy of browser automation through combined visual and structural understanding
 
-This technology is particularly important for browser automation tasks, providing reliable element identification across different page states. Learn more in [Web Extraction Technology](/docs/architecture/web-extraction).
+This technology is particularly important for browser automation tasks, providing reliable element identification across different page states. Learn more in [Web Information Extraction](/docs/architecture/web-extraction).
 
 ## Environment-Aware Architecture
 

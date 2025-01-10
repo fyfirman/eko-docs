@@ -39,12 +39,12 @@ Eko has a hierarchical structure:
 - **Planning layer**: excels at breaking down complex tasks into actionable steps
 - **Operation layer**: is proficient in using tools effectively to execute tasks
 
-This layered structure, known as the "_[Two-layer Execution](/docs/architecture/execution-model)_," is crucial for the following reasons:
+This layered structure, known as the "_[Hierarchical planning](/docs/architecture/execution-model)_," is crucial for the following reasons:
 - It ensures automation reliability by validating plans before execution.
 - It allows for flexibility in adapting to changing conditions during execution.
 - It enables independent adjustments to either the planning or execution layers without affecting the other.
 
-![ENVS](../assets/two_layer_execution.png)
+![ENVS](../assets/hierarchical_planning.png)
 
 ### 3. Tool Integration and Hooks
 

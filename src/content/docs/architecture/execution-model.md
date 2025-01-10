@@ -1,5 +1,5 @@
 ---
-title: Two-Layer Execution Model
+title: Hierarchical Planning
 description: Eko's two-layer execution model separates task planning from execution, enabling predictable automation and adaptive behavior. Learn how Eko decomposes and executes complex tasks through a whimsical example.
 ---
 
@@ -7,7 +7,7 @@ At the heart of Eko lies a unique two-layer execution model that fundamentally c
 
 ## Understanding through Example
 
-![](../assets/two_layer_execution.png)
+![](../assets/hierarchical_planning.png)
 
 To understand this model, let's explore a purposefully whimsical example: placing an elephant into a fridge. While this example uses fictitious tools for clarity, it perfectly illustrates how Eko decomposes and executes complex tasks.
 

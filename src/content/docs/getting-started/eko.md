@@ -7,6 +7,9 @@ description: Eko is an agent development framework that enables programmatic con
 
 ## What is Eko?
 Eko (pronounced like 'echo') is a framework designed for building production-ready agentic workflows. It offers an efficient, cross-platform solution for developing complex workflows that allow developers to combine natural and programming languages. For production safety, Eko provides real-time monitoring and intervention capabilities.
+
+![](../assets/architecture.png)
+
 # Framework Comparison
 
 | Feature                              | Eko   | Langchain  | Browser-use  | Dify.ai  | Coze   | 
@@ -30,17 +33,6 @@ Eko (pronounced like 'echo') is a framework designed for building production-rea
 </video>
 
 Learn more: [Eko Demos](https://github.com/FellouAI/eko-demos).
-
-# Framework Comparison
-| Feature                              | Eko   | Langchain  | Browser-use  | Dify.ai  | Coze   | Midscene.js |
-|--------------------------------------|-------|------------|--------------|----------|--------|-------------|
-| **Supported Platform**               | All platform  | Server side  | Browser  | Web  | Web  | Web  |
-| **One sentence to multi-step workflow** | ✅    | ❌          | ✅            | ❌        | ❌      | ❌           |
-| **Intervenability**                  | ✅    | ✅          | ❌            | ❌        | ❌      | ❌           |
-| **Development Efficiency**           | High  | Low      | Middle        | Middle    | Low    | Middle       |
-| **Task Complexity**           | High  | High      | Low        | Middle    | Middle    | Middle       |
-| **Open-source**                      | ✅    | ✅          | ✅            | ✅        | ❌      | ✅           |
-| **Access to private web resources** | ✅ (Coming soon) | ❌          | ❌            | ❌        | ❌      | ❌           |
 
 
 ## Supported environment
