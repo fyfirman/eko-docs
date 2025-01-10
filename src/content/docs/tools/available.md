@@ -317,7 +317,7 @@ The action to perform. The available actions are:
 
 ## Example: Search Elon Musk on Google
 
-> **NOTICE:** This example can only run on [**Browser Extension Enviroment**](http://localhost:4321/docs/browseruse/browser-extension).
+> **NOTICE:** This example can only run on [**Browser Extension Enviroment**](/docs/browseruse/browser-extension).
 
 ```typescript
 import { tools, browser, utils } from "@eko-ai/eko/extension";
