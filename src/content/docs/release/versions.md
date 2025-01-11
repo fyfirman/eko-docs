@@ -5,28 +5,25 @@ description: Eko version update history
 
 Eko NPM: [@eko-ai/eko](https://www.npmjs.com/package/@eko-ai/eko).
 
-## v1.0.5 - 2025-01-06
+## v1.0.7 - 2025-01-09
 
 ### Overview
-- Brief summary of the release.
+- Optimize workflow, improve tools across different environments, optimize browser use.
 
 ### New Features
-- **Feature 1:** Description of the new feature.
-- **Feature 2:** Description of another new feature.
+- **workflow modify:** Support dynamic workflow modification.
+- **hooks:** Support hook processing at various nodes during workflow execution.
 
 ### Improvements
-- **Improvement 1:** Description of the improvement.
-- **Improvement 2:** Description of another improvement.
+- **browser use:** Improve browser use by leveraging visual and pseudo-HTML assistance to enhance task execution accuracy.
 
 ### Bug Fixes
-- **Bug 1:** Description of the bug fix.
-- **Bug 2:** Description of another bug fix.
+- **workflow:** Fix workflow's recursive tool calling issue.
 
 ### Known Issues
-- **Issue 1:** Description of the known issue.
-- **Issue 2:** Description of another known issue.
+- **speed:** Currently, the overall running speed is relatively slow and needs improvement and optimization.
 
 ---
 
 **Upgrade Notes:**
-- Important information regarding the upgrade process.
+- Optimize workflow and improve tool usage across different environments.
