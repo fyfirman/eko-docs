@@ -5,6 +5,17 @@ description: Eko version update history
 
 Eko NPM: [@eko-ai/eko](https://www.npmjs.com/package/@eko-ai/eko).
 
+## v1.0.8 - 2025-01-14
+
+### Overview
+- Node.js environment supports browser use.
+
+### New Features
+- **request login:** Browser Extension supports user-assisted login tool.
+
+### Bug Fixes
+- **LLM:** Fix OpenaiProvider browser use exception issue.
+
 ## v1.0.7 - 2025-01-09
 
 ### Overview

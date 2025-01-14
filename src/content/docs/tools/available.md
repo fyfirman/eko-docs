@@ -25,7 +25,7 @@ let context: ExecutionContext = {
 ```
 
 ### WebSearch
-`web_search`: Use web search to return search results
+`web_search`: Use web search to return search results.
 
 ```typescript
 let tool = new tools.WebSearch();
@@ -36,7 +36,7 @@ let result = await tool.execute(context, {
 ```
 
 ### ElementClick
-`element_click`: Click the element through task prompts
+`element_click`: Click the element through task prompts.
 
 ```typescript
 let tool = new tools.ElementClick();
@@ -46,7 +46,7 @@ let result = await tool.execute(context, {
 ```
 
 ### FindElementPosition
-`find_element_position`: Locate Element Coordinates through Task Prompts
+`find_element_position`: Locate Element Coordinates through Task Prompts.
 
 ```typescript
 let tool = new tools.FindElementPosition();
@@ -56,7 +56,7 @@ let result = await tool.execute(context, {
 ```
 
 ### OpenUrl
-`open_url`: Open the specified URL link in browser window
+`open_url`: Open the specified URL link in browser window.
 
 ```typescript
 let tool = new tools.OpenUrl();
@@ -67,7 +67,7 @@ let result = await tool.execute(context, {
 ```
 
 ### Screenshot
-`screenshot`: Screenshot the current webpage window
+`screenshot`: Screenshot the current webpage window.
 
 ```typescript
 let tool = new tools.Screenshot();
@@ -96,7 +96,7 @@ The commond to perform. The available commonds are:
 * `new_tab [url]`: Open a new tab window and open the URL, eg: `new_tab https://www.google.com`
 
 ### ExtractContent
-`extract_content`: Extract the text content of the current webpage
+`extract_content`: Extract the text content of the current webpage.
 
 ```typescript
 let tool = new tools.ExtractContent();
@@ -104,7 +104,7 @@ let result = await tool.execute(context, {});
 ```
 
 ### ExportFile
-`export_file`: Content exported as a file, support text format
+`export_file`: Content exported as a file, support text format.
 
 ```typescript
 let tool = new tools.ExportFile();
@@ -114,7 +114,15 @@ let result = await tool.execute(context, {
 });
 ```
 
-### Browser Use
+### RequestLogin
+`request_login`: Login to this website, assist with identity verification when manual intervention is needed, guide users through the login process, and wait for their confirmation of successful login.
+
+```typescript
+let tool = new tools.RequestLogin();
+await tool.execute(context, {});
+```
+
+### BrowserUse
 `browser_use`: Use structured commands to interact with the browser, manipulating page elements through screenshots and webpage element extraction.
 
 ```typescript
@@ -213,7 +221,7 @@ let result = await tool.execute(context, {
 });
 ```
 
-### Browser Use
+### BrowserUse
 `browser_use`: Use structured commands to interact with the browser, manipulating page elements through screenshots and webpage element extraction.
 
 ```typescript
@@ -281,17 +289,21 @@ let result = await tool.execute(context, {
 });
 ```
 
+### BrowserUse
+`browser_use`: Use structured commands to interact with the browser, manipulating page elements through screenshots and webpage element extraction.
+
+
 ## Fellou browser
 
 The current tools can be used in both extension and web environments of the Fellou browser.
 
-### Computer Use
+### ComputerUse
 `computer_use`: Use a mouse and keyboard to interact with a computer, and take screenshots.
 
 ```typescript
-import { BrowserUse } from "@eko-ai/eko/fellou";
+import { ComputerUse } from "@eko-ai/eko/fellou";
 
-let tool = new BrowserUse();
+let tool = new ComputerUse();
 let result = await tool.execute(content, {
     action: 'left_click', // the action to perform
     coordinate: [200, 400], // Coordinate position, eg: [x, y].

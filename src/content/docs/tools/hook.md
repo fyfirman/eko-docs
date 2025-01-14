@@ -163,6 +163,26 @@ await eko.execute(workflow, {
   }
 });
 ```
+
+#### Scenario 5: Before using the browser_use, check if the website is logged in.
+
+```typescript
+import { tools } from "@eko-ai/eko/extension";
+
+await eko.execute(workflow, {
+  hooks: {
+    beforeToolUse: async (tool, context, input) => {
+      if (tool.name == 'browser_use') {
+        // check login status
+        let request_login = new tools.RequestLogin();
+        await request_login.execute(context, {});
+      }
+      return input;
+    }
+  }
+});
+```
+
 ## Next Steps
 
 Now that you understand the concept of tool hooks, let's explore the more powerful hook system in Eko to learn how to implement human-in-the-loop with LLMs:
