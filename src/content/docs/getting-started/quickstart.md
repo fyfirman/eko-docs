@@ -35,6 +35,9 @@ cd browser-extension-demo
 pnpm install
 ```
 
+> If npm environment variables are not configured on Windows, the `eko-cli` command may show as non-existent. Alternatively, you can directly clone our provided template project.
+`git clone https://github.com/FellouAI/eko-browser-extension-template.git`
+
 ## Creat your first workflow
 
 Write your workflow in the `src/background/first_workflow.ts` file:
