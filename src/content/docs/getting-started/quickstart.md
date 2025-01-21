@@ -79,6 +79,7 @@ pnpm run build:dev
 - Open the [Chrome browser](https://www.google.com/chrome/) and navigate to `chrome://extensions/`.
 - Turn on `Developer mode` (toggle switch in the top right corner).
 - Click `Load unpacked` button (the blue text in the top-left corner) and select the `dist` folder of the project (_e.g._, `[root_directory]/Eko/browser-extension-demo/dist`).
+- For **Chinese** users: If it's inconvenient to obtain an API key from the OpenAI or Claude platform, consider using mirror sites or services (such as [ZetaTechs API](https://api.zetatechs.com/)), and then replace the *Base URL* and *API key* with the corresponding values.
 
 <video controls>
   <source src="/docs/load_extension.mov" />
