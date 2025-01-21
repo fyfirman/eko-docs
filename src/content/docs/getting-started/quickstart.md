@@ -8,7 +8,7 @@ Let's create an eko workflow together in a browser extension to automate the tas
 > With this plugin, you no longer need to manually open multiple web pages; instead, you can run everything with a single click.
 
 <video controls>
-  <source src="/docs/run_workflow.mov" />
+  <source src="/docs/quickstart.mov" />
 </video>
 
 ## Prerequisites
@@ -38,18 +38,18 @@ pnpm install
 > If npm environment variables are not configured on Windows, the `eko-cli` command may show as non-existent. Alternatively, you can directly clone our provided template project.
 `git clone https://github.com/FellouAI/eko-browser-extension-template.git`
 
-## Creat your first workflow
+## Your first workflow
 
-Write your workflow in the `src/background/first_workflow.ts` file:
-```bash
-vim src/background/first_workflow.ts
-```
-Paste the following content. Press `:wq` to exit.
+The core logic of workflow is in `src/background/first_workflow.ts` file:
+
 ```typescript
 // src/background/first_workflow.ts
 import { Eko } from "@eko-ai/eko";
 import { EkoConfig } from "@eko-ai/eko/types";
 import { getLLMConfig } from "@eko-ai/eko/extension";
+
+// Task prompt
+const prompt = `Search Sam Altman's information and summarize it into markdown format for export`;
 
 export async function main() {
   // Load LLM model configuration 
@@ -60,9 +60,7 @@ export async function main() {
   let eko = new Eko(config as EkoConfig);
 
   // Generate a workflow from natural language description
-  const workflow = await eko.generate(`
-    Search Sam Altman's information and summarize it into markdown format for export
-  `);
+  const workflow = await eko.generate(prompt);
 
   // Execute the workflow
   await eko.execute(workflow);
@@ -97,11 +95,11 @@ pnpm run build:dev
 </video>
 
 ## Let's run it!
-Pin the current extension in the browser's top-right extensions menu, click the extension to open the popup, and click the RUN button to execute.
-![](../assets/run_extension.png)
+Pin the current extension in the browser's top-right extensions menu, click the extension to open the popup, input task prompt, and click the RUN button to execute.
+![](../assets/run_extension2.png)
 Run your workflow by clicking the RUN button in the extension popup.
 <video controls>
-  <source src="/docs/run_workflow.mov" />
+  <source src="/docs/quickstart.mov" />
 </video>
 
 ## Next Steps
