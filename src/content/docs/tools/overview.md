@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: This guide introduces the built-in tools in eko and how to customize tools.
+description: This guide introduces the built-in tools in Eko and how to customize tools.
 ---
 
 ## What are Tools?
@@ -51,9 +51,9 @@ In the Eko framework, a Workflow is a process of sequential or parallel executio
 
 4. **Task Destruction**: For tools that need to clean up resources, Tools also provide an optional `destroy` method, allowing timely release of resources after task completion to maintain system cleanliness and efficiency.
 
-## Using in eko
+## Using in Eko
 
-eko framework provides various built-in tools for different environments that can be used directly, and you can also customize tools to complete workflow tasks.
+Eko framework provides various built-in tools for different environments that can be used directly, and you can also customize tools to complete workflow tasks.
 
 ### Built-in tools
 

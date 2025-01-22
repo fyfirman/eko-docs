@@ -3,7 +3,7 @@ title: Quickstart
 description: This guide will walk you through creating your first Eko workflow in a browser extension environment.
 ---
 
-Let's create an eko workflow together in a browser extension to automate the task that `Search Sam Altman's information and summarize it into markdown format for export`. 
+Let's create an Eko workflow together in a browser extension to automate the task that `Search Sam Altman's information and summarize it into markdown format for export`. 
 
 > With this plugin, you no longer need to manually open multiple web pages; instead, you can run everything with a single click.
 
@@ -109,4 +109,4 @@ Now that you have run the first workflow, you can:
 
 - Understand the [Installation](/docs/getting-started/installation) of Eko in different environments
 - Learn about Eko's [Configuration](/docs/getting-started/configuration) in different environments
-- Learn more core concepts of eko: [Dive deep into Eko](/docs/getting-started/dive-deep)
+- Learn more core concepts of Eko: [Dive deep into Eko](/docs/getting-started/dive-deep)

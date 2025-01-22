@@ -1,6 +1,6 @@
 ---
 title: Custom Tools
-description: This guide introduces how to customize tools in eko.
+description: This guide introduces how to customize tools in Eko.
 ---
 
 ## What is a Custom Tool?
