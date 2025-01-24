@@ -9,6 +9,16 @@ eko provides various built-in tools for different environments including:
 - [Node.js](/docs/tools/available#nodejs)
 - [Fellou browser](/docs/tools/available#fellou-browser)
 
+## Universal
+
+### CancelWorkflow
+`cancel_workflow`: When encountering a tool failure, Eko will automatically invoke this tool with a reason to end the workflow. Enforce the addition of this tool in every SubTask.
+
+```typescript
+let tool = new tools.CancelWorkflow();
+await tool.execute({reason: "Internet Timeout"});
+```
+
 ## Browser extension
 
 Import tools and initialize context:
@@ -148,6 +158,14 @@ The action to perform. The available actions are:
 * `extract_content`: Extract the text content of the current webpage.
 * `get_dropdown_options`: Get all options from a native dropdown element.
 * `select_dropdown_option`: Select dropdown option for interactive element index by the text of the option you want to select.
+
+### GetAllTabs
+`get_all_tabs`: Obtain the tabId, URL, title, and HTML content of all tabs in the current window.
+
+```typescript
+let tool = new tools.GetAllTabs();
+let result = await tool.execute({});
+```
 
 ## Web
 
