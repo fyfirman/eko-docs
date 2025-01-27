@@ -9,7 +9,7 @@ This guide covers how to configure Eko in different environments.
 
 Here's how to initialize the demo project which includes configuring the model page:
 
-Click on the current eko extension details, find `Extension Options` in the details page, then click to configure LLM model API Key.
+Click on the current Eko extension details, find `Extension Options` in the details page, then click to configure LLM model API Key.
 
 <video controls>
   <source src="/docs/config_llm.mov" />

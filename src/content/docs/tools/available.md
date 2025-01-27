@@ -3,7 +3,7 @@ title: Available Tools
 description: This guide introduces the built-in tools provided by the framework in different environments.
 ---
 
-eko provides various built-in tools for different environments including:
+Eko provides various built-in tools for different environments including:
 - [Browser extension](/docs/tools/available#browser-extension)
 - [Web](/docs/tools/available#web)
 - [Node.js](/docs/tools/available#nodejs)

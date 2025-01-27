@@ -5,7 +5,7 @@ description: This guide introduces the details of using web element-extraction t
 
 ## What is Web Extraction Technology?
 
-Web Extraction Technology is an innovative browser automation solution, Use in eko browser use. It combines visual recognition with contextual information about elements to enhance accuracy and efficiency in automated tasks within complex web environments. By extracting interactive elements and relevant data from web pages, Web Extraction Technology significantly improves the success rate of automation tasks.
+Web Extraction Technology is an innovative browser automation solution, Use in Eko browser use. It combines visual recognition with contextual information about elements to enhance accuracy and efficiency in automated tasks within complex web environments. By extracting interactive elements and relevant data from web pages, Web Extraction Technology significantly improves the success rate of automation tasks.
 
 ## Why Do We Need Web Extraction Technology?
 
