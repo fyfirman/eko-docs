@@ -103,6 +103,10 @@ Run your workflow by clicking the RUN button in the extension popup.
   <source src="/docs/quickstart.mov" />
 </video>
 
+If you want to view more logs, you can right-click on the Eko icon and select "Inspect popup", which will open the Chrome DevTools window. Once opened, please ensure that this window is not in focus to avoid any issues with some tools not functioning properly.
+
+![](../assets/inspect-popup.png)
+
 ## Next Steps
 
 Now that you have run the first workflow, you can:
