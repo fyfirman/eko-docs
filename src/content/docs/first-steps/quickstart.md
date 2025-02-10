@@ -11,74 +11,12 @@ Let's create an Eko workflow together in a browser extension to automate the tas
   <source src="/docs/quickstart.mov" />
 </video>
 
-## Prerequisites
-1. **Install `npm`**: Make sure you have [Node.js](https://nodejs.org/) installed. You will also need either `npm` or `pnpm` for managing dependencies. If you haven't installed `pnpm` yet, follow these steps:
-
-2. **Install `pnpm`**
-   ```bash
-   npm install -g pnpm
-   ```
-> Note: If you prefer using `npm` for the setup, you can skip the pnpm installation and use npm commands instead. However, pnpm is faster and more efficient with handling dependencies.
-
-## Install Eko
-Let's start by creating a new project and installing Eko:
-
-```bash
-# Install the Eko CLI globally
-pnpm install @eko-ai/eko-cli -g
-
-# Create a new browser extension project
-eko-cli init browser-extension-demo
-
-# Install dependencies
-cd browser-extension-demo
-pnpm install
-```
-
-> If npm environment variables are not configured on Windows, the `eko-cli` command may show as non-existent. Alternatively, you can directly clone our provided template project.
-`git clone https://github.com/FellouAI/eko-browser-extension-template.git`
-
-## Your first workflow
-
-The core logic of workflow is in `src/background/first_workflow.ts` file:
-
-```typescript
-// src/background/first_workflow.ts
-import { Eko } from "@eko-ai/eko";
-import { EkoConfig } from "@eko-ai/eko/types";
-import { getLLMConfig } from "@eko-ai/eko/extension";
-
-// Task prompt
-const prompt = `Search Sam Altman's information and summarize it into markdown format for export`;
-
-export async function main() {
-  // Load LLM model configuration 
-  // the current browser plugin project provides a page for configuring LLM parameters
-  let config = await getLLMConfig();
-
-  // Initialize eko
-  let eko = new Eko(config as EkoConfig);
-
-  // Generate a workflow from natural language description
-  const workflow = await eko.generate(prompt);
-
-  // Execute the workflow
-  await eko.execute(workflow);
-}
-```
-
-> Click [here](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-quickstart) to view the sample demo code, or directly [download the extension](https://github.com/FellouAI/eko-demos/tree/main/browser-extension-quickstart/dist) to experience the workflow.
-
-3. **Build**: Build the project into browser-loadable extension code:
-```bash
-pnpm run build:dev
-```
-
 ## Load extension
 
+- Download latest stable version of [FellouAI/eko-browser-extension-template](https://github.com/FellouAI/eko-browser-extension-template/releases). Unzip the ZIP file to a suitable location, and you should see a `dist` folder.
 - Open the [Chrome browser](https://www.google.com/chrome/) and navigate to `chrome://extensions/`.
 - Turn on `Developer mode` (toggle switch in the top right corner).
-- Click `Load unpacked` button (the blue text in the top-left corner) and select the `dist` folder of the project (_e.g._, `[root_directory]/Eko/browser-extension-demo/dist`).
+- Click `Load unpacked` button (the blue text in the top-left corner) and select the `dist` folder in the first step.
 - For **Chinese** users: If it's inconvenient to obtain an API key from the OpenAI or Claude platform, consider using mirror sites or services (such as [ZetaTechs API](https://api.zetatechs.com/)), and then replace the *Base URL* and *API key* with the corresponding values.
 
 <video controls>
