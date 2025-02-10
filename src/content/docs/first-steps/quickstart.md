@@ -107,6 +107,6 @@ Run your workflow by clicking the RUN button in the extension popup.
 
 Now that you have run the first workflow, you can:
 
-- Understand the [Installation](/docs/getting-started/installation) of Eko in different environments
-- Learn about Eko's [Configuration](/docs/getting-started/configuration) in different environments
-- Learn more core concepts of Eko: [Dive deep into Eko](/docs/getting-started/dive-deep)
+- Understand the [Installation](/docs/first-steps/installation) of Eko in different environments
+- Learn about Eko's [Configuration](/docs/first-steps/configuration) in different environments
+- Learn more core concepts of Eko: [Dive deep into Eko](/docs/first-steps/dive-deep)

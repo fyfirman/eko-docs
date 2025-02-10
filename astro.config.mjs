@@ -12,14 +12,14 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'First Steps',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Overview', slug: 'getting-started/eko' },
-						{ label: 'Quickstart', slug: 'getting-started/quickstart' },
-						{ label: 'Installation', slug: 'getting-started/installation' },
-						{ label: 'Configuration', slug: 'getting-started/configuration' },
-						{ label: 'Dive deep into Eko', slug: 'getting-started/dive-deep' },
+						{ label: 'Overview', slug: 'first-steps/eko' },
+						{ label: 'Quickstart', slug: 'first-steps/quickstart' },
+						{ label: 'Installation', slug: 'first-steps/installation' },
+						{ label: 'Configuration', slug: 'first-steps/configuration' },
+						{ label: 'Dive deep into Eko', slug: 'first-steps/dive-deep' },
 					],
 				},
 				{
