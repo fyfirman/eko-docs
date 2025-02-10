@@ -5,6 +5,17 @@ description: Eko version update history
 
 Eko NPM: [@eko-ai/eko](https://www.npmjs.com/package/@eko-ai/eko).
 
+## v1.0.9 - 2025-02-05
+
+### Overview
+- Workflow execution process optimization, new execution log, support for user operate, etc..
+
+### Improvements
+- **workflow:** Optimize the workflow context execution process, reduce LLM context interaction.
+
+### New Features
+- **human operate:** Browser extension supports human_operate tool and human_input tool.
+
 ## v1.0.8 - 2025-01-14
 
 ### Overview
