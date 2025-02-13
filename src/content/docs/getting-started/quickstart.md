@@ -49,6 +49,7 @@ If you want to view more logs, you can right-click on the Eko icon and select "I
 
 Now that you have run the first workflow, you can:
 
-- Understand the [Installation](/docs/first-steps/installation) of Eko in different environments
-- Learn about Eko's [Configuration](/docs/first-steps/configuration) in different environments
-- Learn more core concepts of Eko: [Dive deep into Eko](/docs/first-steps/dive-deep)
+- Understand the [Installation](/docs/getting-started/installation) of Eko in different environments
+- Learn about Eko's [Configuration](/docs/getting-started/configuration) in different environments
+- Learn more core concepts of Eko: [Dive deep into Eko](/docs/getting-started/dive-deep)
+- Build the browser extension from source: [Build from source](/docs/getting-started/build-from-source)
