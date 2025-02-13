@@ -3,7 +3,7 @@ title: Installation
 description: Eko is a JavaScript library that can be used in browser extension, web pages, and node.js. This guide covers installation and setup for different environments.
 ---
 
-Eko is a JavaScript library that can be used in [Browser Extension](/docs/first-steps/installation#browser-extension), [Node.js Enviroment](http://localhost:4321/docs/first-steps/installation#nodejs-environment), and [Web Enviroment](http://localhost:4321/docs/first-steps/installation#web-environment). This guide covers installation and setup for different environments.
+Eko is a JavaScript library that can be used in [Browser Extension](/docs/getting-started/installation#browser-extension), [Node.js Enviroment](http://localhost:4321/docs/getting-started/installation#nodejs-environment), and [Web Enviroment](http://localhost:4321/docs/getting-started/installation#web-environment). This guide covers installation and setup for different environments.
 
 ## Browser Extension
 
