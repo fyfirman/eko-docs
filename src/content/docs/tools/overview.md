@@ -77,7 +77,7 @@ const workflow = await eko.generate(`
 await eko.execute(workflow);
 ```
 
-Learn more: [Available Tools](/docs/tools/available).
+Learn more: [Available Tools](/tools/available).
 
 ### Custom tools
 ```typescript
@@ -102,7 +102,7 @@ const workflow = await eko.generate(`
 await eko.execute(workflow);
 ```
 
-Learn more: [Custom Tools](/docs/tools/custom).
+Learn more: [Custom Tools](/tools/custom).
 
 ### Auto register tools
 
@@ -152,6 +152,6 @@ await eko.execute(workflow);
 
 Now that you understand the concept of tools, let's look at what built-in Tools are available and how to customize Tools:
 
-- Built-in [Available Tools](/docs/tools/available) of the framework in different environments
-- Learn how to [Custom Tools](/docs/tools/custom)
-- Learn how to use [Tools Hook](/docs/tools/hook) to dynamically modify input and output parameters
+- Built-in [Available Tools](/tools/available) of the framework in different environments
+- Learn how to [Custom Tools](/tools/custom)
+- Learn how to use [Tools Hook](/tools/hook) to dynamically modify input and output parameters

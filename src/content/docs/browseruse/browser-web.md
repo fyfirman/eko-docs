@@ -56,7 +56,7 @@ Complete project code: [web-demo-login-autotest](https://github.com/FellouAI/eko
 
 The execution effect is as follows:
 <video controls>
-  <source src="/docs/demo_web_test.mp4" />
+  <source src="/demo_web_test.mp4" />
 </video>
 
 ## Use Cases
@@ -81,7 +81,7 @@ For new users, Eko can provide necessary guidance to help them master website op
 
 You now understand the browser use based on web, you can:
 
-- Learn about [Web Extraction Technology](/docs/architecture/web-extraction) in Browser use
-- Explore [Available Tools](/docs/tools/available#web) for web
-- Learn about [Custom Tool Development](/docs/tools/custom)
-- Understand [Hook System](/docs/tools/hook) for workflow control
+- Learn about [Web Extraction Technology](/architecture/web-extraction) in Browser use
+- Explore [Available Tools](/tools/available#web) for web
+- Learn about [Custom Tool Development](/tools/custom)
+- Understand [Hook System](/tools/hook) for workflow control

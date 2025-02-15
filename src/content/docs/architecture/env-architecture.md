@@ -88,7 +88,7 @@ const {
 } = tools;
 ```
 
-Learn more: [Available Tools](/docs/tools/available);
+Learn more: [Available Tools](/tools/available);
 
 ### 3. Environment Bridge
 
@@ -219,7 +219,7 @@ Eko implements environment-appropriate security measures:
    Eko.tools = loadTools();
    ```
 
-   Learn more: [Custom Tools](/docs/tools/custom).
+   Learn more: [Custom Tools](/tools/custom).
 
 3. **Error Handling**
    ```typescript
@@ -230,10 +230,10 @@ Eko implements environment-appropriate security measures:
      console.error("Workflow execution failed:", error);
    }
    ```
-   Learn more: [Hook System](/docs/architecture/hook-system).
+   Learn more: [Hook System](/architecture/hook-system).
 
 ## Next Steps
 
-- Learn about [Tool System](/docs/tools/overview) capabilities
-- Explore [Workflow Execution](/docs/architecture/workflow)
-- Understand the [Hook System](/docs/architecture/hook-system)
+- Learn about [Tool System](/tools/overview) capabilities
+- Explore [Workflow Execution](/architecture/workflow)
+- Understand the [Hook System](/architecture/hook-system)

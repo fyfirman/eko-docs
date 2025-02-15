@@ -39,7 +39,7 @@ Eko has a hierarchical structure:
 - **Planning layer**: excels at breaking down complex tasks into actionable steps
 - **Operation layer**: is proficient in using tools effectively to execute tasks
 
-This layered structure, known as the "_[Hierarchical planning](/docs/architecture/execution-model)_," is crucial for the following reasons:
+This layered structure, known as the "_[Hierarchical planning](/architecture/execution-model)_," is crucial for the following reasons:
 - It ensures automation reliability by validating plans before execution.
 - It allows for flexibility in adapting to changing conditions during execution.
 - It enables independent adjustments to either the planning or execution layers without affecting the other.
@@ -354,10 +354,10 @@ Tools for computer control in the Fellou browser environment:
 
 Each environment provides its own appropriate set of tools based on the available capabilities and security constraints. For complete details on available tools and their usage, see:
 
-- [Available Tools](/docs/tools/available) for a comprehensive reference
-- [Tool System Overview](/docs/tools/overview) for understanding tool concepts
-- [Browser Use Guide](/docs/browseruse/browser-extension) for browser automation details
-- [Computer Use Guide](/docs/computeruse/computer-fellou) for system automation details
+- [Available Tools](/tools/available) for a comprehensive reference
+- [Tool System Overview](/tools/overview) for understanding tool concepts
+- [Browser Use Guide](/browseruse/browser-extension) for browser automation details
+- [Computer Use Guide](/computeruse/computer-fellou) for system automation details
 
 ## Moving Beyond the Basics
 
@@ -365,7 +365,7 @@ Now that you understand Eko's core concepts, you can explore more advanced topic
 
 ### Advanced Workflow Control
 
-- [Hook System](/docs/architecture/hook-system) for fine-grained execution control
+- [Hook System](/architecture/hook-system) for fine-grained execution control
 - Error handling and recovery strategies
 - State management between nodes
 - Parallel execution of independent tasks
@@ -379,9 +379,9 @@ Now that you understand Eko's core concepts, you can explore more advanced topic
 
 ### Environment Integration
 
-- [Browser Extension Development](/docs/browseruse/browser-extension)
-- [Web Application Integration](/docs/browseruse/browser-web)
-- [Node.js Automation](/docs/computeruse/computer-node)
+- [Browser Extension Development](/browseruse/browser-extension)
+- [Web Application Integration](/browseruse/browser-web)
+- [Node.js Automation](/computeruse/computer-node)
 
 Each of these topics is covered in depth in our detailed guides. The concepts you've learned here provide the foundation for understanding these more advanced capabilities.
 
@@ -389,7 +389,7 @@ Each of these topics is covered in depth in our detailed guides. The concepts yo
 
 Ready to dive deeper? Here's where to go next:
 
-- Explore browser automation in the [Browser Extension Guide](/docs/browseruse/browser-extension)
-- Study the [Tool System](/docs/tools/overview) in depth
-- Learn about advanced patterns in the [Hook System](/docs/architecture/hook-system)
-- Understand how Eko adapts to different environments in [Environment-Aware Architecture](/docs/core-concepts/env-architecture)
+- Explore browser automation in the [Browser Extension Guide](/browseruse/browser-extension)
+- Study the [Tool System](/tools/overview) in depth
+- Learn about advanced patterns in the [Hook System](/architecture/hook-system)
+- Understand how Eko adapts to different environments in [Environment-Aware Architecture](/core-concepts/env-architecture)

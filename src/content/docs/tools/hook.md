@@ -187,6 +187,6 @@ await eko.execute(workflow, {
 
 Now that you understand the concept of tool hooks, let's explore the more powerful hook system in Eko to learn how to implement human-in-the-loop with LLMs:
 
-- Eko [Architecture Overview](/docs/architecture)
-- Learn how Eko infers workflows: [Hierarchical Planning](/docs/architecture/execution-model)
-- Learn the complete [hook system](/docs/architecture/hook-system)
+- Eko [Architecture Overview](/architecture)
+- Learn how Eko infers workflows: [Hierarchical Planning](/architecture/execution-model)
+- Learn the complete [hook system](/architecture/hook-system)

@@ -72,14 +72,14 @@ await tool.execute(context, {
 });
 ```
 
-See the [Available Tools](/docs/tools/available#nodejs) section for complete documentation of all Node.js tools.
+See the [Available Tools](/tools/available#nodejs) section for complete documentation of all Node.js tools.
 
 ## Example: File Cleanup Workflow
 
 > Prompt: `Clean up all files in the current directory larger than 1MB`.
 
 <video controls>
-  <source src="/docs/demo_clean_computer.mp4" />
+  <source src="/demo_clean_computer.mp4" />
 </video>
 
 Let's examine how Eko can automate a file cleanup task:
@@ -176,6 +176,6 @@ const workflow = await eko.generate(`
 
 ## Next Steps
 
-- Explore [Available Tools](/docs/tools/available#nodejs) for Node.js
-- Learn about [Custom Tools](/docs/tools/custom)
-- Understand [Hook System](/docs/tools/hook) for workflow control
+- Explore [Available Tools](/tools/available#nodejs) for Node.js
+- Learn about [Custom Tools](/tools/custom)
+- Understand [Hook System](/tools/hook) for workflow control

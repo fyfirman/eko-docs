@@ -3,12 +3,12 @@ title: Using Eko in Browser Extension
 description: This guide demonstrates how to use Eko's browser automation capabilities in a Chrome extension environment, building on those fundamental concepts.
 ---
 
-Before diving into browser extension specifics, we recommend completing the [Quickstart](/docs/getting-started/quickstart) first. The core concepts of workflows and tools introduced there are essential for understanding how Eko operates in a browser extension environment.
+Before diving into browser extension specifics, we recommend completing the [Quickstart](/getting-started/quickstart) first. The core concepts of workflows and tools introduced there are essential for understanding how Eko operates in a browser extension environment.
 
 This guide demonstrates how to use Eko's browser automation capabilities in a browser extension environment.
 
 ## What is browser use
-Browser Use is a automation tool that operates web pages through screenshot and [Web Extraction Technology](/docs/architecture/web-extraction). It can perform various automated operations on web pages and interact with elements without real mouse operations. Browser Use enables you to complete daily tasks efficiently and accurately.
+Browser Use is a automation tool that operates web pages through screenshot and [Web Extraction Technology](/architecture/web-extraction). It can perform various automated operations on web pages and interact with elements without real mouse operations. Browser Use enables you to complete daily tasks efficiently and accurately.
 
 ## Why use it in browser extension?
 
@@ -23,7 +23,7 @@ The browser extension solution provides an ideal execution environment for autom
 Prompt: `Open youtube, Search for Elon Musk, click on the first video, extract and summarize the content, and export as md`.
 
 <video controls>
-  <source src="/docs/run_browser_use.mov" />
+  <source src="/run_browser_use.mov" />
 </video>
 
 Let's examine how Eko can automate a search task:
@@ -77,7 +77,7 @@ Automate routine tedious tasks such as data entry and information verification t
 
 You now understand the browser use based on extension, you can:
 
-- Learn about [Web Extraction Technology](/docs/architecture/web-extraction) in Browser use
-- Explore [Available Tools](/docs/tools/available#browser-extension) for Browser extension
-- Learn about [Custom Tool Development](/docs/tools/custom)
-- Understand [Hook System](/docs/tools/hook) for workflow control
+- Learn about [Web Extraction Technology](/architecture/web-extraction) in Browser use
+- Explore [Available Tools](/tools/available#browser-extension) for Browser extension
+- Learn about [Custom Tool Development](/tools/custom)
+- Understand [Hook System](/tools/hook) for workflow control

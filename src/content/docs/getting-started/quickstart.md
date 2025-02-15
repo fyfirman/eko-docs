@@ -8,7 +8,7 @@ Let's create an Eko workflow together in a browser extension to automate the tas
 > With this plugin, you no longer need to manually open multiple web pages; instead, you can run everything with a single click.
 
 <video controls>
-  <source src="/docs/quickstart.mov" />
+  <source src="/quickstart.mov" />
 </video>
 
 ## Load extension
@@ -20,7 +20,7 @@ Let's create an Eko workflow together in a browser extension to automate the tas
 - For **Chinese** users: If it's inconvenient to obtain an API key from the OpenAI or Claude platform, consider using mirror sites or services (such as [ZetaTechs API](https://api.zetatechs.com/)), and then replace the *Base URL* and *API key* with the corresponding values.
 
 <video controls>
-  <source src="/docs/load_extension.mov" />
+  <source src="/load_extension.mov" />
 </video>
 
 ## Configure LLM model API Key
@@ -30,7 +30,7 @@ Let's create an Eko workflow together in a browser extension to automate the tas
 - Open it and enter your LLM model API Key.
 
 <video controls>
-  <source src="/docs/config_llm.mov" />
+  <source src="/config_llm.mov" />
 </video>
 
 ## Let's run it!
@@ -38,7 +38,7 @@ Pin the current extension in the browser's top-right extensions menu, click the 
 ![](../assets/run_extension2.png)
 Run your workflow by clicking the RUN button in the extension popup.
 <video controls>
-  <source src="/docs/quickstart.mov" />
+  <source src="/quickstart.mov" />
 </video>
 
 If you want to view more logs, you can right-click on the Eko icon and select "Inspect popup", which will open the Chrome DevTools window. Once opened, please ensure that this window is not in focus to avoid any issues with some tools not functioning properly.
@@ -49,7 +49,7 @@ If you want to view more logs, you can right-click on the Eko icon and select "I
 
 Now that you have run the first workflow, you can:
 
-- Understand the [Installation](/docs/getting-started/installation) of Eko in different environments
-- Learn about Eko's [Configuration](/docs/getting-started/configuration) in different environments
-- Learn more core concepts of Eko: [Dive deep into Eko](/docs/getting-started/dive-deep)
-- Build the browser extension from source: [Build from source](/docs/getting-started/build-from-source)
+- Understand the [Installation](/getting-started/installation) of Eko in different environments
+- Learn about Eko's [Configuration](/getting-started/configuration) in different environments
+- Learn more core concepts of Eko: [Dive deep into Eko](/getting-started/dive-deep)
+- Build the browser extension from source: [Build from source](/getting-started/build-from-source)

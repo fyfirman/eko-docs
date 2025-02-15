@@ -78,10 +78,10 @@ Invalid workflows are rejected early, with specific error messages identifying s
 
 ## Workflow Modification
 
-Workflows support both static and dynamic modification. Before execution, nodes and dependencies can be added or modified programmatically. During execution, the [hook system](/docs/architecture/hook-system) enables dynamic adjustments to node behavior and data flow while maintaining DAG properties.
+Workflows support both static and dynamic modification. Before execution, nodes and dependencies can be added or modified programmatically. During execution, the [hook system](/architecture/hook-system) enables dynamic adjustments to node behavior and data flow while maintaining DAG properties.
 
 Changes must preserve the workflow's structural integrity - particularly its acyclic nature and schema compatibility between connected nodes. The validation system ensures modifications don't introduce cycles or break data flow contracts.
 
 ## Next Steps
 
-The [hook system](/docs/architecture/hook-system) provides fine-grained execution control, while the tool system enables workflow capabilities to be extended, let's delve into the complete hook system in Eko to learn how to implement human-in-the-loop with LLMs.
+The [hook system](/architecture/hook-system) provides fine-grained execution control, while the tool system enables workflow capabilities to be extended, let's delve into the complete hook system in Eko to learn how to implement human-in-the-loop with LLMs.

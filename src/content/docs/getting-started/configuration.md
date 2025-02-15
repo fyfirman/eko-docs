@@ -12,7 +12,7 @@ Here's how to initialize the demo project which includes configuring the model p
 Click on the current Eko extension details, find `Extension Options` in the details page, then click to configure LLM model API Key.
 
 <video controls>
-  <source src="/docs/config_llm.mov" />
+  <source src="/config_llm.mov" />
 </video>
 
 Load Configuration:

@@ -26,7 +26,7 @@ At the heart of Eko is a hierarchical planning framework that separates task pla
 
 ![](../assets/hierarchical_planning.png)
 
-Learn more in [Hierarchical Planning](/docs/architecture/execution-model).
+Learn more in [Hierarchical Planning](/architecture/execution-model).
 
 ## Web Information Extraction
 
@@ -38,7 +38,7 @@ Eko employs an innovative approach to web information through:
 - Combines screenshots with pseudo-HTML for robust element identification
 - Enhances accuracy of browser automation through combined visual and structural understanding
 
-This technology is particularly important for browser automation tasks, providing reliable element identification across different page states. Learn more in [Web Information Extraction](/docs/architecture/web-extraction).
+This technology is particularly important for browser automation tasks, providing reliable element identification across different page states. Learn more in [Web Information Extraction](/architecture/web-extraction).
 
 ## Environment-Aware Architecture
 
@@ -65,7 +65,7 @@ Eko provides consistent capabilities across different JavaScript environments wh
 - Full access to Node.js APIs
 - Direct access to local resources
 
-See [Environment-Aware Architecture](/docs/architecture/env-architecture) for details on how Eko adapts to each environment.
+See [Environment-Aware Architecture](/architecture/env-architecture) for details on how Eko adapts to each environment.
 
 ## Tool System
 
@@ -92,7 +92,7 @@ Tools are the building blocks of automation in Eko:
 - Content processing tools (ExtractContent, ExportFile, etc.)
 - Custom tool support for extensibility
 
-Learn more in the documentation on [Tools Overview](/docs/tools/overview).
+Learn more in the documentation on [Tools Overview](/tools/overview).
 
 ## Hook System
 
@@ -116,11 +116,11 @@ Hooks provide deep visibility and control over workflow execution:
 - Modify tool inputs and outputs
 - Implement custom error handling and recovery
 
-Learn more in [Hook System](/docs/architecture/hook-system).
+Learn more in [Hook System](/architecture/hook-system).
 
 ## Next Steps
 
-- Understand how workflows are structured in [Workflow Structure](/docs/architecture/workflow)
-- Learn about browser automation in [Web Extraction Technology](/docs/architecture/web-extraction)
-- Explore tool development in [Tools Overview](/docs/tools/overview)
-- Master execution control with the [Hook System](/docs/architecture/hook-system)
+- Understand how workflows are structured in [Workflow Structure](/architecture/workflow)
+- Learn about browser automation in [Web Extraction Technology](/architecture/web-extraction)
+- Explore tool development in [Tools Overview](/tools/overview)
+- Master execution control with the [Hook System](/architecture/hook-system)

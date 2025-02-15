@@ -76,6 +76,6 @@ Coming Soon.
 
 ## Next Steps
 
-- Explore [Available Tools](/docs/tools/available#fellou-browser) for Fellou
-- Learn about [Custom Tools](/docs/tools/custom)
-- Understand [Hook System](/docs/tools/hook) for workflow control
+- Explore [Available Tools](/tools/available#fellou-browser) for Fellou
+- Learn about [Custom Tools](/tools/custom)
+- Understand [Hook System](/tools/hook) for workflow control

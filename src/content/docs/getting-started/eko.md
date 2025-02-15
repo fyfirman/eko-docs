@@ -3,7 +3,7 @@ title: Eko Overview
 description: Eko is an agent development framework that enables programmatic control of browsers and operating systems through a combination of natural language and traditional programming interfaces.
 ---
 
-<img src="/docs/eko-colorful.png" width="120" height="auto">
+<img src="/eko-colorful.png" width="120" height="auto">
 
 
 ## What is Eko?
@@ -13,14 +13,14 @@ Eko (pronounced like 'echo') is a framework designed for building production-rea
 
 # Framework Comparison
 
-| Feature                              | Eko   | Langchain  | Browser-use  | Dify.ai  | Coze   | 
-|--------------------------------------|-------|------------|--------------|----------|--------|
-| **Supported Platform**               | **All platform**  | Server side  | Browser  | Web  | Web  |
-| **One sentence to multi-step workflow** | ✅    | ❌          | ✅            | ❌        | ❌      |
-| **Intervenability**                  | ✅    | ✅          | ❌            | ❌        | ❌      | 
-| **Development Efficiency**           | **High**  | Low      | Middle        | Middle    | Low    |
-| **Open-source**                      | ✅    | ✅          | ✅            | ✅        | ❌      | 
-| **Access to private web resources** | ✅ **(Coming soon)** | ❌          | ❌            | ❌        | ❌      |
+| Feature                                 | Eko                 | Langchain   | Browser-use | Dify.ai | Coze |
+| --------------------------------------- | ------------------- | ----------- | ----------- | ------- | ---- |
+| **Supported Platform**                  | **All platform**    | Server side | Browser     | Web     | Web  |
+| **One sentence to multi-step workflow** | ✅                   | ❌           | ✅           | ❌       | ❌    |
+| **Intervenability**                     | ✅                   | ✅           | ❌           | ❌       | ❌    |
+| **Development Efficiency**              | **High**            | Low         | Middle      | Middle  | Low  |
+| **Open-source**                         | ✅                   | ✅           | ✅           | ✅       | ❌    |
+| **Access to private web resources**     | ✅ **(Coming soon)** | ❌           | ❌           | ❌       | ❌    |
 
 ## Eko's Abilities
 - **Browser Use**
@@ -28,13 +28,13 @@ Eko (pronounced like 'echo') is a framework designed for building production-rea
 > Collect the latest NASDAQ data on Yahoo Finance, including price changes, market capitalization, trading volume of major stocks, analyze the data and generate visualization reports.
 
 <video controls>
-  <source src="/docs/demo_stock_analysis.mp4" />
+  <source src="/demo_stock_analysis.mp4" />
 </video>
 
 > Based on the README of FellouAI/eko on github, search for competitors, highlight the key contributions of Eko, write a blog post advertising Eko, and post it on Write.as.
 
 <video controls>
-  <source src="/docs/demo_SEO.mp4" />
+  <source src="/demo_SEO.mp4" />
 </video>
 
 > Current login page automation test: 
@@ -44,7 +44,7 @@ Eko (pronounced like 'echo') is a framework designed for building production-rea
 4. Generate test report and export
 
 <video controls>
-  <source src="/docs/demo_web_test.mp4" />
+  <source src="/demo_web_test.mp4" />
 </video>
 
 - **Computer Use**:
@@ -52,7 +52,7 @@ Eko (pronounced like 'echo') is a framework designed for building production-rea
 > Clean up all files in the current directory larger than 1MB.
 
 <video controls>
-  <source src="/docs/demo_clean_computer.mp4" />
+  <source src="/demo_clean_computer.mp4" />
 </video>
 
 
@@ -63,10 +63,10 @@ Learn more: [Eko Demos](https://github.com/FellouAI/eko-demos).
 ![ENVS](../assets/envs.png)
 
 Learn more:
-- [Browser Extension Environment](/docs/browseruse/browser-extension)
-- [Web Environment](/docs/browseruse/browser-web)
-- [Node.js Environment](/docs/computeruse/computer-node)
-- [Next-Gen AI Browser Fellou Environment](/docs/computeruse/computer-fellou)
+- [Browser Extension Environment](/browseruse/browser-extension)
+- [Web Environment](/browseruse/browser-web)
+- [Node.js Environment](/computeruse/computer-node)
+- [Next-Gen AI Browser Fellou Environment](/computeruse/computer-fellou)
 
 ## Getting started
 - [Quickstart](quickstart)

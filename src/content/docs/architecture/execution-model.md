@@ -25,7 +25,7 @@ When Eko receives a task description, it first breaks it down into logical subta
 
 Each subtask has an associated set of tools that could potentially help accomplish it. These are determined during the planning phase based on the subtask's requirements and the tools' capabilities. In our example, we use three fictitious tools - "Move hand" (🔴), "Door use" (🟢), and "Exert force" (🟡) - to illustrate this concept.
 
-In real Eko applications, the actual tools are much more practical. The framework provides tools for browser automation ([Browser Extension Tools](/docs/tools/available#browser-extension)), web-to-local computer control ([Fellou Computer Use Tools](/docs/tools/available#fellou-browser)), local-computer control ([Node.js Tools](/docs/tools/available#fellou-browser)), and web interactions ([Web Tools](/docs/tools/available#web)). You can also create custom tools to extend Eko's capabilities ([Custom Tools](/docs/tools/custom)).
+In real Eko applications, the actual tools are much more practical. The framework provides tools for browser automation ([Browser Extension Tools](/tools/available#browser-extension)), web-to-local computer control ([Fellou Computer Use Tools](/tools/available#fellou-browser)), local-computer control ([Node.js Tools](/tools/available#fellou-browser)), and web interactions ([Web Tools](/tools/available#web)). You can also create custom tools to extend Eko's capabilities ([Custom Tools](/tools/custom)).
 
 ### Tool Calls
 
@@ -78,6 +78,6 @@ This separation of planning and execution, combined with the ability to inspect 
 
 ## Next Steps
 
-- Learn about Eko's [Tool System](/docs/tools/overview)
-- dive into the [Hook System](/docs/architecture/hook-system) for execution control
-- understand how Eko adapts to different environments in the [Environment-Aware Architecture](/docs/architecture/env-architecture)
+- Learn about Eko's [Tool System](/tools/overview)
+- dive into the [Hook System](/architecture/hook-system) for execution control
+- understand how Eko adapts to different environments in the [Environment-Aware Architecture](/architecture/env-architecture)

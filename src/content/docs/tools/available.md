@@ -4,10 +4,10 @@ description: This guide introduces the built-in tools provided by the framework 
 ---
 
 Eko provides various built-in tools for different environments including:
-- [Browser extension](/docs/tools/available#browser-extension)
-- [Web](/docs/tools/available#web)
-- [Node.js](/docs/tools/available#nodejs)
-- [Fellou browser](/docs/tools/available#fellou-browser)
+- [Browser extension](/tools/available#browser-extension)
+- [Web](/tools/available#web)
+- [Node.js](/tools/available#nodejs)
+- [Fellou browser](/tools/available#fellou-browser)
 
 ## Universal
 
@@ -347,7 +347,7 @@ The action to perform. The available actions are:
 
 ## Example: Search Elon Musk on Google
 
-> **NOTICE:** This example can only run on [**Browser Extension Enviroment**](/docs/browseruse/browser-extension).
+> **NOTICE:** This example can only run on [**Browser Extension Enviroment**](/browseruse/browser-extension).
 
 ```typescript
 import { tools, browser, utils } from "@eko-ai/eko/extension";
